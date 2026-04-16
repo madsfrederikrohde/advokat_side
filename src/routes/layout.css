@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'Inter', sans-serif;
+	--font-serif: 'Lora', serif;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+:root {
+	color: #454545;
+	background: #ffffff;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	background: #ffffff;
+	color: #454545;
+	font-family: var(--font-sans);
+}
+
+::selection {
+	background: rgb(69 69 69 / 0.14);
+	color: #171717;
+}
+
+@layer base {
+	* {
+		@apply border-neutral-200;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-neutral-900;
+	}
+
+	a,
+	button,
+	input,
+	textarea {
+		@apply transition-all duration-300;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}
+
+@layer components {
+	.eyebrow {
+		@apply text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-400;
+	}
+
+	.section-heading {
+		@apply text-3xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-[2.75rem];
+	}
+
+	.section-copy {
+		@apply text-base font-light leading-relaxed text-neutral-500;
+	}
+
+	.glass-shell {
+		@apply border border-neutral-200/40 bg-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-md;
+	}
+
+	.card-luxury {
+		@apply rounded-[28px] border border-[#e8e1d6] bg-[#fbf8f3] shadow-[0_38px_88px_-34px_rgba(15,23,42,0.20),0_18px_34px_-24px_rgba(15,23,42,0.10)];
+	}
+
+	.section-label {
+		@apply text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-400;
+	}
+
+	.input-luxury {
+		@apply w-full rounded-[22px] border border-neutral-200 bg-white px-5 py-4 text-[15px] font-light text-[#5c5c5c] outline-none placeholder:text-[#5c5c5c]/45 focus:border-[#454545]/25 focus:ring-2 focus:ring-[#454545]/10;
+	}
+
+	.rich-prose p {
+		@apply text-sm font-light leading-7 text-neutral-600;
+	}
+
+	.rich-prose p + p {
+		@apply mt-4;
+	}
+
+	.animate-inview {
+		opacity: 0;
+		transform: translateY(24px);
+		transition:
+			opacity 0.55s cubic-bezier(0.32, 0.72, 0, 1),
+			transform 0.55s cubic-bezier(0.32, 0.72, 0, 1);
+	}
+
+	.animate-inview.is-visible {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes header-enter {
+	from {
+		opacity: 0;
+		transform: translateY(-14px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.header-animate {
+	animation: header-enter 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
