@@ -33,7 +33,7 @@ export default function Articles() {
       <Section className="pb-12 pt-10 sm:pb-16 sm:pt-14">
         <div className="max-w-3xl">
           <p className="eyebrow">Gode råd til boligkøb</p>
-          <h1 className="mt-4 font-serif text-[clamp(2.4rem,5vw,4.8rem)] leading-[1.04] tracking-tight text-neutral-900">
+          <h1 className="mt-4 font-serif text-[clamp(2.4rem,5vw,4.8rem)] leading-[1.04] tracking-tight text-[#454545]">
             Praktiske råd og juridiske opmærksomhedspunkter før boligkøbet bliver endeligt.
           </h1>
           <p className="mt-6 max-w-2xl text-base font-light leading-8 text-neutral-600 sm:text-lg">
@@ -55,13 +55,13 @@ export default function Articles() {
               className="rounded-[28px] border border-[#e8e1d6] bg-[#fbf8f3] px-7 py-8 shadow-[0_38px_88px_-34px_rgba(15,23,42,0.20),0_18px_34px_-24px_rgba(15,23,42,0.10)]"
             >
               <p className="eyebrow">{article.category}</p>
-              <h2 className="mt-4 text-[1.35rem] font-semibold leading-tight tracking-tight text-neutral-900">
+              <h2 className="mt-4 text-[1.35rem] font-semibold leading-tight tracking-tight text-[#454545]">
                 {article.title}
               </h2>
               <p className="mt-4 text-sm font-light leading-7 text-neutral-600">{article.excerpt}</p>
               <div className="mt-8">
                 <Link to={`/articles/${article.id}`}>
-                  <Button variant="ghost" className="px-0 text-[#454545] shadow-none hover:bg-transparent hover:text-neutral-900">
+                  <Button variant="ghost" className="px-0 text-[#454545] shadow-none hover:bg-transparent hover:text-[#454545]">
                     Læs mere <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>

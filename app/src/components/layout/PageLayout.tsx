@@ -25,7 +25,7 @@ export function PageLayout({ children }: PageLayoutProps) {
         return;
       }
 
-      const top = window.scrollY + target.getBoundingClientRect().top - 110;
+      const top = window.scrollY + target.getBoundingClientRect().top - (window.innerWidth >= 768 ? 110 : 88);
       window.scrollTo({ top, behavior: 'smooth' });
     });
 

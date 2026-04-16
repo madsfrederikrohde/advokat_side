@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  color: #454545;
+  --color-ink: #454545;
+  color: var(--color-ink);
   background: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,7 +17,7 @@ html {
 body {
   min-height: 100vh;
   background: #ffffff;
-  color: #454545;
+  color: var(--color-ink);
   font-family: "Inter", sans-serif;
 }
 
@@ -40,7 +41,7 @@ body {
   h4,
   h5,
   h6 {
-    @apply text-neutral-900;
+    color: var(--color-ink);
   }
 
   a,
@@ -62,7 +63,8 @@ body {
   }
 
   .section-heading {
-    @apply text-3xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-[2.75rem];
+    @apply text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem];
+    color: var(--color-ink);
   }
 
   .section-copy {

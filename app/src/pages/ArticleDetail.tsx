@@ -55,7 +55,7 @@ export default function ArticleDetail() {
 
         <div className="mt-8">
           <p className="eyebrow">{article.category}</p>
-          <h1 className="mt-4 font-serif text-[clamp(2.2rem,4.8vw,4.2rem)] leading-[1.06] tracking-tight text-neutral-900">
+          <h1 className="mt-4 font-serif text-[clamp(2.2rem,4.8vw,4.2rem)] leading-[1.06] tracking-tight text-[#454545]">
             {article.title}
           </h1>
           <p className="mt-6 max-w-3xl text-base font-light leading-8 text-neutral-600 sm:text-lg">{article.intro}</p>

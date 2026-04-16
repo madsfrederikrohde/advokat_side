@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/src/components/ui/Primitives';
+import { CtaTextLink } from '@/src/components/ui/CtaTextLink';
 import { cn } from '@/src/lib/utils';
 
 type FeatureTab = {
@@ -27,7 +28,7 @@ type LifecycleBlock = {
   description: string;
   image: string;
   imageAlt: string;
-  roundedClass: string;
+  desktopRoundedClass: string;
   ctaLabel: string;
   ctaTo: string;
   cards: LifecycleCard[];
@@ -89,7 +90,7 @@ const lifecycleBlocks: LifecycleBlock[] = [
     image:
       'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&q=80&w=1800',
     imageAlt: 'Bolig og tryg boligrådgivning',
-    roundedClass: 'rounded-r-full',
+    desktopRoundedClass: 'lg:rounded-r-full',
     ctaLabel: 'Book en afklarende samtale',
     ctaTo: '/contact',
     cards: [
@@ -116,7 +117,7 @@ const lifecycleBlocks: LifecycleBlock[] = [
     image:
       'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&q=80&w=1800',
     imageAlt: 'Erfaring med ejendomsprojekter og transaktioner',
-    roundedClass: 'rounded-l-full',
+    desktopRoundedClass: 'lg:rounded-l-full',
     ctaLabel: 'Læs mere om Hans Rohde',
     ctaTo: '/about',
     reverse: true,
@@ -330,22 +331,22 @@ export default function Home() {
       <section
         id="features"
         data-header-theme="light"
-        className="relative scroll-mt-28 px-4 pb-20 pt-48 sm:px-6 sm:pb-24 sm:pt-56 lg:px-8 lg:pb-28 lg:pt-64"
+        className="relative scroll-mt-28 px-6 pb-24 pt-48 sm:px-8 sm:pb-28 sm:pt-56 lg:px-8 lg:pb-32 lg:pt-64"
       >
-        <div className="mx-auto grid max-w-[96rem] gap-10 lg:grid-cols-[minmax(24rem,0.82fr)_minmax(30rem,1.08fr)] xl:grid-cols-[minmax(26rem,0.88fr)_minmax(34rem,1.02fr)]">
+        <div className="mx-auto grid max-w-[96rem] gap-10 lg:grid-cols-[minmax(22rem,0.96fr)_minmax(20rem,1.04fr)] lg:items-stretch lg:gap-12 xl:grid-cols-[minmax(24rem,0.95fr)_minmax(22rem,1.05fr)] xl:gap-14">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-120px' }}
             transition={{ duration: 0.55, ease: [0.32, 0.72, 0, 1] }}
-            className="flex flex-col justify-between gap-10 lg:pr-8 xl:pr-14"
+            className="mx-auto flex h-full min-h-0 w-full max-w-[42rem] flex-col gap-8 sm:gap-9 lg:mx-0 lg:max-w-none lg:gap-0 lg:pr-1 lg:pt-1 xl:pr-4"
           >
-            <div className="space-y-5">
-              <p className="eyebrow">Fagområder</p>
-              <h2 className="text-[2rem] font-semibold leading-[1.08] tracking-tight text-[#5c5c5c] sm:text-[2.5rem]">
+            <div className="shrink-0 space-y-5">
+              <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-neutral-400">Fagområder</p>
+              <h2 className="text-[1.85rem] font-semibold leading-[1.1] tracking-[-0.028em] text-[#5c5c5c] sm:text-[2.1rem] lg:text-[2.35rem]">
                 {featureTabs[activeTab].title}
               </h2>
-              <p className="text-[1rem] leading-7 text-[rgba(92,92,92,0.82)] sm:text-[1.05rem]">
+              <p className="max-w-2xl text-[1.02rem] font-light leading-7 text-[rgba(92,92,92,0.82)] sm:text-[1.08rem] sm:leading-8">
                 {featureTabs[activeTab].description}
               </p>
             </div>
@@ -353,7 +354,7 @@ export default function Home() {
             <div
               role="tablist"
               aria-label="Hans Rohde fagområder"
-              className="grid grid-cols-2 gap-3 md:grid-cols-[minmax(9.5rem,1fr)_auto_minmax(9.5rem,1fr)_auto_minmax(9.5rem,1fr)_auto_minmax(9.5rem,1fr)]"
+              className="grid shrink-0 grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-x-1.5 md:gap-y-2 lg:mt-auto"
             >
               {featureTabs.map((tab, index) => (
                 <div key={tab.id} className="contents">
@@ -369,18 +370,18 @@ export default function Home() {
                     onClick={() => setActiveTab(index)}
                     onKeyDown={(event) => handleTabKeyDown(event, index)}
                     className={cn(
-                      'h-11 rounded-[18px] border px-4 text-[0.82rem] font-medium tracking-[-0.01em] transition-all duration-500 sm:text-[0.85rem]',
+                      'h-11 min-w-0 rounded-full border px-4 text-[0.8rem] font-medium tracking-[-0.01em] transition-colors duration-300 sm:px-4 sm:text-[0.85rem] focus-visible:outline-none focus-visible:ring-0',
                       activeTab === index
-                        ? 'scale-[1.03] border-[#5c5c5c] bg-[#5c5c5c] text-white shadow-[0_12px_24px_-22px_rgba(15,23,42,0.24)]'
-                        : 'border-white/65 bg-white/55 text-[#5c5c5c]/76 shadow-[0_8px_24px_-20px_rgba(15,23,42,0.2)] backdrop-blur-md'
+                        ? 'border-[#5c5c5c] bg-[#5c5c5c] text-white shadow-[0_10px_24px_-16px_rgba(15,23,42,0.24)]'
+                        : 'border-transparent bg-[#ececea] text-[#6b6b6b] shadow-none hover:bg-[#e3e3e0] hover:text-[#525252]'
                     )}
                   >
                     {tab.label}
                   </button>
 
                   {index < featureTabs.length - 1 ? (
-                    <div className="hidden items-center justify-center text-[#c8c1b7] md:flex">
-                      <ArrowRight className="h-4 w-4" strokeWidth={1.8} />
+                    <div className="hidden items-center justify-center px-0.5 text-[#c8c1b7] md:flex">
+                      <ArrowRight className="h-4 w-4" strokeWidth={1.9} />
                     </div>
                   ) : null}
                 </div>
@@ -393,29 +394,31 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-120px' }}
             transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.05 }}
-            className="relative aspect-[3504/2160] overflow-hidden rounded-[26px] bg-[#ede7df] shadow-[0_28px_80px_-46px_rgba(15,23,42,0.4)] lg:ml-auto lg:w-[88%] xl:w-[84%]"
+            className="relative mx-auto aspect-[4/3] w-full max-w-[40rem] rounded-[24px] bg-[#ede7df] shadow-[0_32px_64px_-20px_rgba(15,23,42,0.32),0_14px_32px_-6px_rgba(15,23,42,0.18),0_4px_12px_-2px_rgba(15,23,42,0.1)] sm:aspect-[16/10] sm:max-w-[44rem] sm:rounded-[28px] lg:mx-0 lg:aspect-[7/5] lg:max-w-[min(100%,50rem)] lg:w-full lg:justify-self-start lg:rounded-[28px] xl:aspect-[5/3] xl:max-w-[min(100%,54rem)]"
           >
-            {featureTabs.map((tab, index) => (
-              <div
-                key={tab.id}
-                role="tabpanel"
-                id={`panel-${tab.id}`}
-                aria-labelledby={`tab-${tab.id}`}
-                className={cn(
-                  'absolute inset-0 transition-opacity duration-500 ease-out',
-                  activeTab === index ? 'z-20 opacity-100' : 'z-0 opacity-0'
-                )}
-              >
-                <img src={tab.media} alt={tab.mediaAlt} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(69,69,69,0.06),rgba(69,69,69,0.12)_55%,rgba(69,69,69,0.32))]" />
-              </div>
-            ))}
+            <div className="absolute inset-0 overflow-hidden rounded-[24px] sm:rounded-[28px] lg:rounded-[28px]">
+              {featureTabs.map((tab, index) => (
+                <div
+                  key={tab.id}
+                  role="tabpanel"
+                  id={`panel-${tab.id}`}
+                  aria-labelledby={`tab-${tab.id}`}
+                  className={cn(
+                    'absolute inset-0 transition-opacity duration-500 ease-out',
+                    activeTab === index ? 'z-20 opacity-100' : 'z-0 opacity-0'
+                  )}
+                >
+                  <img src={tab.media} alt={tab.mediaAlt} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(69,69,69,0.06),rgba(69,69,69,0.12)_55%,rgba(69,69,69,0.32))]" />
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
 
-      <section id="lifecycle" data-header-theme="light" className="overflow-hidden py-24 sm:py-32 lg:py-40">
-        <div className="flex flex-col gap-y-32 lg:gap-y-48">
+      <section id="lifecycle" data-header-theme="light" className="overflow-hidden py-20 sm:py-28 lg:py-40">
+        <div className="flex flex-col gap-y-20 sm:gap-y-24 lg:gap-y-48">
           {lifecycleBlocks.map((block) => (
             <motion.div
               key={block.id}
@@ -424,30 +427,32 @@ export default function Home() {
               viewport={{ once: true, margin: '-120px' }}
               transition={{ duration: 0.55, ease: [0.32, 0.72, 0, 1] }}
               className={cn(
-                'flex w-full flex-col items-center gap-12 lg:gap-0',
+                'flex w-full flex-col items-center gap-8 sm:gap-10 lg:gap-0',
                 block.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
               )}
             >
               <div className="w-full px-6 sm:px-8 lg:flex-1 lg:px-0">
-                <div
-                  className={cn(
-                    'overflow-hidden bg-[#D5C6B1] shadow-sm lg:h-[340px] xl:h-[370px] 2xl:h-[400px]',
-                    block.roundedClass
-                  )}
-                >
-                  <img
-                    src={block.image}
-                    alt={block.imageAlt}
-                    className="aspect-[14/7] h-full w-full object-cover mix-blend-multiply opacity-80"
-                    referrerPolicy="no-referrer"
-                  />
+                <div className="mx-auto w-full max-w-[40rem] lg:max-w-none">
+                  <div
+                    className={cn(
+                      'overflow-hidden rounded-[30px] bg-[#D5C6B1] shadow-sm sm:rounded-[34px] lg:h-[340px] lg:rounded-[0] xl:h-[370px] 2xl:h-[400px]',
+                      block.desktopRoundedClass
+                    )}
+                  >
+                    <img
+                      src={block.image}
+                      alt={block.imageAlt}
+                      className="aspect-[4/3] h-full w-full object-cover mix-blend-multiply opacity-80 sm:aspect-[16/10] lg:aspect-auto"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
                 </div>
               </div>
 
               <div className="w-full px-6 sm:px-8 lg:flex-[0_0_46rem] lg:px-12 xl:flex-[0_0_50rem] xl:px-16 2xl:px-20">
-                <div className={cn('max-w-[42rem]', block.reverse ? 'lg:mr-auto' : 'lg:ml-auto')}>
+                <div className={cn('mx-auto w-full max-w-[40rem] lg:w-auto lg:max-w-[42rem]', block.reverse ? 'lg:mr-auto' : 'lg:ml-auto')}>
                   <p className="eyebrow">{block.eyebrow}</p>
-                  <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-4xl">
+                  <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight tracking-tight text-[#454545] sm:text-4xl">
                     {block.title}
                   </h2>
                   <p className="mt-5 max-w-xl text-base font-light leading-relaxed text-neutral-500">
@@ -458,7 +463,7 @@ export default function Home() {
                     {block.cards.map((card) => (
                       <div key={card.title} className="flex gap-4">
                         <div>
-                          <h3 className="text-base font-semibold text-neutral-900">{card.title}</h3>
+                          <h3 className="text-base font-semibold text-[#454545]">{card.title}</h3>
                           <p className="mt-2 text-sm font-light text-neutral-600">{card.description}</p>
                         </div>
                       </div>
@@ -466,15 +471,9 @@ export default function Home() {
                   </div>
 
                   <div className="mt-10">
-                    <Link to={block.ctaTo}>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="h-10 rounded-full border-[#454545]/20 px-6 text-[#454545] hover:bg-[#454545]/5"
-                      >
-                        {block.ctaLabel}
-                      </Button>
-                    </Link>
+                    <CtaTextLink to={block.ctaTo} className="text-base">
+                      {block.ctaLabel}
+                    </CtaTextLink>
                   </div>
                 </div>
               </div>
@@ -513,7 +512,7 @@ export default function Home() {
                   <h3
                     className={cn(
                       'text-[1.15rem] font-semibold tracking-[-0.01em]',
-                      pack.dark ? 'text-white' : 'text-neutral-900'
+                      pack.dark ? 'text-white' : 'text-[#454545]'
                     )}
                   >
                     {pack.name}
@@ -586,7 +585,7 @@ export default function Home() {
                     onClick={() => setOpenFaq(isOpen ? -1 : index)}
                     className="flex w-full items-center justify-between gap-6 text-left"
                   >
-                    <span className="text-[15px] font-medium text-neutral-800">{faq.question}</span>
+                    <span className="text-[15px] font-medium text-[#454545]">{faq.question}</span>
                     <ChevronDown
                       className={cn('h-5 w-5 shrink-0 text-neutral-500 transition-transform duration-300', isOpen ? 'rotate-180' : '')}
                       strokeWidth={1.8}
@@ -624,7 +623,7 @@ export default function Home() {
 
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a href="tel:+4520317879">
-                <Button className="h-12 rounded-full bg-white px-8 text-[15px] font-medium text-neutral-900 hover:bg-neutral-100">
+                <Button className="h-12 rounded-full border-0 bg-white px-8 text-[15px] font-medium text-[#454545] shadow-[0_24px_48px_-16px_rgba(0,0,0,0.45),0_10px_24px_-6px_rgba(0,0,0,0.32),0_3px_10px_-2px_rgba(0,0,0,0.22)] hover:bg-neutral-100 hover:shadow-[0_28px_52px_-14px_rgba(0,0,0,0.42),0_12px_28px_-6px_rgba(0,0,0,0.3),0_4px_12px_-2px_rgba(0,0,0,0.2)]">
                   Ring nu <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
@@ -632,7 +631,7 @@ export default function Home() {
               <a href="mailto:hr@hansrohde.dk">
                 <Button
                   variant="outline"
-                  className="h-12 rounded-full border-white/20 bg-white/5 px-8 text-[15px] text-white hover:bg-white/10"
+                  className="h-12 rounded-full border-white/20 bg-white/5 px-8 text-[15px] text-white shadow-[0_24px_48px_-16px_rgba(0,0,0,0.45),0_10px_24px_-6px_rgba(0,0,0,0.32),0_3px_10px_-2px_rgba(0,0,0,0.22)] hover:bg-white/10 hover:shadow-[0_28px_52px_-14px_rgba(0,0,0,0.42),0_12px_28px_-6px_rgba(0,0,0,0.3),0_4px_12px_-2px_rgba(0,0,0,0.2)]"
                 >
                   Skriv en mail
                 </Button>

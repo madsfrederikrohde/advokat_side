@@ -154,7 +154,7 @@ export default function LegalPage({ variant }: { variant: LegalPageVariant }) {
       <Section className="pb-12 pt-10 sm:pb-16 sm:pt-14" containerClassName="max-w-[90rem]">
         <div className="max-w-4xl">
           <p className="eyebrow">{page.eyebrow}</p>
-          <h1 className="mt-4 font-serif text-[clamp(2.35rem,5vw,4.6rem)] leading-[1.04] tracking-tight text-neutral-900">
+          <h1 className="mt-4 font-serif text-[clamp(2.35rem,5vw,4.6rem)] leading-[1.04] tracking-tight text-[#454545]">
             {page.title}
           </h1>
           <p className="mt-6 max-w-3xl text-base font-light leading-8 text-neutral-600 sm:text-lg">{page.intro}</p>
@@ -172,7 +172,7 @@ export default function LegalPage({ variant }: { variant: LegalPageVariant }) {
               transition={{ duration: 0.45, delay: index * 0.04, ease: [0.32, 0.72, 0, 1] }}
               className="rounded-[28px] border border-neutral-200/80 bg-[#fbf8f3] px-6 py-7 shadow-[0_24px_60px_-42px_rgba(15,23,42,0.16)] sm:px-8 sm:py-8"
             >
-              <h2 className="text-[1.35rem] font-semibold tracking-[-0.02em] text-neutral-900">{section.heading}</h2>
+              <h2 className="text-[1.35rem] font-semibold tracking-[-0.02em] text-[#454545]">{section.heading}</h2>
               <div className="mt-4 space-y-4">
                 {section.paragraphs.map((paragraph) => (
                   <p key={paragraph} className="max-w-4xl text-sm font-light leading-7 text-neutral-600 sm:text-[0.98rem]">
