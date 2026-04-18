@@ -110,7 +110,7 @@
 				<div class="space-y-5">
 					<p class="eyebrow">Fagområder</p>
 					<h2
-						class="text-[2rem] font-semibold leading-[1.08] tracking-tight text-[#5c5c5c] sm:text-[2.5rem]"
+						class="text-[2rem] font-semibold leading-[1.08] tracking-tight text-neutral-900 sm:text-[2.5rem]"
 					>
 						{featureTabs[activeTab].title}
 					</h2>

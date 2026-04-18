@@ -2,10 +2,7 @@
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { Home, Landmark, Package2, CircleHelp, CircleUserRound, Phone } from 'lucide-svelte';
-	import { headerContrast } from '$lib/stores/headerContrast.svelte';
 	import { navItems } from '$lib/data/nav';
-
-	const iconMap = { Home, Landmark, Package2, CircleHelp, CircleUserRound };
 
 	const navIcons: Record<string, typeof Home> = {
 		hero: Home,
@@ -26,7 +23,6 @@
 	}
 
 	$effect(() => {
-		// set up scroll listener
 		const onScroll = () => {
 			isScrolled = window.scrollY > 0;
 
@@ -51,18 +47,10 @@
 	});
 
 	$effect(() => {
-		// sync active section from hash
 		if (page.url.pathname !== '/') return;
 		const hash = page.url.hash.replace('#', '');
 		activeSection = hash || 'hero';
 	});
-
-	$effect(() => {
-		// wire up contrast detection
-		return headerContrast.setup();
-	});
-
-	const isDark = $derived(headerContrast.value === 'dark');
 
 	function handleSectionClick(id: string, event: MouseEvent) {
 		event.preventDefault();
@@ -87,49 +75,35 @@
 
 <header
 	data-header-ignore="true"
-	class="header-animate fixed left-0 right-0 top-0 z-[120]"
+	class="header-animate fixed left-0 right-0 top-0 z-[120] transition-all duration-300 ease-in-out {isScrolled
+		? 'border-b border-neutral-200/60 bg-white/95 shadow-[0_1px_0_rgba(0,0,0,0.02),0_8px_24px_-12px_rgba(0,0,0,0.08)] backdrop-blur-xl'
+		: 'border-b border-transparent bg-transparent shadow-none'}"
 >
 	<nav class="w-full px-5 pb-3 pt-5 sm:px-6">
 		<div class="relative flex items-center justify-between">
 			<!-- Wordmark -->
 			<a
 				href="/"
-				class="relative z-20 shrink-0 transition-opacity duration-300 hover:opacity-100 {isDark
-					? 'opacity-100'
-					: 'opacity-95'}"
+				class="relative z-20 shrink-0 opacity-95 transition-opacity duration-300 hover:opacity-100"
 				aria-label="Advokatfirmaet Hans Rohde"
 			>
 				<span class="flex flex-col leading-none">
 					<span
-						class="text-[0.47rem] font-semibold uppercase tracking-[0.42em] sm:text-[0.54rem] {isDark
-							? 'text-white/78'
-							: 'text-[#7b7a73]'}"
+						class="text-[0.47rem] font-semibold uppercase tracking-[0.42em] text-[#7b7a73] sm:text-[0.54rem]"
 					>
 						Advokatfirmaet
 					</span>
 					<span
-						class="mt-1 font-serif text-[1.4rem] font-medium tracking-[-0.045em] sm:text-[1.65rem] {isDark
-							? 'text-white/95'
-							: 'text-[#7b7a73]'}"
-						style={isDark ? 'text-shadow: 0 2px 14px rgba(0,0,0,0.22)' : ''}
+						class="mt-1 font-serif text-[1.4rem] font-medium tracking-[-0.045em] text-[#7b7a73] sm:text-[1.65rem]"
 					>
 						Hans Rohde
 					</span>
 				</span>
 			</a>
 
-			<!-- Center nav pill -->
+			<!-- Center nav -->
 			<div class="absolute left-1/2 z-10 hidden -translate-x-1/2 md:block">
 				<div class="relative">
-					<!-- pill background -->
-					<div
-						class="pointer-events-none absolute inset-0 rounded-[20px] border transition-all duration-300 ease-in-out {isScrolled
-							? isDark
-								? 'border-white/15 bg-white/10 opacity-100 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-md'
-								: 'border-neutral-200/40 bg-white/40 opacity-100 shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-md'
-							: 'border-transparent bg-transparent opacity-0 shadow-none'}"
-					></div>
-
 					<div class="relative flex items-end gap-1 px-2 py-2 sm:gap-4 md:gap-8">
 						{#each navItems as item, index}
 							{@const Icon = navIcons[item.id]}
@@ -139,12 +113,8 @@
 									: page.url.pathname === item.to}
 							{@const baseClass = `flex flex-col items-center gap-1 rounded-2xl px-2.5 py-2 transition-colors duration-200 ${
 								isActive
-									? isDark
-										? 'bg-white/15 text-white shadow-sm'
-										: 'bg-white/70 text-neutral-900 shadow-sm'
-									: isDark
-										? 'text-white/72 hover:bg-white/15 hover:text-white'
-										: 'text-neutral-500 hover:bg-white/40 hover:text-neutral-800'
+									? 'bg-neutral-100 text-neutral-900 shadow-sm'
+									: 'text-neutral-500 hover:bg-neutral-100/70 hover:text-neutral-800'
 							}`}
 
 							<div class="flex items-center gap-4">
@@ -169,11 +139,7 @@
 								{/if}
 
 								{#if index === 3}
-									<div
-										class="hidden h-8 w-px self-center md:block {isDark
-											? 'bg-white/25'
-											: 'bg-neutral-200'}"
-									></div>
+									<div class="hidden h-8 w-px self-center bg-neutral-200 md:block"></div>
 								{/if}
 							</div>
 						{/each}
@@ -188,8 +154,8 @@
 <a
 	href="tel:+4520317879"
 	data-header-ignore="true"
-	class="fixed right-5 top-5 z-[120] flex flex-col items-center gap-1 rounded-2xl px-2 py-1.5 text-[10px] font-medium leading-none transition-all duration-300 sm:right-6 sm:top-6 {isDark
-		? 'border border-white/15 bg-white/10 text-white backdrop-blur-sm hover:bg-white/15'
+	class="fixed right-5 top-5 z-[120] flex flex-col items-center gap-1 rounded-2xl px-2 py-1.5 text-[10px] font-medium leading-none transition-all duration-300 sm:right-6 sm:top-6 {isScrolled
+		? 'text-[#454545] hover:text-neutral-900'
 		: 'border border-neutral-200/50 bg-white/80 text-[#454545] shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-md hover:bg-white'}"
 >
 	<Phone class="h-[18px] w-[18px]" stroke-width={1.5} />
