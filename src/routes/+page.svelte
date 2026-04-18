@@ -55,7 +55,7 @@
 		style="background-image: url('/copenhagencityy.jpg'); background-size: cover; background-position: center 42%; background-repeat: no-repeat;"
 	>
 		<div
-			class="pointer-events-none absolute -inset-4 z-10 opacity-50 blur-[10px]"
+			class="pointer-events-none absolute -inset-4 z-10 rounded-[2rem] opacity-50 blur-[10px]"
 			style="background-image: url('/copenhagencityy.jpg'); background-size: cover; background-position: center 42%;"
 		></div>
 		<div class="pointer-events-none absolute inset-0 z-20 bg-black/15"></div>
