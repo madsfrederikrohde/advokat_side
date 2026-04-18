@@ -3,6 +3,10 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import Section from '$lib/components/ui/Section.svelte';
 	import { inview } from '$lib/actions/inview';
+	import { enhance } from '$app/forms';
+	import type { ActionData } from './$types';
+
+	const { form }: { form: ActionData } = $props();
 
 	const contactItems = [
 		{ label: 'Telefon', value: '+45 20 31 78 79', href: 'tel:+4520317879', Icon: Phone },
@@ -84,56 +88,73 @@
 					lettere at vende hurtigt og præcist tilbage.
 				</p>
 
-				<form class="mt-8 space-y-5" onsubmit={(e) => e.preventDefault()}>
-					<div class="grid gap-5 sm:grid-cols-2">
+				{#if form?.success}
+					<div class="mt-8 rounded-2xl border border-white/20 bg-white/10 px-6 py-8 text-center">
+						<p class="text-2xl font-semibold text-white">Tak for din besked</p>
+						<p class="mt-3 text-base font-light text-neutral-300">
+							Vi vender tilbage hurtigst muligt.
+						</p>
+					</div>
+				{:else}
+					<form class="mt-8 space-y-5" method="POST" use:enhance>
+						<div class="grid gap-5 sm:grid-cols-2">
+							<div>
+								<label for="contact-name" class="eyebrow block text-neutral-400">Navn</label>
+								<input
+									id="contact-name"
+									name="name"
+									type="text"
+									class="input-luxury mt-2 border-white/10 bg-white text-[#454545]"
+									placeholder="Dit navn"
+								/>
+							</div>
+							<div>
+								<label for="contact-phone" class="eyebrow block text-neutral-400">Telefon</label>
+								<input
+									id="contact-phone"
+									name="phone"
+									type="tel"
+									class="input-luxury mt-2 border-white/10 bg-white text-[#454545]"
+									placeholder="+45 20 31 78 79"
+								/>
+							</div>
+						</div>
+
 						<div>
-							<label for="contact-name" class="eyebrow block text-neutral-400">Navn</label>
+							<label for="contact-email" class="eyebrow block text-neutral-400">E-mail</label>
 							<input
-								id="contact-name"
-								type="text"
+								id="contact-email"
+								name="email"
+								type="email"
 								class="input-luxury mt-2 border-white/10 bg-white text-[#454545]"
-								placeholder="Dit navn"
+								placeholder="din@email.dk"
 							/>
 						</div>
+
 						<div>
-							<label for="contact-phone" class="eyebrow block text-neutral-400">Telefon</label>
-							<input
-								id="contact-phone"
-								type="tel"
-								class="input-luxury mt-2 border-white/10 bg-white text-[#454545]"
-								placeholder="+45 20 31 78 79"
-							/>
+							<label for="contact-message" class="eyebrow block text-neutral-400">Besked</label>
+							<textarea
+								id="contact-message"
+								name="message"
+								rows={6}
+								class="input-luxury mt-2 min-h-[10rem] resize-none border-white/10 bg-white text-[#454545]"
+								placeholder="Beskriv kort boligen, projektet eller det juridiske spørgsmål."
+							></textarea>
 						</div>
-					</div>
 
-					<div>
-						<label for="contact-email" class="eyebrow block text-neutral-400">E-mail</label>
-						<input
-							id="contact-email"
-							type="email"
-							class="input-luxury mt-2 border-white/10 bg-white text-[#454545]"
-							placeholder="din@email.dk"
-						/>
-					</div>
+						{#if form?.error}
+							<p class="text-sm text-red-300">{form.error}</p>
+						{/if}
 
-					<div>
-						<label for="contact-message" class="eyebrow block text-neutral-400">Besked</label>
-						<textarea
-							id="contact-message"
-							rows={6}
-							class="input-luxury mt-2 min-h-[10rem] resize-none border-white/10 bg-white text-[#454545]"
-							placeholder="Beskriv kort boligen, projektet eller det juridiske spørgsmål."
-						></textarea>
-					</div>
-
-					<div class="pt-2">
-						<Button
-							class="h-12 rounded-full bg-white px-8 text-[15px] font-medium text-neutral-900 hover:bg-neutral-100"
-						>
-							Send besked
-						</Button>
-					</div>
-				</form>
+						<div class="pt-2">
+							<Button
+								class="h-12 rounded-full bg-white px-8 text-[15px] font-medium text-neutral-900 hover:bg-neutral-100"
+							>
+								Send besked
+							</Button>
+						</div>
+					</form>
+				{/if}
 			</div>
 		</div>
 	</Section>
