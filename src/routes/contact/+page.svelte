@@ -148,6 +148,7 @@
 
 						<div class="pt-2">
 							<Button
+								variant="secondary"
 								class="h-12 rounded-full bg-white px-8 text-[15px] font-medium text-neutral-900 hover:bg-neutral-100"
 							>
 								Send besked

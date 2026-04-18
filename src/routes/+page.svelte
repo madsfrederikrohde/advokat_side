@@ -422,6 +422,7 @@
 				<div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
 					<a href="tel:+4520317879">
 						<Button
+							variant="secondary"
 							class="h-12 rounded-full bg-white px-8 text-[15px] font-medium text-neutral-900 hover:bg-neutral-100"
 						>
 							Ring nu <ArrowRight class="ml-2 h-4 w-4" />
