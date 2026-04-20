@@ -63,6 +63,25 @@
 		</div>
 	</div>
 
+	<div data-header-theme="light" class="px-6 pt-10 sm:px-8 lg:px-12">
+		<div class="mx-auto flex max-w-[90rem] items-center gap-4">
+			<img
+				src="/advokatsamfundet_logo_dk_bomaerke_black_rgb.jpg"
+				alt="Advokatsamfundet"
+				class="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20"
+			/>
+			<p class="max-w-md text-sm font-light leading-6 text-neutral-600">
+				Advokaterne hos Ejendomsadvokaterne er beskikket af Justitsministeriet i Danmark og er en del
+				af <a
+					href="https://www.advokatsamfundet.dk/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="link-accent">Advokatsamfundet</a
+				>.
+			</p>
+		</div>
+	</div>
+
 	<section data-header-theme="light" class="px-6 pb-20 pt-12 sm:px-8 sm:pt-16 lg:px-12 lg:pb-28">
 		<div class="mx-auto grid max-w-[90rem] gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(16rem,0.6fr)]">
 			<ServiceArticle body={service.body} />

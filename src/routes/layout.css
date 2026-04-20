@@ -134,8 +134,16 @@ body {
 		@apply w-full rounded-[22px] border border-neutral-200 bg-white px-5 py-4 text-[15px] font-light text-[#5c5c5c] outline-none placeholder:text-[#5c5c5c]/45 focus:border-[#454545]/25 focus:ring-2 focus:ring-[#454545]/10;
 	}
 
+	.link-accent {
+		@apply text-[#c43b5e] transition-colors hover:underline hover:underline-offset-[3px] hover:decoration-[#c43b5e] hover:decoration-[1px];
+	}
+
 	.rich-prose p {
 		@apply text-sm font-light leading-7 text-neutral-600;
+	}
+
+	.rich-prose a {
+		@apply text-[#c43b5e] transition-colors hover:underline hover:underline-offset-[3px] hover:decoration-[#c43b5e] hover:decoration-[1px];
 	}
 
 	.rich-prose p + p {
