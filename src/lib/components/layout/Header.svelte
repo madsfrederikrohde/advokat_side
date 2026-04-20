@@ -1,67 +1,30 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { goto } from '$app/navigation';
 	import { navItems } from '$lib/data/nav';
+	import HeaderDropdown from '$lib/components/layout/HeaderDropdown.svelte';
 
 	let isScrolled = $state(false);
-	let activeSection = $state('hero');
-
-	function scrollToSection(id: string) {
-		const target = document.getElementById(id);
-		if (!target) return;
-		const top = window.scrollY + target.getBoundingClientRect().top - 110;
-		window.scrollTo({ top, behavior: 'smooth' });
-	}
 
 	$effect(() => {
 		const onScroll = () => {
 			isScrolled = window.scrollY > 0;
-
-			if (page.url.pathname !== '/') return;
-
-			const midpoint = window.scrollY + window.innerHeight * 0.35;
-			const sections = navItems
-				.filter((item) => item.kind === 'section')
-				.map((item) => document.getElementById(item.id))
-				.filter((el): el is HTMLElement => Boolean(el));
-
-			let next = 'hero';
-			sections.forEach((s) => {
-				if (s.offsetTop - 130 <= midpoint) next = s.id;
-			});
-			activeSection = next;
 		};
-
 		onScroll();
 		window.addEventListener('scroll', onScroll, { passive: true });
 		return () => window.removeEventListener('scroll', onScroll);
 	});
 
-	$effect(() => {
-		if (page.url.pathname !== '/') return;
-		const hash = page.url.hash.replace('#', '');
-		activeSection = hash || 'hero';
-	});
-
-	function handleSectionClick(id: string, event: MouseEvent) {
-		event.preventDefault();
-
-		if (page.url.pathname !== '/') {
-			goto(id === 'hero' ? '/' : `/#${id}`);
-			return;
-		}
-
-		if (id === 'hero') {
-			goto('/');
-			window.scrollTo({ top: 0, behavior: 'smooth' });
-			activeSection = 'hero';
-			return;
-		}
-
-		goto(`/#${id}`, { replaceState: true });
-		scrollToSection(id);
-		activeSection = id;
+	function isActive(item: (typeof navItems)[number]) {
+		const path = page.url.pathname;
+		if (item.kind === 'dropdown') return path === item.to || path.startsWith(item.to + '/');
+		if (item.kind === 'route') return path === item.to || path.startsWith(item.to + '/');
+		return false;
 	}
+
+	const baseLink =
+		'whitespace-nowrap text-sm font-medium transition-colors duration-200 text-neutral-500 hover:text-neutral-800 hover:underline hover:underline-offset-4 hover:decoration-1';
+	const activeLink =
+		'whitespace-nowrap text-sm font-medium transition-colors duration-200 text-neutral-900 underline underline-offset-4 decoration-1';
 </script>
 
 <header
@@ -72,7 +35,6 @@
 >
 	<nav class="w-full px-5 pb-3 pt-5 sm:px-6">
 		<div class="relative flex items-center justify-between">
-			<!-- Wordmark -->
 			<a
 				href="/"
 				class="relative z-20 shrink-0 opacity-95 transition-opacity duration-300 hover:opacity-100"
@@ -92,49 +54,25 @@
 				</span>
 			</a>
 
-			<!-- Center nav -->
 			<div class="absolute left-1/2 z-10 hidden -translate-x-1/2 md:block">
-				<div class="relative">
-					<div class="relative flex items-center gap-6 px-2 py-2 md:gap-8">
-						{#each navItems as item, index}
-							{@const isActive =
-								item.kind === 'section'
-									? page.url.pathname === '/' && activeSection === item.id
-									: page.url.pathname === item.to}
-							{@const baseClass = `whitespace-nowrap text-sm font-medium transition-colors duration-200 ${
-								isActive
-									? 'text-neutral-900 underline underline-offset-4 decoration-1'
-									: 'text-neutral-500 hover:text-neutral-800 hover:underline hover:underline-offset-4 hover:decoration-1'
-							}`}
-
-							<div class="flex items-center gap-6 md:gap-8">
-								{#if item.kind === 'section'}
-									<a
-										href={item.id === 'hero' ? '/' : `/#${item.id}`}
-										onclick={(e) => handleSectionClick(item.id, e)}
-										class={baseClass}
-									>
-										{item.label}
-									</a>
-								{:else}
-									<a href={item.to} class={baseClass}>
-										{item.label}
-									</a>
-								{/if}
-
-								{#if index === 3}
-									<div class="hidden h-4 w-px self-center bg-neutral-200 md:block"></div>
-								{/if}
-							</div>
-						{/each}
-					</div>
+				<div class="relative flex items-center gap-6 px-2 py-2 md:gap-8">
+					{#each navItems as item}
+						{@const active = isActive(item)}
+						{@const cls = active ? activeLink : baseLink}
+						{#if item.kind === 'dropdown'}
+							<HeaderDropdown label={item.label} to={item.to} baseClass={cls} isActive={active} />
+						{:else}
+							<a href={item.to} class={cls}>
+								{item.label}
+							</a>
+						{/if}
+					{/each}
 				</div>
 			</div>
 		</div>
 	</nav>
 </header>
 
-<!-- Phone CTA (fixed, separate from header) -->
 <a
 	href="tel:+4520317879"
 	data-header-ignore="true"
