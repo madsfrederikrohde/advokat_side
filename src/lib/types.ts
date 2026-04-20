@@ -1,8 +1,34 @@
 export type HeaderContrast = 'light' | 'dark';
 
 export type NavItem =
-	| { kind: 'section'; id: string; label: string }
-	| { kind: 'route'; id: string; label: string; to: string };
+	| { kind: 'route'; id: string; label: string; to: string }
+	| { kind: 'dropdown'; id: string; label: string; to: string };
+
+export type ServiceCategorySlug = 'boligkoeb' | 'fast-ejendom' | 'familiearveret';
+
+export interface ServiceCategory {
+	slug: ServiceCategorySlug;
+	title: string;
+	description: string;
+	order: number;
+}
+
+export interface ServiceBodySection {
+	heading?: string;
+	paragraphs?: string[];
+	bullets?: string[];
+}
+
+export interface Service {
+	slug: string;
+	category: ServiceCategorySlug;
+	title: string;
+	navLabel: string;
+	heroImage: { src: string; alt: string };
+	shortDescription: string;
+	body: ServiceBodySection[];
+	seo?: { title?: string; description?: string };
+}
 
 export interface FeatureTab {
 	id: string;
