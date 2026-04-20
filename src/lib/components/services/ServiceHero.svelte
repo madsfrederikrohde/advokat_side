@@ -20,27 +20,29 @@
 	}: Props = $props();
 </script>
 
-<section
-	data-header-theme="dark"
-	class="relative isolate mx-4 overflow-hidden rounded-2xl pb-16 pt-24 sm:mx-6 sm:pt-28 lg:mx-8 lg:pb-24 lg:pt-32"
->
-	<img
-		src={image.src}
-		alt={image.alt}
-		class="absolute inset-0 -z-10 h-full w-full object-cover"
-		referrerpolicy="no-referrer"
-	/>
-	<div class="absolute inset-0 -z-10 bg-black/30"></div>
+<section data-header-theme="light" class="relative px-4 pt-8 sm:px-6 lg:px-8 lg:pt-12">
+	<div class="relative mx-auto w-full max-w-[96rem]">
+		<!-- Image: left side, rounded, fixed aspect -->
+		<div
+			class="relative overflow-hidden rounded-[28px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.35)] lg:w-[62%]"
+		>
+			<img
+				src={image.src}
+				alt={image.alt}
+				class="aspect-[16/9] h-full w-full object-cover lg:aspect-[3/2]"
+				referrerpolicy="no-referrer"
+			/>
+		</div>
 
-	<div class="mx-auto grid w-full max-w-[96rem] gap-10 px-6 lg:grid-cols-[1fr_minmax(26rem,42%)]">
-		<div class="hidden lg:block"></div>
-
+		<!-- Card: stacks below on mobile, floats and overlaps on lg -->
 		<div
 			use:inview
-			class="animate-inview rounded-[28px] bg-[#0d2340]/95 p-8 text-white shadow-[0_30px_80px_-40px_rgba(0,0,0,0.5)] sm:p-10 lg:ml-auto lg:max-w-[42rem]"
+			class="animate-inview relative -mt-6 mx-2 rounded-[28px] bg-[#0d2340] p-8 text-white shadow-[0_30px_80px_-30px_rgba(0,0,0,0.45)] sm:p-10 lg:absolute lg:right-0 lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-[46%] lg:-translate-y-1/2 lg:p-12"
 		>
 			<div class="mb-5 h-[3px] w-14 bg-[#c43b5e]"></div>
-			<h1 class="font-serif text-[clamp(1.85rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-tight">
+			<h1
+				class="font-serif text-[clamp(1.85rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-tight text-white"
+			>
 				{title}
 			</h1>
 			<p class="mt-6 text-[15px] font-light leading-7 text-white/85">
