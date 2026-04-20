@@ -1,16 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
-	import { Home, Landmark, Package2, CircleHelp, CircleUserRound, Phone } from 'lucide-svelte';
 	import { navItems } from '$lib/data/nav';
-
-	const navIcons: Record<string, typeof Home> = {
-		hero: Home,
-		features: Landmark,
-		packages: Package2,
-		faq: CircleHelp,
-		about: CircleUserRound
-	};
 
 	let isScrolled = $state(false);
 	let activeSection = $state('hero');
@@ -104,42 +95,35 @@
 			<!-- Center nav -->
 			<div class="absolute left-1/2 z-10 hidden -translate-x-1/2 md:block">
 				<div class="relative">
-					<div class="relative flex items-end gap-1 px-2 py-2 sm:gap-4 md:gap-8">
+					<div class="relative flex items-center gap-6 px-2 py-2 md:gap-8">
 						{#each navItems as item, index}
-							{@const Icon = navIcons[item.id]}
 							{@const isActive =
 								item.kind === 'section'
 									? page.url.pathname === '/' && activeSection === item.id
 									: page.url.pathname === item.to}
-							{@const baseClass = `flex flex-col items-center gap-1 rounded-2xl px-2.5 py-2 transition-colors duration-200 ${
+							{@const baseClass = `whitespace-nowrap text-sm font-medium transition-colors duration-200 ${
 								isActive
-									? 'bg-neutral-100 text-neutral-900 shadow-sm'
-									: 'text-neutral-500 hover:bg-neutral-100/70 hover:text-neutral-800'
+									? 'text-neutral-900 underline underline-offset-4 decoration-1'
+									: 'text-neutral-500 hover:text-neutral-800 hover:underline hover:underline-offset-4 hover:decoration-1'
 							}`}
 
-							<div class="flex items-center gap-4">
+							<div class="flex items-center gap-6 md:gap-8">
 								{#if item.kind === 'section'}
 									<a
 										href={item.id === 'hero' ? '/' : `/#${item.id}`}
 										onclick={(e) => handleSectionClick(item.id, e)}
 										class={baseClass}
 									>
-										<Icon class="h-[18px] w-[18px]" stroke-width={1.5} />
-										<span class="whitespace-nowrap text-[10px] font-medium leading-none"
-											>{item.label}</span
-										>
+										{item.label}
 									</a>
 								{:else}
 									<a href={item.to} class={baseClass}>
-										<Icon class="h-[18px] w-[18px]" stroke-width={1.5} />
-										<span class="whitespace-nowrap text-[10px] font-medium leading-none"
-											>{item.label}</span
-										>
+										{item.label}
 									</a>
 								{/if}
 
 								{#if index === 3}
-									<div class="hidden h-8 w-px self-center bg-neutral-200 md:block"></div>
+									<div class="hidden h-4 w-px self-center bg-neutral-200 md:block"></div>
 								{/if}
 							</div>
 						{/each}
@@ -154,10 +138,9 @@
 <a
 	href="tel:+4520317879"
 	data-header-ignore="true"
-	class="fixed right-5 top-5 z-[120] flex flex-col items-center gap-1 rounded-2xl px-2 py-1.5 text-[10px] font-medium leading-none transition-all duration-300 sm:right-6 sm:top-6 {isScrolled
+	class="fixed right-5 top-5 z-[120] text-lg font-semibold tracking-tight transition-colors duration-300 sm:right-6 sm:top-5 {isScrolled
 		? 'text-[#454545] hover:text-neutral-900'
-		: 'border border-neutral-200/50 bg-white/80 text-[#454545] shadow-[0_8px_32px_rgba(0,0,0,0.06)] backdrop-blur-md hover:bg-white'}"
+		: 'text-[#7b7a73] hover:text-neutral-800'}"
 >
-	<Phone class="h-[18px] w-[18px]" stroke-width={1.5} />
-	<span>20 31 78 79</span>
+	20 31 78 79
 </a>
