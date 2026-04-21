@@ -47,6 +47,15 @@
 @theme {
 	--font-sans: 'Inter', sans-serif;
 	--font-serif: 'Lora', serif;
+
+	--color-ink: #454545;
+	--color-ink-strong: #171717;
+	--color-accent: #c43b5e;
+	--color-accent-hover: #a9304f;
+	--color-accent-soft: #f4a8bb;
+	--color-navy: #0d2340;
+	--color-cream: #fbf8f3;
+	--color-cream-border: #e8e1d6;
 }
 
 @view-transition {
@@ -54,7 +63,21 @@
 }
 
 :root {
-	color: #454545;
+	--color-ink: #454545;
+	--color-ink-strong: #171717;
+	--color-accent: #c43b5e;
+	--color-accent-hover: #a9304f;
+	--color-accent-soft: #f4a8bb;
+	--color-navy: #0d2340;
+	--color-cream: #fbf8f3;
+	--color-cream-border: #e8e1d6;
+
+	--radius-card: 28px;
+	--shadow-card: 0 38px 88px -34px rgb(15 23 42 / 0.20), 0 18px 34px -24px rgb(15 23 42 / 0.10);
+	--shadow-hero-card: 0 30px 80px -30px rgb(0 0 0 / 0.45);
+	--container-max: 90rem;
+
+	color: var(--color-ink);
 	background: #ffffff;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -69,13 +92,13 @@ html {
 body {
 	min-height: 100vh;
 	background: #ffffff;
-	color: #454545;
+	color: var(--color-ink);
 	font-family: var(--font-sans);
 }
 
 ::selection {
 	background: rgb(69 69 69 / 0.14);
-	color: #171717;
+	color: var(--color-ink-strong);
 }
 
 @layer base {
@@ -123,7 +146,10 @@ body {
 	}
 
 	.card-luxury {
-		@apply rounded-[28px] border border-[#e8e1d6] bg-[#fbf8f3] shadow-[0_38px_88px_-34px_rgba(15,23,42,0.20),0_18px_34px_-24px_rgba(15,23,42,0.10)];
+		border: 1px solid var(--color-cream-border);
+		background: var(--color-cream);
+		border-radius: var(--radius-card);
+		box-shadow: var(--shadow-card);
 	}
 
 	.section-label {
@@ -135,7 +161,14 @@ body {
 	}
 
 	.link-accent {
-		@apply text-[#c43b5e] transition-colors hover:underline hover:underline-offset-[3px] hover:decoration-[#c43b5e] hover:decoration-[1px];
+		color: var(--color-accent);
+		transition: color 0.2s;
+	}
+	.link-accent:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-thickness: 1px;
+		text-decoration-color: var(--color-accent);
 	}
 
 	.rich-prose p {
@@ -143,24 +176,34 @@ body {
 	}
 
 	.rich-prose a {
-		@apply text-[#c43b5e] transition-colors hover:underline hover:underline-offset-[3px] hover:decoration-[#c43b5e] hover:decoration-[1px];
+		color: var(--color-accent);
+		transition: color 0.2s;
+	}
+	.rich-prose a:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-thickness: 1px;
+		text-decoration-color: var(--color-accent);
 	}
 
 	.rich-prose p + p {
 		@apply mt-4;
 	}
 
-	.animate-inview {
-		opacity: 0;
-		transform: translateY(24px);
-		transition:
-			opacity 0.55s cubic-bezier(0.32, 0.72, 0, 1),
-			transform 0.55s cubic-bezier(0.32, 0.72, 0, 1);
+	.prose-bullets {
+		@apply mt-4 space-y-2;
 	}
-
-	.animate-inview.is-visible {
-		opacity: 1;
-		transform: none;
+	.prose-bullets > li {
+		@apply flex gap-3 text-sm font-light leading-7 text-neutral-600;
+	}
+	.prose-bullets > li::before {
+		content: '';
+		flex: none;
+		margin-top: 0.625rem;
+		width: 0.25rem;
+		height: 0.25rem;
+		border-radius: 9999px;
+		background: var(--color-accent);
 	}
 }
 

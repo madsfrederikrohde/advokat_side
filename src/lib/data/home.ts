@@ -1,4 +1,44 @@
-import type { LifecycleBlock, FaqItem } from '$lib/types';
+import type { LifecycleBlock, FaqItem, BodySection } from '$lib/types';
+
+export const homeContent: {
+	title: string;
+	shortDescription: string;
+	heroImage: { src: string; alt: string };
+	body: BodySection[];
+	seo: { title: string; description: string };
+} = {
+	title: 'Kom sikkert gennem boligkøbet med erfaren juridisk sparring hele vejen.',
+	shortDescription:
+		'Få uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Vi hjælper også gerne med et gratis advokatforbehold, før du skriver under.',
+	heroImage: {
+		src: '/copenhagencityy.jpg',
+		alt: 'København — fast ejendom og boligkøb'
+	},
+	body: [
+		{
+			heading: 'Uvildig rådgivning om boligkøb og fast ejendom',
+			paragraphs: [
+				'Alle kan i princippet tilbyde køberrådgivning. Men kun advokater er lovmæssigt forpligtet til at yde uvildig rådgivning uden provision eller binding til bestemte banker, kreditforeninger eller forsikringsselskaber.',
+				'Advokatfirmaet Hans Rohde arbejder med fast ejendom, bolighandler, byggeri og ejendomsudvikling. Målet er ikke blot korrekt jura, men et forløb der føles klart, trygt og ordentligt fra første vurdering til endelig beslutning.'
+			]
+		},
+		{
+			heading: 'Vi hjælper blandt andet med følgende',
+			bullets: [
+				'Gratis advokatforbehold, så handlen kan undersøges før den bliver endelig',
+				'Grundig gennemgang af købsaftale, bilag og servitutter',
+				'Uvildig second opinion på finansiering og lånetyper',
+				'Tinglysning, skøde og refusionsopgørelse',
+				'Rådgivning om byggeri, entreprise og ejendomsudvikling'
+			]
+		}
+	],
+	seo: {
+		title: 'Boligkøb og fast ejendom',
+		description:
+			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Advokatfirmaet Hans Rohde, Rødovre.'
+	}
+};
 
 export const lifecycleBlocks: LifecycleBlock[] = [
 	{

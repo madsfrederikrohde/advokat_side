@@ -1,30 +1,34 @@
 <script lang="ts">
 	import { ArrowRight, Phone } from 'lucide-svelte';
 	import Button from '$lib/components/ui/Button.svelte';
-	import { inview } from '$lib/actions/inview';
 
 	interface Props {
 		title: string;
 		description: string;
 		image: { src: string; alt: string };
+		eyebrow?: string;
 		phone?: string;
 		phoneDisplay?: string;
+		ctaLabel?: string;
+		ctaHref?: string;
 	}
 
 	let {
 		title,
 		description,
 		image,
+		eyebrow,
 		phone = '+4520317879',
-		phoneDisplay = '20 31 78 79'
+		phoneDisplay = '20 31 78 79',
+		ctaLabel = 'Bliv kontaktet',
+		ctaHref = '/contact'
 	}: Props = $props();
 </script>
 
 <section data-header-theme="light" class="relative px-4 pt-8 sm:px-6 lg:px-8 lg:pt-12">
 	<div class="relative mx-auto w-full max-w-[96rem]">
-		<!-- Image: left side, rounded, fixed aspect -->
 		<div
-			class="relative overflow-hidden rounded-[28px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.35)] lg:w-[62%]"
+			class="relative overflow-hidden rounded-[var(--radius-card)] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.35)] lg:w-[62%]"
 		>
 			<img
 				src={image.src}
@@ -34,12 +38,15 @@
 			/>
 		</div>
 
-		<!-- Card: stacks below on mobile, floats and overlaps on lg -->
 		<div
-			use:inview
-			class="animate-inview relative -mt-6 mx-2 rounded-[28px] bg-[#0d2340] p-8 text-white shadow-[0_30px_80px_-30px_rgba(0,0,0,0.45)] sm:p-10 lg:absolute lg:right-0 lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-[46%] lg:-translate-y-1/2 lg:p-12"
+			class="relative -mt-6 mx-2 rounded-[var(--radius-card)] bg-[var(--color-navy)] p-8 text-white shadow-[var(--shadow-hero-card)] sm:p-10 lg:absolute lg:right-0 lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-[46%] lg:-translate-y-1/2 lg:p-12"
 		>
-			<div class="mb-5 h-[3px] w-14 bg-[#c43b5e]"></div>
+			<div class="mb-5 h-[3px] w-14 bg-[var(--color-accent)]"></div>
+			{#if eyebrow}
+				<p class="mb-3 text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">
+					{eyebrow}
+				</p>
+			{/if}
 			<h1
 				class="font-serif text-[clamp(1.85rem,4vw,2.75rem)] font-normal leading-[1.1] tracking-tight text-white"
 			>
@@ -50,18 +57,18 @@
 			</p>
 
 			<div class="mt-8 flex flex-wrap items-center gap-5">
-				<a href="/contact">
+				<a href={ctaHref}>
 					<Button
 						variant="primary"
-						class="h-11 rounded-full border-[#c43b5e] bg-[#c43b5e] px-7 text-white hover:bg-[#a9304f]"
+						class="h-11 rounded-full border-[var(--color-accent)] bg-[var(--color-accent)] px-7 text-white hover:bg-[var(--color-accent-hover)]"
 					>
-						Bliv kontaktet <ArrowRight class="ml-2 h-4 w-4" />
+						{ctaLabel} <ArrowRight class="ml-2 h-4 w-4" />
 					</Button>
 				</a>
 				<div class="flex items-center gap-2 text-sm text-white/75">
 					<Phone class="h-4 w-4" stroke-width={1.8} />
 					<span>Eller ring på</span>
-					<a href="tel:{phone}" class="font-medium text-[#f4a8bb] hover:underline">
+					<a href="tel:{phone}" class="font-medium text-[var(--color-accent-soft)] hover:underline">
 						{phoneDisplay}
 					</a>
 				</div>

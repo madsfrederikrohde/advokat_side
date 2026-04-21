@@ -22,7 +22,7 @@
 					{#if active}
 						<span
 							aria-hidden="true"
-							class="absolute -left-[1.5px] top-1/2 h-6 w-[3px] -translate-y-1/2 bg-[#c43b5e]"
+							class="absolute -left-[1.5px] top-1/2 h-6 w-[3px] -translate-y-1/2 bg-[var(--color-accent)]"
 						></span>
 					{/if}
 					<a

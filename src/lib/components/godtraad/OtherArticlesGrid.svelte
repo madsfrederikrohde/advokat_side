@@ -16,8 +16,8 @@
 		<h2
 			class="mb-12 text-center font-serif text-[clamp(1.75rem,3vw,2.25rem)] font-normal tracking-tight"
 		>
-			<span class="text-[#0d2340]">Andre</span>
-			<span class="text-[#c43b5e]">råd</span>
+			<span class="text-[var(--color-navy)]">Andre</span>
+			<span class="text-[var(--color-accent)]">råd</span>
 		</h2>
 		<div class="grid gap-x-12 sm:grid-cols-2">
 			{#each articles as a}
@@ -27,7 +27,7 @@
 				>
 					<span>{a.title}</span>
 					<ArrowRight
-						class="h-4 w-4 shrink-0 text-[#c43b5e] transition-transform group-hover:translate-x-1"
+						class="h-4 w-4 shrink-0 text-[var(--color-accent)] transition-transform group-hover:translate-x-1"
 						stroke-width={2}
 					/>
 				</a>

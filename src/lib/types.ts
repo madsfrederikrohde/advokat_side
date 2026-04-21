@@ -13,11 +13,14 @@ export interface ServiceCategory {
 	order: number;
 }
 
-export interface ServiceBodySection {
+export interface BodySection {
 	heading?: string;
 	paragraphs?: string[];
 	bullets?: string[];
 }
+
+/** @deprecated use BodySection */
+export type ServiceBodySection = BodySection;
 
 export interface Service {
 	slug: string;

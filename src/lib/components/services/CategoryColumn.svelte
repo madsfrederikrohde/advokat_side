@@ -16,7 +16,7 @@
 	<a
 		href={categoryPath(category)}
 		onclick={() => onNavigate?.()}
-		class="group mb-4 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#c43b5e] hover:text-[#a9304f]"
+		class="group mb-4 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
 	>
 		{category.title}
 		<ArrowRight class="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" stroke-width={2} />
