@@ -63,13 +63,13 @@
 						Boligkøb
 					</a>
 					<a
-						href="/about"
+						href="/om-os"
 						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
 					>
 						Om os
 					</a>
 					<a
-						href="/contact"
+						href="/kontakt"
 						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
 					>
 						Kontakt

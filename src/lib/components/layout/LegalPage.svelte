@@ -45,6 +45,7 @@
 	{breadcrumbs}
 	{body}
 	showBadge={false}
+	showHeroCta={false}
 	ctaLine1="Har du brug for nærmere vejledning?"
 	ctaLine2="Kontakt os i dag for en uforpligtende snak."
 />

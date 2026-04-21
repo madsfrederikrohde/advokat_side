@@ -42,50 +42,17 @@
 	breadcrumbs={[{ label: 'Forside', href: '/' }, { label: 'Kontakt' }]}
 	body={contactContent.body}
 	showBadge={false}
+	showHeroCta={false}
 >
-	{#snippet sidebar()}
-		<aside class="space-y-4">
-			{#each contactItems as item}
-				<div
-					class="card-luxury px-5 py-5"
-				>
-					<div class="flex items-start gap-4">
-						<div
-							class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-ink)]/10 text-[var(--color-ink)]"
-						>
-							<item.Icon class="h-5 w-5" stroke-width={1.7} />
-						</div>
-						<div>
-							<p class="eyebrow">{item.label}</p>
-							{#if item.href}
-								<a
-									href={item.href}
-									class="mt-2 block text-lg font-semibold tracking-tight text-[var(--color-ink)] hover:text-neutral-900"
-								>
-									{item.value}
-								</a>
-							{:else}
-								<p class="mt-2 text-lg font-semibold tracking-tight text-[var(--color-ink)]">
-									{item.value}
-								</p>
-							{/if}
-						</div>
-					</div>
-				</div>
-			{/each}
-		</aside>
-	{/snippet}
-
-	{#snippet cta()}
-		<section data-header-theme="light" class="px-6 pb-20 sm:px-8 lg:px-12 lg:pb-28">
-			<div class="mx-auto max-w-[var(--container-max)]">
+	{#snippet mainContent()}
+		<section data-header-theme="light" class="px-6 pb-20 pt-12 sm:px-8 sm:pt-16 lg:px-12 lg:pb-28">
+			<div class="mx-auto grid max-w-[var(--container-max)] gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(16rem,0.65fr)]">
+				<!-- Contact form -->
 				<div
 					class="rounded-[var(--radius-card)] border border-[var(--color-ink)] bg-[var(--color-ink)] px-8 py-10 text-white shadow-[0_40px_92px_-34px_rgba(17,17,19,0.50),0_18px_34px_-24px_rgba(17,17,19,0.22)] sm:px-10 sm:py-12"
 				>
 					<p class="eyebrow text-neutral-500">Skriv til os</p>
-					<h2
-						class="mt-4 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
-					>
+					<h2 class="mt-4 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
 						Fortæl kort hvad sagen handler om
 					</h2>
 					<p class="mt-5 max-w-xl text-base font-light leading-7 text-neutral-300">
@@ -141,8 +108,8 @@
 								<textarea
 									id="contact-message"
 									name="message"
-									rows={6}
-									class="input-luxury mt-2 min-h-[10rem] resize-none border-white/10 bg-white text-[var(--color-ink)]"
+									rows={5}
+									class="input-luxury mt-2 min-h-[9rem] resize-none border-white/10 bg-white text-[var(--color-ink)]"
 									placeholder="Beskriv kort boligen, projektet eller det juridiske spørgsmål."
 								></textarea>
 							</div>
@@ -162,7 +129,39 @@
 						</form>
 					{/if}
 				</div>
+
+				<!-- Contact info sidebar -->
+				<aside class="space-y-4">
+					{#each contactItems as item}
+						<div class="card-luxury px-5 py-5">
+							<div class="flex items-start gap-4">
+								<div
+									class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--color-ink)]/10 text-[var(--color-ink)]"
+								>
+									<item.Icon class="h-5 w-5" stroke-width={1.7} />
+								</div>
+								<div>
+									<p class="eyebrow">{item.label}</p>
+									{#if item.href}
+										<a
+											href={item.href}
+											class="mt-2 block text-lg font-semibold tracking-tight text-[var(--color-ink)] hover:text-neutral-900"
+										>
+											{item.value}
+										</a>
+									{:else}
+										<p class="mt-2 text-lg font-semibold tracking-tight text-[var(--color-ink)]">
+											{item.value}
+										</p>
+									{/if}
+								</div>
+							</div>
+						</div>
+					{/each}
+				</aside>
 			</div>
 		</section>
 	{/snippet}
+
+	{#snippet cta()}{/snippet}
 </ContentPageShell>

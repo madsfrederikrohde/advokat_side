@@ -19,11 +19,13 @@
 		breadcrumbs: BreadcrumbItem[];
 		body: BodySection[];
 		sidebar?: Snippet;
+		mainContent?: Snippet;
 		cta?: Snippet;
 		related?: Snippet;
 		ctaLine1?: string;
 		ctaLine2?: string;
 		showBadge?: boolean;
+		showHeroCta?: boolean;
 	}
 
 	let {
@@ -33,16 +35,18 @@
 		breadcrumbs,
 		body,
 		sidebar,
+		mainContent,
 		cta,
 		related,
 		ctaLine1,
 		ctaLine2,
-		showBadge = true
+		showBadge = true,
+		showHeroCta = true
 	}: Props = $props();
 </script>
 
 <main data-header-theme="dark" class="bg-white pt-20 sm:pt-24">
-	<PageHero {title} {description} {image} />
+	<PageHero {title} {description} {image} showCta={showHeroCta} />
 
 	{#if breadcrumbs.length > 1}
 		<div data-header-theme="light" class="px-6 pt-8 sm:px-8 lg:px-12">
@@ -56,18 +60,22 @@
 		<AdvokatsamfundetBadge />
 	{/if}
 
-	<section data-header-theme="light" class="px-6 pb-20 pt-12 sm:px-8 sm:pt-16 lg:px-12 lg:pb-28">
-		<div
-			class="mx-auto grid max-w-[var(--container-max)] gap-12 {sidebar
-				? 'lg:grid-cols-[minmax(0,1.6fr)_minmax(16rem,0.6fr)]'
-				: ''}"
-		>
-			<ServiceArticle {body} />
-			{#if sidebar}
-				{@render sidebar()}
-			{/if}
-		</div>
-	</section>
+	{#if mainContent}
+		{@render mainContent()}
+	{:else}
+		<section data-header-theme="light" class="px-6 pb-20 pt-12 sm:px-8 sm:pt-16 lg:px-12 lg:pb-28">
+			<div
+				class="mx-auto grid max-w-[var(--container-max)] gap-12 {sidebar
+					? 'lg:grid-cols-[minmax(0,1.6fr)_minmax(16rem,0.6fr)]'
+					: ''}"
+			>
+				<ServiceArticle {body} />
+				{#if sidebar}
+					{@render sidebar()}
+				{/if}
+			</div>
+		</section>
+	{/if}
 
 	{#if cta}
 		{@render cta()}

@@ -51,7 +51,7 @@ export const lifecycleBlocks: LifecycleBlock[] = [
 		imageAlt: 'Bolig og tryg boligrådgivning',
 		roundedClass: 'rounded-r-full',
 		ctaLabel: 'Book en afklarende samtale',
-		ctaTo: '/contact',
+		ctaTo: '/kontakt',
 		cards: [
 			{
 				title: 'Gratis advokatforbehold',

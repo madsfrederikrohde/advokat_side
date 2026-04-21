@@ -15,7 +15,7 @@
 		line1 = 'Har du brug for juridisk rådgivning?',
 		line2 = 'Kontakt os i dag for en uforpligtende snak.',
 		ctaLabel = 'Bliv kontaktet',
-		ctaHref = '/contact',
+		ctaHref = '/kontakt',
 		phone = '+4520317879',
 		phoneDisplay = '20 31 78 79'
 	}: Props = $props();

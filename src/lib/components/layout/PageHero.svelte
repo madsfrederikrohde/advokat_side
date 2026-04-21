@@ -11,6 +11,7 @@
 		phoneDisplay?: string;
 		ctaLabel?: string;
 		ctaHref?: string;
+		showCta?: boolean;
 	}
 
 	let {
@@ -21,7 +22,8 @@
 		phone = '+4520317879',
 		phoneDisplay = '20 31 78 79',
 		ctaLabel = 'Bliv kontaktet',
-		ctaHref = '/contact'
+		ctaHref = '/kontakt',
+		showCta = true
 	}: Props = $props();
 </script>
 
@@ -56,23 +58,25 @@
 				{description}
 			</p>
 
-			<div class="mt-8 flex flex-wrap items-center gap-5">
-				<a href={ctaHref}>
-					<Button
-						variant="primary"
-						class="h-11 rounded-full border-[var(--color-accent)] bg-[var(--color-accent)] px-7 text-white hover:bg-[var(--color-accent-hover)]"
-					>
-						{ctaLabel} <ArrowRight class="ml-2 h-4 w-4" />
-					</Button>
-				</a>
-				<div class="flex items-center gap-2 text-sm text-white/75">
-					<Phone class="h-4 w-4" stroke-width={1.8} />
-					<span>Eller ring på</span>
-					<a href="tel:{phone}" class="font-medium text-[var(--color-accent-soft)] hover:underline">
-						{phoneDisplay}
+			{#if showCta}
+				<div class="mt-8 flex flex-wrap items-center gap-5">
+					<a href={ctaHref}>
+						<Button
+							variant="primary"
+							class="h-11 rounded-full border-[var(--color-accent)] bg-[var(--color-accent)] px-7 text-white hover:bg-[var(--color-accent-hover)]"
+						>
+							{ctaLabel} <ArrowRight class="ml-2 h-4 w-4" />
+						</Button>
 					</a>
+					<div class="flex items-center gap-2 text-sm text-white/75">
+						<Phone class="h-4 w-4" stroke-width={1.8} />
+						<span>Eller ring på</span>
+						<a href="tel:{phone}" class="font-medium text-[var(--color-accent-soft)] hover:underline">
+							{phoneDisplay}
+						</a>
+					</div>
 				</div>
-			</div>
+			{/if}
 		</div>
 	</div>
 </section>
