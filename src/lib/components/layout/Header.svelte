@@ -55,7 +55,7 @@
 				</span>
 			</a>
 
-			<div class="absolute left-1/2 z-10 hidden -translate-x-1/2 md:block">
+			<div class="ml-auto hidden md:block">
 				<div class="relative flex items-center gap-6 px-2 py-2 md:gap-8">
 					{#each navItems as item}
 						{@const active = isActive(item)}
@@ -77,13 +77,3 @@
 		</div>
 	</nav>
 </header>
-
-<a
-	href="tel:+4520317879"
-	data-header-ignore="true"
-	class="fixed right-5 top-5 z-[120] text-lg font-semibold tracking-tight transition-colors duration-300 sm:right-6 sm:top-5 {isScrolled
-		? 'text-[#454545] hover:text-neutral-900'
-		: 'text-[#7b7a73] hover:text-neutral-800'}"
->
-	20 31 78 79
-</a>

@@ -74,7 +74,7 @@
 	{#if open}
 		<div
 			role="menu"
-			class="absolute left-1/2 top-full z-50 mt-3 w-56 -translate-x-1/2 rounded-2xl border border-neutral-200/70 bg-white/98 p-3 shadow-[0_30px_80px_-30px_rgba(15,23,42,0.25)] backdrop-blur-xl"
+			class="absolute right-0 top-full z-50 mt-3 w-56 rounded-2xl border border-neutral-200/70 bg-white/98 p-3 shadow-[0_30px_80px_-30px_rgba(15,23,42,0.25)] backdrop-blur-xl"
 		>
 			<ul class="space-y-0.5">
 				{#each godtRaad as a}
