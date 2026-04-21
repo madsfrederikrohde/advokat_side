@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArrowRight, ChevronDown } from 'lucide-svelte';
+	import { ChevronDown } from 'lucide-svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 	import { inview } from '$lib/actions/inview';
 	import { lifecycleBlocks, faqs } from '$lib/data/home';
@@ -172,51 +172,6 @@
 						</div>
 					</div>
 				{/each}
-			</div>
-		</div>
-	</section>
-
-	<!-- CTA -->
-	<section
-		data-header-theme="light"
-		class="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:pb-40 lg:pt-24"
-	>
-		<div class="mx-auto max-w-4xl">
-			<div
-				use:inview
-				class="animate-inview rounded-2xl border border-[#454545] bg-[#454545] px-8 py-14 text-center sm:px-12 sm:py-20"
-			>
-				<p class="mb-5 text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-500">
-					Klar til næste skridt
-				</p>
-				<h2
-					class="mx-auto max-w-lg text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl"
-				>
-					Få afklaret købet, finansieringen eller det juridiske setup før du binder dig.
-				</h2>
-				<p class="mx-auto mt-5 max-w-md text-base font-light leading-relaxed text-neutral-400">
-					Ring på 20 31 78 79 eller skriv til hr@hansrohde.dk, hvis du vil have en hurtig og
-					erfaren vurdering af din sag.
-				</p>
-
-				<div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-					<a href="tel:+4520317879">
-						<Button
-							variant="secondary"
-							class="h-12 rounded-full bg-white px-8 text-[15px] font-medium text-neutral-900 hover:bg-neutral-100"
-						>
-							Ring nu <ArrowRight class="ml-2 h-4 w-4" />
-						</Button>
-					</a>
-					<a href="mailto:hr@hansrohde.dk">
-						<Button
-							variant="outline"
-							class="h-12 rounded-full border-white/20 bg-white/5 px-8 text-[15px] text-white hover:bg-white/10"
-						>
-							Skriv en mail
-						</Button>
-					</a>
-				</div>
 			</div>
 		</div>
 	</section>
