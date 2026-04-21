@@ -1,43 +1,4 @@
-import type { FeatureTab, LifecycleBlock, FaqItem } from '$lib/types';
-
-export const featureTabs: FeatureTab[] = [
-	{
-		id: 'boligkoeb',
-		label: 'Boligkøb',
-		title: 'Tryg køberrådgivning fra advokatforbehold til nøgleoverdragelse.',
-		description:
-			'Vi gennemgår købsaftale og dokumenter, forhandler vilkår, udarbejder godkendelsesskrivelse og følger handlen helt frem til skøde og refusionsopgørelse.',
-		media: 'https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?auto=format&fit=crop&q=80&w=1800',
-		mediaAlt: 'Huskøb og dokumentgennemgang'
-	},
-	{
-		id: 'finansiering',
-		label: 'Finansiering',
-		title: 'Uvildig second opinion på bankens finansieringsforslag.',
-		description:
-			'Få sparring om lån, rente og vilkår, og brug vores erfaring til at vurdere finansieringen en gang til, før du binder dig. Vi hjælper også, hvis du vil have sagen vurderet igen ved bankskifte.',
-		media: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1800',
-		mediaAlt: 'Finansieringsrådgivning med tal og dokumenter'
-	},
-	{
-		id: 'raadgivning',
-		label: 'Rådgivning',
-		title: 'Juridisk rådgivning om bolig, byggeri og fast ejendom.',
-		description:
-			'Vi bistår med blandt andet entreprise, hegn, servitutter, lejeret og andre spørgsmål, hvor fast ejendom, byggeri og jura mødes i praksis.',
-		media: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1800',
-		mediaAlt: 'Byggeri og juridisk rådgivning'
-	},
-	{
-		id: 'ejendomsudvikling',
-		label: 'Udvikling',
-		title: 'Erfaring med strukturering og gennemførelse af ejendomsprojekter.',
-		description:
-			'Fra udvikling og investering til komplekse transaktioner og energiprojekter. Vi skaber overblik over de juridiske lag og fører processen sikkert videre.',
-		media: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1800',
-		mediaAlt: 'Ejendomsudvikling og bygningsprojekter'
-	}
-];
+import type { LifecycleBlock, FaqItem } from '$lib/types';
 
 export const lifecycleBlocks: LifecycleBlock[] = [
 	{

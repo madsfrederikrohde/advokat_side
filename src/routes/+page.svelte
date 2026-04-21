@@ -2,40 +2,9 @@
 	import { ArrowRight, ChevronDown } from 'lucide-svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 	import { inview } from '$lib/actions/inview';
-	import { featureTabs, lifecycleBlocks, faqs } from '$lib/data/home';
+	import { lifecycleBlocks, faqs } from '$lib/data/home';
 
-	let activeTab = $state(0);
 	let openFaq = $state(0);
-	let tabRefs = $state<Array<HTMLButtonElement | null>>([]);
-
-	function handleTabNavigation(next: number) {
-		const total = featureTabs.length;
-		activeTab = ((next % total) + total) % total;
-		tabRefs[activeTab]?.focus();
-	}
-
-	function handleTabKeyDown(event: KeyboardEvent, index: number) {
-		switch (event.key) {
-			case 'ArrowRight':
-			case 'ArrowDown':
-				event.preventDefault();
-				handleTabNavigation(index + 1);
-				break;
-			case 'ArrowLeft':
-			case 'ArrowUp':
-				event.preventDefault();
-				handleTabNavigation(index - 1);
-				break;
-			case 'Home':
-				event.preventDefault();
-				handleTabNavigation(0);
-				break;
-			case 'End':
-				event.preventDefault();
-				handleTabNavigation(featureTabs.length - 1);
-				break;
-		}
-	}
 </script>
 
 <svelte:head>
@@ -94,93 +63,7 @@
 		</div>
 	</section>
 
-	<!-- Features / Tabs -->
-	<section
-		id="features"
-		data-header-theme="light"
-		class="relative scroll-mt-28 px-4 pb-20 pt-48 sm:px-6 sm:pb-24 sm:pt-56 lg:px-8 lg:pb-28 lg:pt-64"
-	>
-		<div
-			class="mx-auto grid max-w-[96rem] gap-10 lg:grid-cols-[minmax(24rem,0.82fr)_minmax(30rem,1.08fr)] xl:grid-cols-[minmax(26rem,0.88fr)_minmax(34rem,1.02fr)]"
-		>
-			<div
-				use:inview
-				class="animate-inview flex flex-col justify-between gap-10 lg:pr-8 xl:pr-14"
-			>
-				<div class="space-y-5">
-					<p class="eyebrow">Fagområder</p>
-					<h2
-						class="text-[2rem] font-semibold leading-[1.08] tracking-tight text-neutral-900 sm:text-[2.5rem]"
-					>
-						{featureTabs[activeTab].title}
-					</h2>
-					<p class="text-[1rem] leading-7 text-[rgba(92,92,92,0.82)] sm:text-[1.05rem]">
-						{featureTabs[activeTab].description}
-					</p>
-				</div>
-
-				<div
-					role="tablist"
-					aria-label="Hans Rohde fagområder"
-					class="grid grid-cols-2 gap-3 md:grid-cols-[minmax(9.5rem,1fr)_auto_minmax(9.5rem,1fr)_auto_minmax(9.5rem,1fr)_auto_minmax(9.5rem,1fr)]"
-				>
-					{#each featureTabs as tab, index}
-						<div class="contents">
-							<button
-								bind:this={tabRefs[index]}
-								role="tab"
-								id="tab-{tab.id}"
-								aria-selected={activeTab === index}
-								aria-controls="panel-{tab.id}"
-								tabindex={activeTab === index ? 0 : -1}
-								onclick={() => (activeTab = index)}
-								onkeydown={(e) => handleTabKeyDown(e, index)}
-								class="h-11 rounded-[18px] border px-4 text-[0.82rem] font-medium tracking-[-0.01em] transition-all duration-500 sm:text-[0.85rem] {activeTab ===
-								index
-									? 'scale-[1.03] border-[#5c5c5c] bg-[#5c5c5c] text-white shadow-[0_12px_24px_-22px_rgba(15,23,42,0.24)]'
-									: 'border-white/65 bg-white/55 text-[#5c5c5c]/76 shadow-[0_8px_24px_-20px_rgba(15,23,42,0.2)] backdrop-blur-md'}"
-							>
-								{tab.label}
-							</button>
-							{#if index < featureTabs.length - 1}
-								<div class="hidden items-center justify-center text-[#c8c1b7] md:flex">
-									<ArrowRight class="h-4 w-4" stroke-width={1.8} />
-								</div>
-							{/if}
-						</div>
-					{/each}
-				</div>
-			</div>
-
-			<div
-				use:inview
-				class="animate-inview relative aspect-[3504/2160] overflow-hidden rounded-[26px] bg-[#ede7df] shadow-[0_28px_80px_-46px_rgba(15,23,42,0.4)] lg:ml-auto lg:w-[88%] xl:w-[84%]"
-			>
-				{#each featureTabs as tab, index}
-					<div
-						role="tabpanel"
-						id="panel-{tab.id}"
-						aria-labelledby="tab-{tab.id}"
-						class="absolute inset-0 transition-opacity duration-500 ease-out {activeTab === index
-							? 'z-20 opacity-100'
-							: 'z-0 opacity-0'}"
-					>
-						<img
-							src={tab.media}
-							alt={tab.mediaAlt}
-							class="h-full w-full object-cover"
-							referrerpolicy="no-referrer"
-						/>
-						<div
-							class="absolute inset-0 bg-[linear-gradient(180deg,rgba(69,69,69,0.06),rgba(69,69,69,0.12)_55%,rgba(69,69,69,0.32))]"
-						></div>
-					</div>
-				{/each}
-			</div>
-		</div>
-	</section>
-
-	<!-- Lifecycle blocks -->
+	<!-- Lifecycle blocks --><!-- Lifecycle blocks -->
 	<section id="lifecycle" data-header-theme="light" class="overflow-hidden py-24 sm:py-32 lg:py-40">
 		<div class="flex flex-col gap-y-32 lg:gap-y-48">
 			{#each lifecycleBlocks as block}

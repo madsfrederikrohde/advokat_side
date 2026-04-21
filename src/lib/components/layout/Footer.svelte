@@ -63,13 +63,6 @@
 						Boligkøb
 					</a>
 					<a
-						href="/#features"
-						onclick={(e) => handleSectionClick('features', e)}
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
-					>
-						Specialer
-					</a>
-					<a
 						href="/about"
 						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
 					>

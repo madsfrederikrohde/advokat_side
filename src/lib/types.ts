@@ -30,15 +30,6 @@ export interface Service {
 	seo?: { title?: string; description?: string };
 }
 
-export interface FeatureTab {
-	id: string;
-	label: string;
-	title: string;
-	description: string;
-	media: string;
-	mediaAlt: string;
-}
-
 export interface LifecycleCard {
 	title: string;
 	description: string;
