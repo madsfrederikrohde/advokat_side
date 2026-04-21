@@ -1,4 +1,4 @@
-import type { FeatureTab, LifecycleBlock, Package, FaqItem } from '$lib/types';
+import type { FeatureTab, LifecycleBlock, FaqItem } from '$lib/types';
 
 export const featureTabs: FeatureTab[] = [
 	{
@@ -68,87 +68,6 @@ export const lifecycleBlocks: LifecycleBlock[] = [
 					'Hvis handlen ikke gennemføres efter advokatforbeholdet, koster rådgivningen ikke noget.'
 			}
 		]
-	},
-	{
-		id: 'erfaring',
-		eyebrow: 'Mere end 20 års erfaring',
-		title: 'Erfaring fra både privat boligkøb, komplekse transaktioner og store energiprojekter.',
-		description:
-			'Hans Rohde har arbejdet med alle aspekter af fast ejendom i over 20 år og har baggrund fra blandt andet Københavns Kommune, By- og Boligministeriet, Better Energy og egen advokatvirksomhed.',
-		image: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&q=80&w=1800',
-		imageAlt: 'Erfaring med ejendomsprojekter og transaktioner',
-		roundedClass: 'rounded-l-full',
-		ctaLabel: 'Læs mere om Hans Rohde',
-		ctaTo: '/about',
-		reverse: true,
-		cards: [
-			{
-				title: 'Praktisk erfaring',
-				description:
-					'Rådgivningen er formet af både myndighedsarbejde, advokatpraksis og in-house erfaring.'
-			},
-			{
-				title: 'Juridisk tyngde',
-				description:
-					'Vi arbejder med både privat bolighandel, byggeri, udvikling, investering og tvister om fast ejendom.'
-			},
-			{
-				title: 'Projektforståelse',
-				description:
-					'Komplekse ejendomsprojekter kræver mere end jura alene. Vi ser også på struktur, timing og gennemførlighed.'
-			}
-		]
-	}
-];
-
-export const packages: Package[] = [
-	{
-		name: 'Boligpakke 1',
-		price: '6.995 kr.',
-		subtitle: 'Advokatgennemgang af købsaftale og dokumenter',
-		description:
-			'Til dig der vil have en grundig juridisk gennemgang af handlen og et sikkert beslutningsgrundlag, før du godkender købet.',
-		features: [
-			'Gennemgang af købsaftale og bilag',
-			'Vurdering af servitutter og juridiske risici',
-			'Skriftlig tilbagemelding og anbefalinger',
-			'Gratis advokatforbehold før underskrift'
-		],
-		cta: 'Vælg boligpakke 1',
-		to: '/contact',
-		dark: false
-	},
-	{
-		name: 'Boligpakke 2',
-		price: '9.995 kr.',
-		subtitle: 'Gennemgang, forhandling og godkendelsesskrivelse',
-		description:
-			'Til dig der vil have juridisk sparring hele vejen gennem forhandling og accept af handlen, ikke kun en dokumentgennemgang.',
-		features: [
-			'Alt i boligpakke 1',
-			'Forhandling af juridiske vilkår',
-			'Udarbejdelse af godkendelsesskrivelse',
-			'Dialog med mægler frem til endelig handel'
-		],
-		cta: 'Vælg boligpakke 2',
-		to: '/contact',
-		dark: true
-	},
-	{
-		name: 'Boligpakke 3',
-		price: '14.495 kr.',
-		subtitle: 'Komplet pakke med finansieringsrådgivning',
-		description:
-			'Til dig der vil kombinere juridisk køberrådgivning med uvildig sparring om finansiering, lån og bankens løsningsforslag.',
-		features: [
-			'Alt i boligpakke 2',
-			'Uvildig second opinion på finansiering',
-			'Sparring om lån, rente og vilkår',
-			'Vejledning om forhandlingsmuligheder over for bank og realkredit'
-		],
-		cta: 'Vælg boligpakke 3',
-		to: '/contact',
-		dark: false
 	}
 ];
 

@@ -2,7 +2,7 @@
 	import { ArrowRight, ChevronDown } from 'lucide-svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 	import { inview } from '$lib/actions/inview';
-	import { featureTabs, lifecycleBlocks, packages, faqs } from '$lib/data/home';
+	import { featureTabs, lifecycleBlocks, faqs } from '$lib/data/home';
 
 	let activeTab = $state(0);
 	let openFaq = $state(0);
@@ -246,109 +246,6 @@
 		</div>
 	</section>
 
-	<!-- Packages -->
-	<section id="packages" data-header-theme="light" class="px-6 py-24 sm:py-32 lg:py-40">
-		<div class="mx-auto max-w-6xl">
-			<div class="max-w-2xl">
-				<p class="eyebrow">Boligpakker</p>
-				<h2 class="mt-4 section-heading">
-					Vælg den boligpakke der passer til dit køb og dit behov for sparring.
-				</h2>
-				<p class="mt-5 max-w-lg section-copy">
-					Pakkerne her er målrettet bolighandler op til 10 mio. kr. Ved større handler eller særlige
-					forhold aftales opgaven konkret.
-				</p>
-			</div>
-
-			<div class="mt-14 grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 xl:grid-cols-3">
-				{#each packages as pack}
-					<article
-						use:inview
-						class="animate-inview flex h-full flex-col rounded-[28px] border px-8 pb-10 pt-10 transition-all duration-500 hover:-translate-y-0.5 md:px-10 md:pb-12 md:pt-12 {pack.dark
-							? 'border-white/[0.06] bg-[#454545] shadow-[0_40px_92px_-34px_rgba(17,17,19,0.50),0_18px_34px_-24px_rgba(17,17,19,0.22)]'
-							: 'border-[#e8e1d6] bg-[#fbf8f3] shadow-[0_38px_88px_-34px_rgba(15,23,42,0.20),0_18px_34px_-24px_rgba(15,23,42,0.10)]'}"
-					>
-						<div>
-							<h3
-								class="text-[1.15rem] font-semibold tracking-[-0.01em] {pack.dark
-									? 'text-white'
-									: 'text-neutral-900'}"
-							>
-								{pack.name}
-							</h3>
-							<div class="mt-4 h-px w-12 {pack.dark ? 'bg-white/20' : 'bg-[#454545]/15'}"></div>
-							<p
-								class="mt-4 text-[1.65rem] font-semibold tracking-tight {pack.dark
-									? 'text-white'
-									: 'text-[#454545]'}"
-							>
-								{pack.price}
-							</p>
-							<p
-								class="mt-3 text-[15px] font-light {pack.dark
-									? 'text-white/75'
-									: 'text-neutral-500'}"
-							>
-								{pack.subtitle}
-							</p>
-							<p
-								class="mt-5 text-sm font-light {pack.dark ? 'text-white/70' : 'text-neutral-600'}"
-							>
-								{pack.description}
-							</p>
-						</div>
-
-						<div
-							class="mt-6 border-t pt-6 {pack.dark ? 'border-white/10' : 'border-[#454545]/10'}"
-						>
-							<ul class="space-y-4">
-								{#each pack.features as feature}
-									<li class="flex items-start gap-3">
-										<svg
-											viewBox="0 0 18 14"
-											class="h-[0.75rem] w-[0.9rem] shrink-0 {pack.dark
-												? 'text-white'
-												: 'text-[#454545]'}"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M1.5 7.5L5.5 11.5L16.5 1.5"
-												stroke="currentColor"
-												stroke-width="1.8"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
-										<span
-											class="text-sm font-light {pack.dark
-												? 'text-white/82'
-												: 'text-neutral-600'}"
-										>
-											{feature}
-										</span>
-									</li>
-								{/each}
-							</ul>
-						</div>
-
-						<div class="mt-8 pt-2">
-							<a href={pack.to}>
-								<Button
-									variant={pack.dark ? 'secondary' : 'primary'}
-									class="px-6 py-3 text-sm font-medium {pack.dark
-										? 'bg-white text-[#454545] shadow-[0_2px_12px_rgba(255,255,255,0.15)]'
-										: 'bg-[#454545] text-white shadow-[0_8px_24px_-8px_rgba(17,17,19,0.4)]'}"
-								>
-									{pack.cta}
-								</Button>
-							</a>
-						</div>
-					</article>
-				{/each}
-			</div>
-		</div>
-	</section>
 
 	<!-- FAQ -->
 	<section id="faq" data-header-theme="light" class="px-6 py-24 sm:py-32 lg:py-40">

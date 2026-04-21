@@ -58,17 +58,6 @@ export interface LifecycleBlock {
 	reverse?: boolean;
 }
 
-export interface Package {
-	name: string;
-	price: string;
-	subtitle: string;
-	description: string;
-	features: string[];
-	cta: string;
-	to: string;
-	dark: boolean;
-}
-
 export interface FaqItem {
 	question: string;
 	answer: string;

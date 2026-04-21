@@ -70,13 +70,6 @@
 						Specialer
 					</a>
 					<a
-						href="/#packages"
-						onclick={(e) => handleSectionClick('packages', e)}
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
-					>
-						Boligpakker
-					</a>
-					<a
 						href="/about"
 						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
 					>
