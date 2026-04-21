@@ -94,6 +94,16 @@ export interface ArticleDetail {
 	paragraphs: string[];
 }
 
+export interface GodtRaad {
+	slug: string;
+	title: string;
+	navLabel: string;
+	heroImage: { src: string; alt: string };
+	shortDescription: string;
+	body: ServiceBodySection[];
+	seo?: { title?: string; description?: string };
+}
+
 export type LegalVariant =
 	| 'advokatsamfundet'
 	| 'politikker'

@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import { navItems } from '$lib/data/nav';
 	import HeaderDropdown from '$lib/components/layout/HeaderDropdown.svelte';
+	import GodtRaadHeaderDropdown from '$lib/components/layout/GodtRaadHeaderDropdown.svelte';
 
 	let isScrolled = $state(false);
 
@@ -60,7 +61,11 @@
 						{@const active = isActive(item)}
 						{@const cls = active ? activeLink : baseLink}
 						{#if item.kind === 'dropdown'}
-							<HeaderDropdown label={item.label} to={item.to} baseClass={cls} isActive={active} />
+							{#if item.id === 'gode-raad'}
+								<GodtRaadHeaderDropdown label={item.label} to={item.to} baseClass={cls} isActive={active} />
+							{:else}
+								<HeaderDropdown label={item.label} to={item.to} baseClass={cls} isActive={active} />
+							{/if}
 						{:else}
 							<a href={item.to} class={cls}>
 								{item.label}

@@ -1,4 +1,5 @@
 import { categories, services } from '$lib/data/services';
+import { godtRaad } from '$lib/data/godtraad';
 
 export const prerender = true;
 
@@ -7,7 +8,7 @@ const SITE = 'https://hansrohde.dk';
 const staticRoutes = [
 	'/',
 	'/about',
-	'/articles',
+	'/gode-raad',
 	'/contact',
 	'/ydelser',
 	'/advokatsamfundet',
@@ -25,7 +26,8 @@ export const GET = () => {
 		...services.map((s) => ({
 			loc: `${SITE}/ydelser/${s.category}/${s.slug}`,
 			priority: '0.9'
-		}))
+		})),
+		...godtRaad.map((a) => ({ loc: `${SITE}/gode-raad/${a.slug}`, priority: '0.8' }))
 	];
 
 	const body = `<?xml version="1.0" encoding="UTF-8"?>
