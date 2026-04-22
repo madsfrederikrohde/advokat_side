@@ -28,22 +28,23 @@
 	}
 </script>
 
-<footer class="border-t border-neutral-200/80 bg-[#fafaf8]" data-header-theme="light">
+<footer class="bg-[var(--color-navy)]" data-header-theme="dark">
 	<div class="mx-auto max-w-[88rem] px-6 pb-8 pt-16 sm:px-8 sm:pt-20 lg:px-10 lg:pt-24">
 		<div
 			class="grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.72fr)_minmax(0,0.8fr)_minmax(0,0.9fr)]"
 		>
 			<!-- Brand -->
 			<div class="max-w-xl">
-				<p class="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#7b7a73]">
+				<div class="mb-5 h-[3px] w-14 bg-[var(--color-accent)]"></div>
+				<p class="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-white/60">
 					Advokatfirmaet
 				</p>
 				<p
-					class="mt-3 font-serif text-[2rem] font-medium leading-none tracking-[-0.045em] text-[#454545] sm:text-[2.35rem]"
+					class="mt-3 font-serif text-[2rem] font-medium leading-none tracking-[-0.045em] text-white sm:text-[2.35rem]"
 				>
 					Hans Rohde
 				</p>
-				<p class="mt-6 max-w-md text-[0.98rem] font-light leading-7 text-neutral-600">
+				<p class="mt-6 max-w-md text-[0.98rem] font-light leading-7 text-white/70">
 					Uvildig rådgivning om boligkøb, finansiering, byggeri og fast ejendom med fokus på
 					klarhed, kvalitet og ordentlighed i hele forløbet.
 				</p>
@@ -51,26 +52,26 @@
 
 			<!-- Navigation -->
 			<div>
-				<p class="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
+				<p class="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white/50">
 					Navigation
 				</p>
 				<div class="mt-4 flex flex-col gap-3">
 					<a
 						href="/"
 						onclick={(e) => handleSectionClick('hero', e)}
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
 						Boligkøb
 					</a>
 					<a
 						href="/om-os"
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
 						Om os
 					</a>
 					<a
 						href="/kontakt"
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
 						Kontakt
 					</a>
@@ -79,37 +80,37 @@
 
 			<!-- Legal -->
 			<div>
-				<p class="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
+				<p class="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white/50">
 					Juridisk
 				</p>
 				<div class="mt-4 flex flex-col gap-3">
 					<a
 						href="/advokatsamfundet"
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
 						Advokatsamfundet
 					</a>
 					<a
 						href="/politikker"
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
 						Politikker
 					</a>
 					<a
 						href="/forretningsbetingelser"
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
 						Forretningsbetingelser
 					</a>
 					<a
 						href="/gdpr"
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
 						GDPR
 					</a>
 					<a
 						href="/cookies"
-						class="text-[0.95rem] font-medium text-[#454545] hover:text-neutral-400"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
 						Cookiepolitik
 					</a>
@@ -118,10 +119,10 @@
 
 			<!-- Contact -->
 			<div>
-				<p class="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
+				<p class="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white/50">
 					Kontakt
 				</p>
-				<div class="mt-4 space-y-3 text-[0.95rem] font-light leading-7 text-neutral-600">
+				<div class="mt-4 space-y-3 text-[0.95rem] font-light leading-7 text-white/70">
 					<p>
 						Advokatfirmaet Hans Rohde<br />
 						Hviddingvej 47,<br />
@@ -131,13 +132,13 @@
 					<p>
 						<a
 							href="tel:+4520317879"
-							class="font-medium text-[#454545] hover:text-neutral-400"
+							class="font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 						>
 							+45 20 31 78 79
 						</a><br />
 						<a
 							href="mailto:hr@hansrohde.dk"
-							class="font-medium text-[#454545] hover:text-neutral-400"
+							class="font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 						>
 							hr@hansrohde.dk
 						</a>
@@ -147,7 +148,7 @@
 		</div>
 
 		<div
-			class="mt-12 flex flex-col gap-4 border-t border-neutral-200/80 pt-6 text-[0.8rem] font-medium tracking-wide text-[#45454570] sm:flex-row sm:items-center sm:justify-between"
+			class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[0.8rem] font-medium tracking-wide text-white/40 sm:flex-row sm:items-center sm:justify-between"
 		>
 			<p>© 2026 Advokatfirmaet Hans Rohde. Alle rettigheder forbeholdes.</p>
 			<p>

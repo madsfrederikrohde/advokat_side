@@ -42,13 +42,14 @@
 				aria-label="Advokatfirmaet Hans Rohde"
 			>
 				<span class="flex flex-col leading-none">
+					<span class="mb-1.5 h-[2px] w-8 bg-[var(--color-accent)]"></span>
 					<span
-						class="text-[0.47rem] font-semibold uppercase tracking-[0.42em] text-[#7b7a73] sm:text-[0.54rem]"
+						class="text-[0.47rem] font-semibold uppercase tracking-[0.42em] text-[var(--color-navy)]/70 sm:text-[0.54rem]"
 					>
 						Advokatfirmaet
 					</span>
 					<span
-						class="mt-1 font-serif text-[1.4rem] font-medium tracking-[-0.045em] text-[#7b7a73] sm:text-[1.65rem]"
+						class="mt-1 font-serif text-[1.4rem] font-medium tracking-[-0.045em] text-[var(--color-navy)] sm:text-[1.65rem]"
 					>
 						Hans Rohde
 					</span>
