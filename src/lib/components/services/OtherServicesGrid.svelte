@@ -6,9 +6,10 @@
 	interface Props {
 		services: Service[];
 		title?: string;
+		isMain?: boolean;
 	}
 
-	let { services, title = 'Andre ydelser' }: Props = $props();
+	let { services, title = 'Andre ydelser', isMain = false }: Props = $props();
 </script>
 
 <section class="px-6 py-24 sm:py-28 lg:py-32">
@@ -16,7 +17,7 @@
 		<h2
 			class="mb-12 text-center font-serif text-[clamp(1.75rem,3vw,2.25rem)] font-normal tracking-tight"
 		>
-			<span class="text-[var(--color-navy)]">Andre</span>
+			<span class="text-[var(--color-navy)]">{isMain ? 'Vores' : 'Andre'}</span>
 			<span class="text-[var(--color-accent)]">ydelser</span>
 		</h2>
 		<div class="grid gap-x-12 sm:grid-cols-2">
