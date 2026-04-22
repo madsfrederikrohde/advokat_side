@@ -3,8 +3,4 @@
 	import { legalContent } from '$lib/data/legal';
 </script>
 
-<svelte:head>
-	<title>GDPR – Advokatfirmaet Hans Rohde</title>
-</svelte:head>
-
 <LegalPage content={legalContent.gdpr} />

@@ -1,16 +1,36 @@
 export type HeaderContrast = 'light' | 'dark';
 
 export type NavItem =
-	| { kind: 'section'; id: string; label: string }
-	| { kind: 'route'; id: string; label: string; to: string };
+	| { kind: 'route'; id: string; label: string; to: string }
+	| { kind: 'dropdown'; id: string; label: string; to: string };
 
-export interface FeatureTab {
-	id: string;
-	label: string;
+export type ServiceCategorySlug = 'boligkoeb' | 'fast-ejendom' | 'familiearveret';
+
+export interface ServiceCategory {
+	slug: ServiceCategorySlug;
 	title: string;
 	description: string;
-	media: string;
-	mediaAlt: string;
+	order: number;
+}
+
+export interface BodySection {
+	heading?: string;
+	paragraphs?: string[];
+	bullets?: string[];
+}
+
+/** @deprecated use BodySection */
+export type ServiceBodySection = BodySection;
+
+export interface Service {
+	slug: string;
+	category: ServiceCategorySlug;
+	title: string;
+	navLabel: string;
+	heroImage: { src: string; alt: string };
+	shortDescription: string;
+	body: ServiceBodySection[];
+	seo?: { title?: string; description?: string };
 }
 
 export interface LifecycleCard {
@@ -30,17 +50,6 @@ export interface LifecycleBlock {
 	ctaTo: string;
 	cards: LifecycleCard[];
 	reverse?: boolean;
-}
-
-export interface Package {
-	name: string;
-	price: string;
-	subtitle: string;
-	description: string;
-	features: string[];
-	cta: string;
-	to: string;
-	dark: boolean;
 }
 
 export interface FaqItem {
@@ -66,6 +75,16 @@ export interface ArticleDetail {
 	title: string;
 	intro: string;
 	paragraphs: string[];
+}
+
+export interface GodtRaad {
+	slug: string;
+	title: string;
+	navLabel: string;
+	heroImage: { src: string; alt: string };
+	shortDescription: string;
+	body: ServiceBodySection[];
+	seo?: { title?: string; description?: string };
 }
 
 export type LegalVariant =
