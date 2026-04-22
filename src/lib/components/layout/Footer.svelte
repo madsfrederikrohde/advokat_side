@@ -57,11 +57,16 @@
 				</p>
 				<div class="mt-4 flex flex-col gap-3">
 					<a
-						href="/"
-						onclick={(e) => handleSectionClick('hero', e)}
+						href="/ydelser"
 						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
 					>
-						Boligkøb
+						Ydelser
+					</a>
+					<a
+						href="/gode-raad"
+						class="text-[0.95rem] font-medium text-white/85 hover:text-[var(--color-accent-soft)]"
+					>
+						Gode råd
 					</a>
 					<a
 						href="/om-os"
