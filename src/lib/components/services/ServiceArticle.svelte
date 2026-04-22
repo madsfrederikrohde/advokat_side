@@ -29,7 +29,7 @@
 			{/if}
 			{#if section.paragraphs}
 				{#each section.paragraphs as p}
-					<p>{p}</p>
+					<p>{@html p}</p>
 				{/each}
 			{/if}
 			{#if section.bullets}
