@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import PageMeta from '$lib/components/layout/PageMeta.svelte';
 	import ContentPageShell from '$lib/components/layout/ContentPageShell.svelte';
-	import PriceList from '$lib/components/priser/PriceList.svelte';
+	import FoldoutList from '$lib/components/ui/FoldoutList.svelte';
 	import ServiceArticle from '$lib/components/services/ServiceArticle.svelte';
 	import OtherServicesGrid from '$lib/components/services/OtherServicesGrid.svelte';
 	import { priserContent } from '$lib/data/priser';
@@ -12,6 +12,16 @@
 	const canonical = $derived(buildCanonical(page.url.pathname));
 	const jsonLd = $derived(
 		buildJsonLd.webPage(priserContent.seo.title, priserContent.seo.description, canonical)
+	);
+
+	const priceFoldoutItems = $derived(
+		priserContent.priceItems.map((p) => ({
+			title: p.service,
+			meta: p.fromPrice,
+			description: p.description,
+			example: p.examples,
+			href: p.href
+		}))
 	);
 </script>
 
@@ -51,7 +61,7 @@
 					</div>
 				</header>
 
-				<PriceList examples={priserContent.priceExamples} />
+				<FoldoutList items={priceFoldoutItems} initialOpen={-1} />
 
 				<ServiceArticle body={[priserContent.includes]} />
 			</div>

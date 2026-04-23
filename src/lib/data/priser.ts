@@ -1,10 +1,16 @@
 import type { BodySection } from '$lib/types';
 
-export interface PriceExample {
+export interface PriceExampleRow {
+	label: string;
+	price: string;
+}
+
+export interface PriceItem {
 	service: string;
 	href: string;
-	price: string;
-	note?: string;
+	fromPrice: string;
+	description: string;
+	examples: PriceExampleRow[];
 }
 
 export const priserContent: {
@@ -12,7 +18,7 @@ export const priserContent: {
 	shortDescription: string;
 	heroImage: { src: string; alt: string };
 	intro: BodySection;
-	priceExamples: PriceExample[];
+	priceItems: PriceItem[];
 	includes: BodySection;
 	seo: { title: string; description: string };
 } = {
@@ -30,28 +36,74 @@ export const priserContent: {
 			'Vi tilbyder fast pris på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer og ingen timepriset fakturering – blot en forudsigelig og konkurrencedygtig pris for en erfaren boligadvokat.'
 		]
 	},
-	priceExamples: [
-		{ service: 'Køb af villa', href: '/ydelser/boligkoeb/villa', price: '8.500 kr.' },
+	priceItems: [
+		{
+			service: 'Køb af villa',
+			href: '/ydelser/boligkoeb/villa',
+			fromPrice: 'fra 8.500 kr.',
+			description:
+				'Fuld juridisk gennemgang af købsaftale, tilstandsrapport, energimærke og øvrige dokumenter, samt tinglysning af skøde. Prisen afhænger af handelssummen.',
+			examples: [
+				{ label: 'Villa op til 5.000.000 kr.', price: '8.500 kr.' },
+				{ label: 'Villa op til 10.000.000 kr.', price: '9.995 kr.' },
+				{ label: 'Villa over 10.000.000 kr.', price: 'efter aftale' }
+			]
+		},
 		{
 			service: 'Køb af ejerlejlighed',
 			href: '/ydelser/boligkoeb/ejerlejlighed',
-			price: '8.500 kr.'
+			fromPrice: 'fra 8.500 kr.',
+			description:
+				'Gennemgang af købsaftale, ejerforeningens regnskaber og vedtægter samt tinglysning af skøde. Prisen afhænger af handelssummen.',
+			examples: [
+				{ label: 'Ejerlejlighed op til 5.000.000 kr.', price: '8.500 kr.' },
+				{ label: 'Ejerlejlighed op til 10.000.000 kr.', price: '9.995 kr.' },
+				{ label: 'Ejerlejlighed over 10.000.000 kr.', price: 'efter aftale' }
+			]
 		},
-		{ service: 'Køb af sommerhus', href: '/ydelser/boligkoeb/sommerhus', price: '9.500 kr.' },
+		{
+			service: 'Køb af sommerhus',
+			href: '/ydelser/boligkoeb/sommerhus',
+			fromPrice: 'fra 9.500 kr.',
+			description:
+				'Sommerhushandler kræver særlig opmærksomhed på planlovens regler om helårsanvendelse, servitutter og eventuelle udlejningsforhold. Prisen inkluderer tinglysning af skøde.',
+			examples: [
+				{ label: 'Sommerhus op til 5.000.000 kr.', price: '9.500 kr.' },
+				{ label: 'Sommerhus over 5.000.000 kr.', price: '10.995 kr.' }
+			]
+		},
 		{
 			service: 'Køb af andelsbolig',
 			href: '/ydelser/boligkoeb/andelsbolig',
-			price: '7.500 kr.'
+			fromPrice: 'fra 7.500 kr.',
+			description:
+				'Vi gennemgår overdragelsesaftalen, foreningens regnskab og vedtægter samt vurderer andelsværdien og eventuelle forkøbsrettigheder.',
+			examples: [
+				{ label: 'Andelsbolig op til 2.000.000 kr.', price: '7.500 kr.' },
+				{ label: 'Andelsbolig over 2.000.000 kr.', price: '8.500 kr.' }
+			]
 		},
 		{
 			service: 'Testamente',
 			href: '/ydelser/familiearveret/testamente',
-			price: 'fra 3.500 kr.'
+			fromPrice: 'fra 3.500 kr.',
+			description:
+				'Oprettelse af individuelt tilpasset testamente og rådgivning om arvefordeling. Prisen afhænger af antallet af testatorer og kompleksiteten af dine ønsker.',
+			examples: [
+				{ label: 'Enkelt testamente', price: '3.500 kr.' },
+				{ label: 'Fælles testamente (par)', price: '4.500 kr.' }
+			]
 		},
 		{
 			service: 'Ægtepagt',
 			href: '/ydelser/familiearveret/aegtepagt',
-			price: 'fra 3.500 kr.'
+			fromPrice: 'fra 3.500 kr.',
+			description:
+				'Udarbejdelse og tinglysning af ægtepagt, herunder rådgivning om formuefællesskab, særeje og kombinationsmodeller.',
+			examples: [
+				{ label: 'Almindelig ægtepagt', price: '3.500 kr.' },
+				{ label: 'Ægtepagt med kombinationssæreje', price: '4.500 kr.' }
+			]
 		}
 	],
 	includes: {
