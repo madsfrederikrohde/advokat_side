@@ -1,13 +1,16 @@
 import { categories, services } from '$lib/data/services';
 import { godtRaad } from '$lib/data/godtraad';
+import { locations } from '$lib/data/locations';
 import { SITE_URL } from '$lib/config';
 
 export const prerender = true;
 
 const staticRoutes = [
 	{ path: '/', priority: '1.0' },
+	{ path: '/boligadvokat', priority: '0.9' },
 	{ path: '/ydelser', priority: '0.9' },
 	{ path: '/gode-raad', priority: '0.9' },
+	{ path: '/priser', priority: '0.7' },
 	{ path: '/om-os', priority: '0.7' },
 	{ path: '/kontakt', priority: '0.7' },
 	{ path: '/advokatsamfundet', priority: '0.5' },
@@ -26,7 +29,10 @@ export const GET = () => {
 			loc: `${SITE_URL}/ydelser/${s.category}/${s.slug}`,
 			priority: '0.9'
 		})),
-		...godtRaad.map((a) => ({ loc: `${SITE_URL}/gode-raad/${a.slug}`, priority: '0.8' }))
+		...godtRaad.map((a) => ({ loc: `${SITE_URL}/gode-raad/${a.slug}`, priority: '0.8' })),
+		...locations
+			.filter((l) => !l.draft)
+			.map((l) => ({ loc: `${SITE_URL}/boligadvokat/${l.slug}`, priority: '0.8' }))
 	];
 
 	const body = `<?xml version="1.0" encoding="UTF-8"?>

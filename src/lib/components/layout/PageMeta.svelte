@@ -8,6 +8,7 @@
 		image?: string;
 		type?: 'website' | 'article' | 'profile';
 		jsonLd?: unknown | unknown[];
+		noindex?: boolean;
 	}
 
 	let {
@@ -16,7 +17,8 @@
 		canonical,
 		image,
 		type = 'website',
-		jsonLd
+		jsonLd,
+		noindex = false
 	}: Props = $props();
 
 	const fullTitle = $derived(title.includes(SITE_NAME) ? title : `${title} – ${SITE_NAME}`);
@@ -31,6 +33,9 @@
 <svelte:head>
 	<title>{fullTitle}</title>
 	<meta name="description" content={description} />
+	{#if noindex}
+		<meta name="robots" content="noindex, follow" />
+	{/if}
 	<link rel="canonical" href={canonical} />
 	<meta property="og:type" content={type} />
 	<meta property="og:title" content={fullTitle} />

@@ -20,7 +20,15 @@
 		email: 'hr@hansrohde.dk',
 		areaServed: 'Denmark',
 		description:
-			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Advokatfirmaet Hans Rohde.'
+			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Advokatfirmaet Hans Rohde.',
+		contactPoint: {
+			'@type': 'ContactPoint',
+			telephone: '+4520317879',
+			email: 'hr@hansrohde.dk',
+			contactType: 'customer service',
+			areaServed: 'DK',
+			availableLanguage: ['Danish', 'English']
+		}
 	};
 
 	// Page transitions via View Transitions API

@@ -39,6 +39,29 @@ export const buildJsonLd = {
 			publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL }
 		};
 	},
+	localLegalService(
+		location: { name: string; type: 'by' | 'kommune' | 'bydel' | 'region' },
+		canonical: string
+	) {
+		const areaType =
+			location.type === 'region'
+				? 'AdministrativeArea'
+				: location.type === 'kommune'
+					? 'AdministrativeArea'
+					: 'City';
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'LegalService',
+			name: SITE_NAME,
+			serviceType: 'Boligadvokat',
+			description: `Boligadvokat i ${location.name}. Rådgivning om køb og salg af bolig.`,
+			url: canonical,
+			areaServed: { '@type': areaType, name: location.name },
+			telephone: '+4520317879',
+			email: 'hr@hansrohde.dk',
+			provider: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL }
+		};
+	},
 	webPage(title: string, description: string, canonical: string) {
 		return {
 			'@context': 'https://schema.org',
