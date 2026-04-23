@@ -33,7 +33,7 @@ const makePlaceholderBody = (title: string, category: string): Service['body'] =
 	{
 		heading: `Boligadvokat med +25 års erfaring i rådgivning om ${title.toLowerCase()}`,
 		paragraphs: [
-			`Hos Advokatfirmaet Hans Rohde har vi specialiseret os i ${category.toLowerCase()} og rådgiver dagligt klienter om ${title.toLowerCase()}. Vi sikrer, at alle juridiske forhold er afklaret, så du kan træffe beslutninger på et oplyst grundlag.`,
+			`Hos Ejendomsadvokaterne har vi specialiseret os i ${category.toLowerCase()} og rådgiver dagligt klienter om ${title.toLowerCase()}. Vi sikrer, at alle juridiske forhold er afklaret, så du kan træffe beslutninger på et oplyst grundlag.`,
 			'Vi gennemgår alle relevante dokumenter, rådgiver dig om indholdet og sørger for, at dine interesser bliver varetaget gennem hele forløbet.'
 		]
 	},

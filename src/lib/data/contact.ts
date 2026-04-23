@@ -14,12 +14,12 @@ export const contactContent: {
 	body: BodySection[];
 	seo: { title: string; description: string };
 } = {
-	title: 'Kontakt Advokatfirmaet Hans Rohde',
+	title: 'Kontakt Ejendomsadvokaterne',
 	shortDescription:
 		'Har du spørgsmål om boligkøb, finansiering, byggeri eller ejendomsudvikling, er du velkommen til at tage kontakt. Vi vender gerne tilbage med en indledende vurdering af sagen.',
 	heroImage: {
 		src: '/copenhagencityy.jpg',
-		alt: 'Advokatfirmaet Hans Rohde – Rødovre'
+		alt: 'Ejendomsadvokaterne v/ Hans Rohde – Rødovre'
 	},
 	body: [
 		{
@@ -33,6 +33,6 @@ export const contactContent: {
 	seo: {
 		title: 'Kontakt',
 		description:
-			'Kontakt Advokatfirmaet Hans Rohde. Ring, skriv eller brug kontaktformularen for en uforpligtende snak om din sag.'
+			'Kontakt Ejendomsadvokaterne v/ Hans Rohde. Ring, skriv eller brug kontaktformularen for en uforpligtende snak om din sag.'
 	}
 };

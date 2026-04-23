@@ -5,7 +5,7 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 		eyebrow: 'Advokatsamfundet',
 		title: 'Oplysninger om branchetilknytning og de rammer, vi arbejder under.',
 		intro:
-			'Advokatfirmaet Hans Rohde udøver advokatvirksomhed under de regler, der gælder for advokater i Danmark. Siden her samler de overordnede oplysninger om tilsyn, etiske regler og den professionelle ramme omkring rådgivningen.',
+			'Ejendomsadvokaterne v/ Hans Rohde udøver advokatvirksomhed under de regler, der gælder for advokater i Danmark. Siden her samler de overordnede oplysninger om tilsyn, etiske regler og den professionelle ramme omkring rådgivningen.',
 		sections: [
 			{
 				heading: 'Professionel ramme',
@@ -78,7 +78,7 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 		eyebrow: 'GDPR',
 		title: 'Behandling af personoplysninger med respekt for nødvendighed, sikkerhed og fortrolighed.',
 		intro:
-			'Når du kontakter Advokatfirmaet Hans Rohde eller indgår i et sagsforløb, kan der behandles personoplysninger som led i kommunikationen og den juridiske rådgivning. Behandlingen sker med fokus på nødvendighed og fortrolighed.',
+			'Når du kontakter Ejendomsadvokaterne v/ Hans Rohde eller indgår i et sagsforløb, kan der behandles personoplysninger som led i kommunikationen og den juridiske rådgivning. Behandlingen sker med fokus på nødvendighed og fortrolighed.',
 		sections: [
 			{
 				heading: 'Formål',

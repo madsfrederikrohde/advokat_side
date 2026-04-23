@@ -5,7 +5,7 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import favicon from '$lib/assets/favicon.svg';
-	import { SITE_URL } from '$lib/config';
+	import { SITE_URL, BRAND_NAME, LEGAL_NAME, PREVIOUS_NAME } from '$lib/config';
 
 	let { children } = $props();
 
@@ -14,13 +14,15 @@
 	const orgJsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'LegalService',
-		name: 'Advokatfirmaet Hans Rohde',
-		url: 'https://hansrohde.dk',
+		name: BRAND_NAME,
+		legalName: LEGAL_NAME,
+		alternateName: PREVIOUS_NAME,
+		url: SITE_URL,
 		telephone: '+4520317879',
 		email: 'hr@hansrohde.dk',
 		areaServed: 'Denmark',
 		description:
-			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Advokatfirmaet Hans Rohde.',
+			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter hos Ejendomsadvokaterne v/ Hans Rohde.',
 		contactPoint: {
 			'@type': 'ContactPoint',
 			telephone: '+4520317879',
@@ -65,7 +67,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<link rel="canonical" href={canonical} />
-	<meta property="og:site_name" content="Advokatfirmaet Hans Rohde" />
+	<meta property="og:site_name" content={BRAND_NAME} />
 	<meta property="og:locale" content="da_DK" />
 	{@html `<script type="application/ld+json">${JSON.stringify(orgJsonLd)}</script>`}
 </svelte:head>

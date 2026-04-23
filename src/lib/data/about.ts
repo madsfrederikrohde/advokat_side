@@ -10,7 +10,7 @@ export const aboutContent: {
 } = {
 	title: 'Erfaring, ro og præcision i rådgivning om fast ejendom.',
 	shortDescription:
-		'Advokatfirmaet Hans Rohde arbejder med fast ejendom, bolighandler, byggeri og ejendomsudvikling. Målet er ikke blot korrekt jura, men et forløb der føles klart, trygt og ordentligt fra første vurdering til endelig beslutning.',
+		'Ejendomsadvokaterne arbejder med fast ejendom, bolighandler, byggeri og ejendomsudvikling. Målet er ikke blot korrekt jura, men et forløb der føles klart, trygt og ordentligt fra første vurdering til endelig beslutning.',
 	heroImage: {
 		src: '/copenhagencityy.jpg',
 		alt: 'Hans Rohde med udsigt over København'

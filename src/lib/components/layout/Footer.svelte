@@ -36,13 +36,13 @@
 			<!-- Brand -->
 			<div class="max-w-xl">
 				<div class="mb-5 h-[3px] w-14 bg-[var(--color-accent)]"></div>
-				<p class="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-white/60">
-					Advokatfirmaet
-				</p>
 				<p
-					class="mt-3 font-serif text-[2rem] font-medium leading-none tracking-[-0.045em] text-white sm:text-[2.35rem]"
+					class="font-serif text-[1.9rem] font-medium leading-none tracking-[-0.035em] text-white sm:text-[2.2rem]"
 				>
-					Hans Rohde
+					Ejendomsadvokaterne
+				</p>
+				<p class="mt-4 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-white/60">
+					v/ Hans Rohde
 				</p>
 				<p class="mt-6 max-w-md text-[0.98rem] font-light leading-7 text-white/70">
 					Uvildig rådgivning om boligkøb, finansiering, byggeri og fast ejendom med fokus på
@@ -129,7 +129,7 @@
 				</p>
 				<div class="mt-4 space-y-3 text-[0.95rem] font-light leading-7 text-white/70">
 					<p>
-						Advokatfirmaet Hans Rohde<br />
+						Ejendomsadvokaterne v/ Hans Rohde<br />
 						Hviddingvej 47,<br />
 						2610 Rødovre<br />
 						CVR nr.: 31 30 46 87
@@ -155,7 +155,7 @@
 		<div
 			class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[0.8rem] font-medium tracking-wide text-white/40 sm:flex-row sm:items-center sm:justify-between"
 		>
-			<p>© 2026 Advokatfirmaet Hans Rohde. Alle rettigheder forbeholdes.</p>
+			<p>© 2026 Ejendomsadvokaterne v/ Hans Rohde. Alle rettigheder forbeholdes.</p>
 			<p>
 				Denne side anvender nødvendige cookies til drift og sikkerhed. Se cookiepolitikken for mere
 				information.

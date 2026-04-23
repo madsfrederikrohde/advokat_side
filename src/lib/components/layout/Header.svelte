@@ -39,19 +39,19 @@
 			<a
 				href="/"
 				class="relative z-20 shrink-0 opacity-95 transition-opacity duration-300 hover:opacity-100"
-				aria-label="Advokatfirmaet Hans Rohde"
+				aria-label="Ejendomsadvokaterne v/ Hans Rohde"
 			>
 				<span class="flex flex-col leading-none">
 					<span class="mb-1.5 h-[2px] w-8 bg-[var(--color-accent)]"></span>
 					<span
-						class="text-[0.47rem] font-semibold uppercase tracking-[0.42em] text-[var(--color-navy)]/70 sm:text-[0.54rem]"
+						class="font-serif text-[1.25rem] font-medium tracking-[-0.035em] text-[var(--color-navy)] sm:text-[1.5rem]"
 					>
-						Advokatfirmaet
+						Ejendomsadvokaterne
 					</span>
 					<span
-						class="mt-1 font-serif text-[1.4rem] font-medium tracking-[-0.045em] text-[var(--color-navy)] sm:text-[1.65rem]"
+						class="mt-1.5 text-[0.47rem] font-semibold uppercase tracking-[0.38em] text-[var(--color-navy)]/70 sm:text-[0.54rem]"
 					>
-						Hans Rohde
+						v/ Hans Rohde
 					</span>
 				</span>
 			</a>

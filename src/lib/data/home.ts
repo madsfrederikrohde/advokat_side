@@ -19,7 +19,7 @@ export const homeContent: {
 			heading: 'Uvildig rådgivning om boligkøb og fast ejendom',
 			paragraphs: [
 				'Alle kan i princippet tilbyde køberrådgivning. Men kun advokater er lovmæssigt forpligtet til at yde uvildig rådgivning uden provision eller binding til bestemte banker, kreditforeninger eller forsikringsselskaber.',
-				'Advokatfirmaet Hans Rohde arbejder med fast ejendom, bolighandler, byggeri og ejendomsudvikling. Målet er ikke blot korrekt jura, men et forløb der føles klart, trygt og ordentligt fra første vurdering til endelig beslutning.'
+				'Ejendomsadvokaterne arbejder med fast ejendom, bolighandler, byggeri og ejendomsudvikling. Målet er ikke blot korrekt jura, men et forløb der føles klart, trygt og ordentligt fra første vurdering til endelig beslutning.'
 			]
 		},
 		{
@@ -36,7 +36,7 @@ export const homeContent: {
 	seo: {
 		title: 'Boligkøb og fast ejendom',
 		description:
-			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Advokatfirmaet Hans Rohde, Rødovre.'
+			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Ejendomsadvokaterne v/ Hans Rohde, Rødovre.'
 	}
 };
 
