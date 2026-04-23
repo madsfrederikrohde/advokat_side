@@ -33,10 +33,10 @@
 	breadcrumbs={[
 		{ label: 'Forside', href: '/' },
 		{ label: 'Gode råd', href: '/gode-raad' },
-		{ label: article.title }
+		{ label: article.navLabel }
 	]}
 	body={article.body}
-	ctaLine1={`Har du spørgsmål om ${article.title.toLowerCase()}?`}
+	ctaLine1={`Har du spørgsmål om ${article.navLabel.toLowerCase()}?`}
 	ctaLine2="Kontakt os i dag for en uforpligtende snak."
 >
 	{#snippet sidebar()}
