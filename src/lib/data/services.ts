@@ -196,8 +196,8 @@ export const services: Service[] = [
 				heading: 'Byggegrund — først noget værd, når du ved, hvad du må bygge',
 				paragraphs: [
 					'En byggegrund er først noget værd, når du reelt kan bygge det hus, du drømmer om. Det er her, vi starter.',
-					'Vi undersøger, om lokalplan, kommuneplan, servitutter og byggelovgivning tillader dit projekt. Vi gennemgår skøde og købsaftale, tjekker vejret, byggemodning, forsyninger (kloak, vand, varme, el, internet), jordbund og eventuel forurening. Hvis der er servitutter, der begrænser byggehøjde, udnyttelsesgrad eller anvendelse, får du det at vide — før handlen bliver endelig.',
-					'Grunde med uafklarede forhold, beskyttelseslinjer eller en lokalplan under udarbejdelse er særligt risikable. Det er også her, tidlig rådgivning ofte redder projektet eller er ud af en ufordelagtig situation.'
+					'Vi undersøger, om lokalplan, kommuneplan, servitutter og byggelovgivning tillader dit projekt. Vi gennemgår skøde og købsaftale, tjekker vejret, byggemodning, forsyninger (kloak, vand, varme, el, internet), jordbund og eventuel forurening. Hvis der er servitutter, der begrænser byggehøjde, udnyttelsesgrad eller anvendelse, får du det at vide — før handlen bliver endelig. Har du brug for et dybere myndighedstjek, kan du læse mere om <a href="/ydelser/fast-ejendom/planlovgivning" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">planlovgivning</a>.',
+					'Grunde med uafklarede forhold, beskyttelseslinjer eller en lokalplan under udarbejdelse er særligt risikable. Det er også her, tidlig rådgivning ofte redder projektet eller dig ud af en ufordelagtig situation. Hvis projektet allerede er i gang og er kørt fast, hjælper vi også med <a href="/ydelser/fast-ejendom/byggesag" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">byggesager</a>.'
 				]
 			},
 			{
@@ -309,8 +309,8 @@ export const services: Service[] = [
 			{
 				heading: 'Mangler — du har rettigheder, men ikke i al evighed',
 				paragraphs: [
-					'Opdager du først efter overtagelsen, at der er noget galt — fugtskader, skjulte mangler, ulovligt byggeri, råd — så har du rettigheder. Men fristerne er korte. Jo hurtigere du reagerer, jo større er chancen for at få afhjælpning, prisafslag eller erstatning.',
-					'Vi vurderer, om kravet dækkes af ejerskifteforsikringen eller sælgers ansvar eller slet ikke. Vi forhandler først — og fører sag, hvis det er nødvendigt.',
+					'Opdager du først efter overtagelsen, at der er noget galt — fugtskader, skjulte mangler, ulovligt byggeri, råd — så har du rettigheder. Men fristerne er korte. Jo hurtigere du reagerer, jo større er chancen for at få afhjælpning, prisafslag eller erstatning. Læs også vores guide til <a href="/gode-raad/tilstandsrapport-og-ejerskifteforsikring" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">tilstandsrapport og ejerskifteforsikring</a>.',
+					'Vi vurderer, om kravet dækkes af <a href="/ydelser/fast-ejendom/ejerskifteforsikring" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">ejerskifteforsikringen</a> eller sælgers ansvar eller slet ikke. Vi forhandler først — og fører sag, hvis det er nødvendigt.',
 					'Vigtigst: vi siger det, som det er. Hvis kravet er svagt, bruger vi ikke din tid og penge på en sag, du ikke kan vinde.'
 				]
 			},
@@ -336,7 +336,7 @@ export const services: Service[] = [
 				paragraphs: [
 					'Ejerskifteforsikringen lyder som en fuld kaskoforsikring for din bolig. Det er den sjældent.',
 					'Dækningen er i praksis snævert afgrænset: kun skjulte mangler, ikke nævnt i tilstandsrapporten, som du ikke burde have set. Slid, vedligeholdelse, ulovligt byggeri og forhold, den bygningssagkyndige burde have opdaget, er ikke med. Og selvrisikoen er ofte så høj, at små skader reelt ikke dækkes.',
-					'Vi gennemgår forsikringsbetingelserne, før du vælger — og bistår med anmeldelse og tvist, hvis selskabet afslår. Vi kender de typiske afslagsårsager, og vi siger klart til, når det er værd at klage, og når det ikke er.'
+					'Vi gennemgår forsikringsbetingelserne, før du vælger — og bistår med anmeldelse og tvist, hvis selskabet afslår. Vi kender de typiske afslagsårsager, og vi siger klart til, når det er værd at klage, og når det ikke er. Er skaden allerede opstået, kan du også læse om <a href="/ydelser/fast-ejendom/mangler-ved-fast-ejendom" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">mangler ved fast ejendom</a>.'
 				]
 			},
 			{
@@ -480,8 +480,8 @@ export const services: Service[] = [
 			{
 				heading: 'Planlovgivning — fra lokalplan til Planklagenævnet',
 				paragraphs: [
-					'Lokalplan, kommuneplan og dispensation afgør, hvad du må bygge og ændre på din ejendom. Vi kender både reglerne og forvaltningspraksis.',
-					'Med baggrund fra Københavns Kommune, By- og Boligministeriet og 20+ års arbejde med plan- og byggesager har vi en særlig indsigt i sagsgangen, klagesystemets nåleøjer og domstolenes tilgang. Vi rådgiver ejere, investorer, bygherrer og grundejerforeninger.'
+					'Lokalplan, kommuneplan og dispensation afgør, hvad du må bygge og ændre på din ejendom. Vi kender både reglerne og forvaltningspraksis. Hvis du står før et grundkøb, kan du med fordel læse om <a href="/ydelser/boligkoeb/byggegrund" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">køb af byggegrund</a>.',
+					'Med baggrund fra Københavns Kommune, By- og Boligministeriet og 20+ års arbejde med plan- og byggesager har vi en særlig indsigt i sagsgangen, klagesystemets nåleøjer og domstolenes tilgang. Vi rådgiver ejere, investorer, bygherrer og grundejerforeninger. Er sagen allerede låst i kommunen, hjælper vi også med <a href="/ydelser/fast-ejendom/byggesag" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">hjælp til din byggesag</a>.'
 				]
 			},
 			{
@@ -505,7 +505,7 @@ export const services: Service[] = [
 				heading: 'Byggesag — vi får den i gang igen',
 				paragraphs: [
 					'Byggesagen er ofte den del af byggeriet, der går i stå. Kommunens sagsbehandling trækker ud, nabohøringen giver modstand, eller I modtager et påbud om lovliggørelse, ingen havde regnet med.',
-					'Vi hjælper private, virksomheder og mæglere med både almindelige byggesager og de komplicerede: ulovligt byggeri, manglende færdigmelding, BBR-fejl, nabohøring med modstand, byggeri inden for beskyttelseslinjer. Vi rykker hurtigt og kender sagsgangene indefra. Vi har særligt kendskab til fredede ejendomme fra mange sager.'
+					'Vi hjælper private, virksomheder og mæglere med både almindelige byggesager og de komplicerede: ulovligt byggeri, manglende færdigmelding, BBR-fejl, nabohøring med modstand, byggeri inden for beskyttelseslinjer. Vi rykker hurtigt og kender sagsgangene indefra. Vi har særligt kendskab til fredede ejendomme fra mange sager. Mange byggesager hænger tæt sammen med <a href="/ydelser/fast-ejendom/planlovgivning" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">planlovgivning</a> og starter allerede ved <a href="/ydelser/boligkoeb/byggegrund" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">køb af byggegrund</a>.'
 				]
 			},
 			{
@@ -627,7 +627,7 @@ export const services: Service[] = [
 				heading: 'Retssager — vi fører sagen, men kun hvis den er værd at føre',
 				paragraphs: [
 					'De fleste tvister kan løses uden retssag. Forhandling, forlig eller klageinstans er billigere, hurtigere og mere forudsigelige. Men når modparten ikke vil forhandle, eller sagen kun kan afgøres af retten, fører vi den.',
-					'Vi har ført sager for byretten, og flere klagenævn inden for fast ejendom, entrepriseret, erhvervsleje og naboforhold. Og vi vurderer realistisk, før vi går i gang — chancer, omkostninger og risici.'
+					'Vi har ført sager for byretten, og flere klagenævn inden for fast ejendom, entrepriseret, erhvervsleje og naboforhold. Har din sag primært karakter af en ejendomstvist, kan du læse mere om <a href="/ydelser/fast-ejendom/tvister-og-klagesager" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">tvister og klagesager</a>. Og vi vurderer realistisk, før vi går i gang — chancer, omkostninger og risici.'
 				]
 			},
 			{
