@@ -8,12 +8,12 @@
 	let { body }: Props = $props();
 </script>
 
-<article class="rich-prose">
+<article class="rich-prose max-w-2xl">
 	{#each body as section, i}
 		<div class="{i > 0 ? 'mt-12' : ''}">
 			{#if section.heading}
 				<h2
-					class="mb-5 font-serif text-[clamp(1.4rem,2.4vw,1.85rem)] font-normal leading-tight tracking-tight text-[var(--color-navy)]"
+					class="mb-5 font-serif {i === 0 ? 'text-[clamp(1.8rem,3.2vw,2.2rem)]' : 'text-[clamp(1.4rem,2.4vw,1.85rem)]'} font-normal leading-tight tracking-tight text-[var(--color-navy)]"
 				>
 					{#if i === 0}
 						<span class="text-[var(--color-navy)]"
