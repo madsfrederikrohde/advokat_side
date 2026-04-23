@@ -76,7 +76,7 @@
 	{#if open}
 		<div
 			role="menu"
-			class="absolute right-0 top-full z-50 mt-3 w-[min(64rem,92vw)] rounded-2xl border border-neutral-200/70 bg-white/98 p-8 shadow-[0_30px_80px_-30px_rgba(15,23,42,0.25)] backdrop-blur-xl"
+			class="fixed left-1/2 top-[4.75rem] z-50 w-[min(64rem,92vw)] -translate-x-1/2 rounded-2xl border border-neutral-200/70 bg-white/98 p-8 shadow-[0_30px_80px_-30px_rgba(15,23,42,0.25)] backdrop-blur-xl"
 		>
 			<div class="grid gap-10 md:grid-cols-3">
 				{#each categories as cat}

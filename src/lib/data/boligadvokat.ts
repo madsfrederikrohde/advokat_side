@@ -18,8 +18,8 @@ export const boligadvokatContent: {
 		{
 			heading: 'Boligadvokater til lavere pris: No cure – no pay',
 			paragraphs: [
-				'Hos Ejendomsadvokaterne arbejder vi på no cure – no pay-vilkår. Det betyder, at du ikke betaler advokatsalær, hvis handlen ikke gennemføres. Vores honorar forfalder først til betaling, når du har overtaget din nye bolig – og det er der en god grund til. Et boligkøb er forbundet med mange usikkerhedsmomenter, og vi mener, at du som køber ikke bør bære den fulde økonomiske risiko alene. Med vores model er vi med dig hele vejen, og vores interesse er den samme som din: at handlen lykkes.',
-				'Vi tilbyder fast pris på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer eller timepriset fakturering. Du får en erfaren boligadvokat til en forudsigelig og konkurrencedygtig pris.'
+				'Hos Ejendomsadvokaterne arbejder vi på <a href="/priser" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">no cure – no pay</a>-vilkår. Det betyder, at du ikke betaler advokatsalær, hvis handlen ikke gennemføres. Vores honorar forfalder først til betaling, når du har overtaget din nye bolig – og det er der en god grund til. Et boligkøb er forbundet med mange usikkerhedsmomenter, og vi mener, at du som køber ikke bør bære den fulde økonomiske risiko alene. Med vores model er vi med dig hele vejen, og vores interesse er den samme som din: at handlen lykkes.',
+				'Vi tilbyder <a href="/priser" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">fast pris</a> på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer eller timepriset fakturering. Du får en erfaren boligadvokat til en forudsigelig og konkurrencedygtig pris.'
 			]
 		},
 		{
