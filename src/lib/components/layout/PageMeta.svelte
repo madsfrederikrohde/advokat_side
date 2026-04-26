@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SITE_URL, SITE_NAME } from '$lib/config';
+	import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '$lib/config';
 
 	interface Props {
 		title: string;
@@ -23,7 +23,11 @@
 
 	const fullTitle = $derived(title.includes(SITE_NAME) ? title : `${title} – ${SITE_NAME}`);
 	const absImage = $derived(
-		image ? (image.startsWith('http') ? image : `${SITE_URL}${image}`) : undefined
+		image
+			? image.startsWith('http')
+				? image
+				: `${SITE_URL}${image}`
+			: `${SITE_URL}${DEFAULT_OG_IMAGE}`
 	);
 	const blocks = $derived(
 		jsonLd === undefined ? [] : Array.isArray(jsonLd) ? jsonLd : [jsonLd]
@@ -41,15 +45,11 @@
 	<meta property="og:title" content={fullTitle} />
 	<meta property="og:description" content={description} />
 	<meta property="og:url" content={canonical} />
-	{#if absImage}
-		<meta property="og:image" content={absImage} />
-	{/if}
+	<meta property="og:image" content={absImage} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={fullTitle} />
 	<meta name="twitter:description" content={description} />
-	{#if absImage}
-		<meta name="twitter:image" content={absImage} />
-	{/if}
+	<meta name="twitter:image" content={absImage} />
 	{#each blocks as block}
 		{@html `<script type="application/ld+json">${JSON.stringify(block)}</script>`}
 	{/each}

@@ -12,7 +12,9 @@ import {
 	CONTACT,
 	SAME_AS,
 	AREAS_SERVED,
-	KNOWS_ABOUT
+	KNOWS_ABOUT,
+	BRAND_LOGO,
+	DEFAULT_OG_IMAGE
 } from '$lib/config';
 import type { Service, GodtRaad, FaqItem } from '$lib/types';
 
@@ -52,6 +54,8 @@ export const organizationNode = () => ({
 	vatID: `DK${CONTACT.cvr}`,
 	taxID: CONTACT.cvr,
 	priceRange: '$$',
+	logo: { '@type': 'ImageObject', url: `${SITE_URL}${BRAND_LOGO}` },
+	image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
 	address: postalAddressNode(),
 	geo: {
 		'@type': 'GeoCoordinates',

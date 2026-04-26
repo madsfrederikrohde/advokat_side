@@ -13,6 +13,11 @@ export const PREVIOUS_NAME = 'Advokatfirmaet Hans Rohde';
 
 export const SITE_NAME = BRAND_NAME;
 
+// Brand assets used in JSON-LD `logo`/`image` and as OG fallback. Paths are
+// site-absolute so they can be turned into full URLs with SITE_URL.
+export const BRAND_LOGO = '/logo.png';
+export const DEFAULT_OG_IMAGE = '/copenhagencityy.jpg';
+
 // Stable JSON-LD @id IRIs. Hash fragments make them resolvable but distinct
 // from page URLs, so the same entity can be referenced from any page.
 export const ORG_ID = `${SITE_URL}/#organization`;

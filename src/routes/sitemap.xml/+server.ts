@@ -20,16 +20,33 @@ const staticRoutes = [
 	{ path: '/cookies', priority: '0.4' }
 ];
 
+// Computed once at module load — `prerender = true` means the sitemap is
+// generated at build time, so this is effectively the build date.
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
+
+interface SitemapUrl {
+	loc: string;
+	priority: string;
+	lastmod?: string;
+}
+
 export const GET = () => {
-	const today = new Date().toISOString().slice(0, 10);
-	const urls = [
-		...staticRoutes.map((r) => ({ loc: `${SITE_URL}${r.path}`, priority: r.priority })),
+	const urls: SitemapUrl[] = [
+		...staticRoutes.map((r) => ({
+			loc: `${SITE_URL}${r.path}`,
+			priority: r.priority,
+			lastmod: BUILD_DATE
+		})),
 		...categories.map((c) => ({ loc: `${SITE_URL}/ydelser/${c.slug}`, priority: '0.8' })),
 		...services.map((s) => ({
 			loc: `${SITE_URL}/ydelser/${s.category}/${s.slug}`,
 			priority: '0.9'
 		})),
-		...godtRaad.map((a) => ({ loc: `${SITE_URL}/gode-raad/${a.slug}`, priority: '0.8' })),
+		...godtRaad.map((a) => ({
+			loc: `${SITE_URL}/gode-raad/${a.slug}`,
+			priority: '0.8',
+			lastmod: a.updatedAt ?? a.publishedAt
+		})),
 		...locations
 			.filter((l) => !l.draft)
 			.map((l) => ({ loc: `${SITE_URL}/boligadvokat/${l.slug}`, priority: '0.8' }))
@@ -40,9 +57,7 @@ export const GET = () => {
 ${urls
 	.map(
 		(u) => `  <url>
-    <loc>${u.loc}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>${u.loc}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : ''}
     <priority>${u.priority}</priority>
   </url>`
 	)
