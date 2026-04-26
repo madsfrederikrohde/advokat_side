@@ -16,7 +16,15 @@ export const SITE_NAME = BRAND_NAME;
 // Brand assets used in JSON-LD `logo`/`image` and as OG fallback. Paths are
 // site-absolute so they can be turned into full URLs with SITE_URL.
 export const BRAND_LOGO = '/logo.png';
-export const DEFAULT_OG_IMAGE = '/copenhagencityy.jpg';
+// 1200×630 JPEG sized for Open Graph / Twitter large-image cards. Kept separate
+// from hero imagery so social previews render at the platform-recommended ratio.
+export const DEFAULT_OG_IMAGE = '/og-default.jpg';
+export const DEFAULT_OG_IMAGE_WIDTH = 1200;
+export const DEFAULT_OG_IMAGE_HEIGHT = 630;
+export const DEFAULT_OG_IMAGE_TYPE = 'image/jpeg';
+// Brand color used for `theme-color` (mobile browser chrome) and as a hint in
+// social previews. Mirrors --color-navy in layout.css.
+export const BRAND_THEME_COLOR = '#0d2340';
 
 // Stable JSON-LD @id IRIs. Hash fragments make them resolvable but distinct
 // from page URLs, so the same entity can be referenced from any page.

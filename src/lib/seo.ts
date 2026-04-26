@@ -199,7 +199,14 @@ export const buildJsonLd = {
 					businessFunction: 'http://purl.org/goodrelations/v1#ProvideService',
 					eligibleRegion: { '@type': 'Country', name: 'Denmark' },
 					termsOfService: `${SITE_URL}/forretningsbetingelser`,
-					url: `${SITE_URL}/priser`
+					url: `${SITE_URL}/priser`,
+					priceSpecification: {
+						'@type': 'PriceSpecification',
+						priceCurrency: 'DKK',
+						minPrice: 5500,
+						description:
+							'No cure – no pay. Honoraret forfalder først til betaling ved overtagelse af boligen.'
+					}
 				},
 				mainEntityOfPage: { '@id': webPageId(canonical) }
 			}
@@ -285,7 +292,14 @@ export const buildJsonLd = {
 					priceCurrency: 'DKK',
 					availability: 'https://schema.org/InStock',
 					businessFunction: 'http://purl.org/goodrelations/v1#ProvideService',
-					url: `${SITE_URL}/priser`
+					url: `${SITE_URL}/priser`,
+					priceSpecification: {
+						'@type': 'PriceSpecification',
+						priceCurrency: 'DKK',
+						minPrice: 5500,
+						description:
+							'No cure – no pay. Honoraret forfalder først til betaling ved overtagelse af boligen.'
+					}
 				},
 				mainEntityOfPage: { '@id': webPageId(canonical) }
 			}
