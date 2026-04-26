@@ -34,8 +34,8 @@ export const OFFICE = {
 	addressCountry: 'DK',
 	// Approximate coordinates for Hviddingvej 47, 2610 Rødovre.
 	// TODO: verify with authoritative geocoder before relying on local-pack signals.
-	latitude: 55.6815,
-	longitude: 12.4632
+	latitude: 55.6677,
+	longitude: 12.4619
 } as const;
 
 export const CONTACT = {
@@ -49,13 +49,13 @@ export const CONTACT = {
 // and feeds Knowledge Graph. Add real URLs as profiles are claimed.
 // Empty entries are filtered out at render time.
 export const SAME_AS: string[] = [
-	// 'https://www.linkedin.com/in/hansrohde/',
+	'https://www.linkedin.com/in/hans-rohde-7246387/',
 	// 'https://www.linkedin.com/company/ejendomsadvokaterne/',
 	// 'https://www.advokatsamfundet.dk/Advokatnoeglen/...',
 	// 'https://g.page/ejendomsadvokaterne',
 	// 'https://www.krak.dk/...',
 	// 'https://www.degulesider.dk/...',
-	// 'https://www.proff.dk/...',
+	'https://www.proff.dk/firma/advokatfirmaet-hans-rohde/rødovre/advokater-og-juridiske-tjenester/GXQ9F7I07U6',
 	// 'https://dk.trustpilot.com/review/ejendomsadvokaterne.dk'
 ];
 
