@@ -51,8 +51,8 @@ export const CONTACT = {
 export const SAME_AS: string[] = [
 	'https://www.linkedin.com/in/hans-rohde-7246387/',
 	// 'https://www.linkedin.com/company/ejendomsadvokaterne/',
-	// 'https://www.advokatsamfundet.dk/Advokatnoeglen/...',
-	// 'https://g.page/ejendomsadvokaterne',
+	'http://www.advokatnoeglen.dk/firma/advokatfirmaet-hans-rohde-7a1358c0-2915-4a02-a73b-3f7a56f2a130',
+	'https://g.page/advokatfirmaet-hans-rohde',
 	// 'https://www.krak.dk/...',
 	// 'https://www.degulesider.dk/...',
 	'https://www.proff.dk/firma/advokatfirmaet-hans-rohde/rødovre/advokater-og-juridiske-tjenester/GXQ9F7I07U6',
