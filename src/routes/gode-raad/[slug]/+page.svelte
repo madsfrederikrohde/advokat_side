@@ -20,6 +20,19 @@
 		{ label: article.navLabel }
 	]);
 	const jsonLd = $derived(buildJsonLd.article(article, canonical, { breadcrumbs }));
+
+	const danishDateFormatter = new Intl.DateTimeFormat('da-DK', {
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric'
+	});
+	const bylineDateISO = $derived(article.updatedAt ?? article.publishedAt);
+	const byline = $derived({
+		author: 'Hans Rohde',
+		dateISO: bylineDateISO,
+		dateLabel: danishDateFormatter.format(new Date(bylineDateISO)),
+		dateVerb: article.updatedAt ? 'Opdateret' : 'Udgivet'
+	});
 </script>
 
 <PageMeta
@@ -36,6 +49,7 @@
 	description={article.shortDescription}
 	image={article.heroImage}
 	{breadcrumbs}
+	{byline}
 	body={article.body}
 	ctaLine1={`Har du spørgsmål om ${article.navLabel.toLowerCase()}?`}
 	ctaLine2="Kontakt os i dag for en uforpligtende snak."

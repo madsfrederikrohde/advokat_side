@@ -226,6 +226,8 @@ export const buildJsonLd = {
 				description: article.shortDescription,
 				url: canonical,
 				image: { '@type': 'ImageObject', url: absoluteImage(article.heroImage.src) },
+				datePublished: article.publishedAt,
+				dateModified: article.updatedAt ?? article.publishedAt,
 				author: { '@id': PERSON_HANS_ROHDE_ID },
 				publisher: { '@id': ORG_ID },
 				inLanguage: 'da-DK',

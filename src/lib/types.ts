@@ -79,6 +79,10 @@ export interface ArticleDetail {
 
 export interface GodtRaad {
 	slug: string;
+	/** ISO 8601 date the article first went live. Required — feeds Article schema `datePublished`. */
+	publishedAt: string;
+	/** ISO 8601 date of last substantive update. Optional; falls back to `publishedAt` in schema. */
+	updatedAt?: string;
 	title: string;
 	navLabel: string;
 	heroImage: { src: string; alt: string };

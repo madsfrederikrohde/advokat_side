@@ -12,12 +12,23 @@
 		href?: string;
 	}
 
+	interface Byline {
+		author: string;
+		/** Pre-formatted Danish date (e.g. "21. april 2026"). */
+		dateLabel: string;
+		/** ISO 8601 date for the <time> element. */
+		dateISO: string;
+		/** Label preceding the date. Defaults to "Opdateret". */
+		dateVerb?: string;
+	}
+
 	interface Props {
 		title: string;
 		description: string;
 		image: { src: string; alt: string };
 		breadcrumbs: BreadcrumbItem[];
 		body: BodySection[];
+		byline?: Byline;
 		sidebar?: Snippet;
 		mainContent?: Snippet;
 		cta?: Snippet;
@@ -34,6 +45,7 @@
 		image,
 		breadcrumbs,
 		body,
+		byline,
 		sidebar,
 		mainContent,
 		cta,
@@ -69,7 +81,23 @@
 					? 'lg:grid-cols-[minmax(0,1.6fr)_minmax(16rem,0.6fr)]'
 					: ''}"
 			>
-				<ServiceArticle {body} />
+				<div>
+					{#if byline}
+						<div
+							class="mb-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-neutral-500"
+						>
+							<span
+								>Skrevet af <span class="font-medium text-neutral-700">{byline.author}</span></span
+							>
+							<span aria-hidden="true" class="text-neutral-300">·</span>
+							<span>
+								{byline.dateVerb ?? 'Opdateret'}
+								<time datetime={byline.dateISO}>{byline.dateLabel}</time>
+							</span>
+						</div>
+					{/if}
+					<ServiceArticle {body} />
+				</div>
 				{#if sidebar}
 					{@render sidebar()}
 				{/if}

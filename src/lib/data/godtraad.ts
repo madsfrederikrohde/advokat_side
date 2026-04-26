@@ -5,6 +5,7 @@ const defaultImage = { src: '/copenhagencityy.jpg', alt: 'Københavnsk boligomr�
 export const godtRaad: GodtRaad[] = [
 	{
 		slug: 'advokatforbehold',
+		publishedAt: '2026-04-21',
 		title: 'Advokatforbehold — hvad det er, og hvorfor du aldrig bør skrive under uden',
 		navLabel: 'Advokatforbehold',
 		heroImage: defaultImage,
@@ -78,6 +79,7 @@ export const godtRaad: GodtRaad[] = [
 	},
 	{
 		slug: 'servitutter',
+		publishedAt: '2026-04-21',
 		title: 'Servitutter — hvad er det, og hvorfor kan de være en deal-breaker?',
 		navLabel: 'Servitutter',
 		heroImage: defaultImage,
@@ -140,6 +142,7 @@ export const godtRaad: GodtRaad[] = [
 	},
 	{
 		slug: 'ulovligt-byggeri',
+		publishedAt: '2026-04-21',
 		title: 'Ulovligt byggeri i ejendommen — hvad gør du som køber?',
 		navLabel: 'Ulovligt byggeri',
 		heroImage: defaultImage,
@@ -207,6 +210,7 @@ export const godtRaad: GodtRaad[] = [
 	},
 	{
 		slug: 'refusionsopgorelse',
+		publishedAt: '2026-04-21',
 		title: 'Refusionsopgørelsen forklaret — hvad betaler du, og hvad får du tilbage?',
 		navLabel: 'Refusionsopgørelse',
 		heroImage: defaultImage,
@@ -267,6 +271,7 @@ export const godtRaad: GodtRaad[] = [
 	},
 	{
 		slug: 'tilstandsrapport-og-ejerskifteforsikring',
+		publishedAt: '2026-04-21',
 		title: 'Tilstandsrapport og ejerskifteforsikring — hvad de dækker, og hvad de ikke dækker',
 		navLabel: 'Tilstandsrapport og forsikring',
 		heroImage: defaultImage,
@@ -348,6 +353,7 @@ export const godtRaad: GodtRaad[] = [
 	},
 	{
 		slug: 'finansiering',
+		publishedAt: '2026-04-21',
 		title: 'Få en second opinion på finansieringen',
 		navLabel: 'Boligfinansiering',
 		heroImage: defaultImage,
@@ -404,6 +410,7 @@ export const godtRaad: GodtRaad[] = [
 	},
 	{
 		slug: 'tinglysning',
+		publishedAt: '2026-04-21',
 		title: 'Tinglysning og refusionsopgørelse er ikke bare formaliteter',
 		navLabel: 'Tinglysning',
 		heroImage: defaultImage,
