@@ -7,7 +7,7 @@ export const homeContent: {
 	body: BodySection[];
 	seo: { title: string; description: string };
 } = {
-	title: 'Kom sikkert gennem boligkøbet med erfaren juridisk sparring hele vejen.',
+	title: 'Boligadvokat med erfaren juridisk sparring fra første vurdering til handlen er i hus.',
 	shortDescription:
 		'Få uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Vi hjælper også gerne med et gratis advokatforbehold, før du skriver under.',
 	heroImage: {
@@ -34,9 +34,9 @@ export const homeContent: {
 		}
 	],
 	seo: {
-		title: 'Boligkøb og fast ejendom',
+		title: 'Boligadvokat i København – uvildig rådgivning ved boligkøb',
 		description:
-			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Ejendomsadvokaterne v/ Hans Rohde, Rødovre.'
+			'Boligadvokat i København og omegn. Uvildig rådgivning om boligkøb, advokatforbehold, finansiering og tinglysning. Fast pris, no cure – no pay.'
 	}
 };
 

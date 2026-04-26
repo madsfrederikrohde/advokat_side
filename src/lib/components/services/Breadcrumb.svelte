@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { SITE_URL } from '$lib/config';
-
 	interface Item {
 		label: string;
 		href?: string;
@@ -11,24 +9,7 @@
 	}
 
 	let { items }: Props = $props();
-
-	const origin = SITE_URL;
-
-	const jsonLd = $derived({
-		'@context': 'https://schema.org',
-		'@type': 'BreadcrumbList',
-		itemListElement: items.map((item, i) => ({
-			'@type': 'ListItem',
-			position: i + 1,
-			name: item.label,
-			...(item.href ? { item: `${origin}${item.href}` } : {})
-		}))
-	});
 </script>
-
-<svelte:head>
-	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
-</svelte:head>
 
 <nav aria-label="Sti" class="text-sm text-neutral-500">
 	<ol class="flex flex-wrap items-center gap-x-2 gap-y-1">

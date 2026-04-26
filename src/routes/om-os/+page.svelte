@@ -5,8 +5,14 @@
 	import { aboutContent, timeline } from '$lib/data/about';
 	import { buildCanonical, buildJsonLd } from '$lib/seo';
 
+	const breadcrumbs = [{ label: 'Forside', href: '/' }, { label: 'Om os' }];
 	const canonical = $derived(buildCanonical(page.url.pathname));
-	const jsonLd = $derived(buildJsonLd.aboutPage(canonical, aboutContent.person));
+	const jsonLd = $derived(
+		buildJsonLd.aboutPage(aboutContent.seo.title, aboutContent.seo.description, canonical, {
+			breadcrumbs,
+			image: aboutContent.heroImage.src
+		})
+	);
 </script>
 
 <PageMeta
@@ -21,7 +27,7 @@
 	title={aboutContent.title}
 	description={aboutContent.shortDescription}
 	image={aboutContent.heroImage}
-	breadcrumbs={[{ label: 'Forside', href: '/' }, { label: 'Om os' }]}
+	{breadcrumbs}
 	body={aboutContent.body}
 	ctaLine1="Har du en sag eller et spørgsmål?"
 	ctaLine2="Kontakt os i dag for en uforpligtende snak."

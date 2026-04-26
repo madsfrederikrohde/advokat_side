@@ -14,7 +14,12 @@
 	const description = $derived(article.seo?.description ?? article.shortDescription);
 	const canonical = $derived(buildCanonical(page.url.pathname));
 	const others = $derived(otherGodtRaad(article.slug));
-	const jsonLd = $derived(buildJsonLd.article(article, canonical));
+	const breadcrumbs = $derived([
+		{ label: 'Forside', href: '/' },
+		{ label: 'Gode råd', href: '/gode-raad' },
+		{ label: article.navLabel }
+	]);
+	const jsonLd = $derived(buildJsonLd.article(article, canonical, { breadcrumbs }));
 </script>
 
 <PageMeta
@@ -30,11 +35,7 @@
 	title={article.title}
 	description={article.shortDescription}
 	image={article.heroImage}
-	breadcrumbs={[
-		{ label: 'Forside', href: '/' },
-		{ label: 'Gode råd', href: '/gode-raad' },
-		{ label: article.navLabel }
-	]}
+	{breadcrumbs}
 	body={article.body}
 	ctaLine1={`Har du spørgsmål om ${article.navLabel.toLowerCase()}?`}
 	ctaLine2="Kontakt os i dag for en uforpligtende snak."

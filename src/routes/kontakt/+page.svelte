@@ -33,13 +33,15 @@
 		}, 10);
 	}
 
+	const breadcrumbs = [{ label: 'Forside', href: '/' }, { label: 'Kontakt' }];
 	const canonical = $derived(buildCanonical(page.url.pathname));
 	const jsonLd = $derived(
-		buildJsonLd.contactPage(canonical, {
-			phone: contactInfo.phone,
-			email: contactInfo.email,
-			address: contactInfo.address
-		})
+		buildJsonLd.contactPage(
+			contactContent.seo.title,
+			contactContent.seo.description,
+			canonical,
+			{ breadcrumbs, image: contactContent.heroImage.src }
+		)
 	);
 </script>
 

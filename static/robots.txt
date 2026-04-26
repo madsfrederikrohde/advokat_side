@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hansrohde.dk/sitemap.xml
+Sitemap: https://ejendomsadvokaterne.dk/sitemap.xml

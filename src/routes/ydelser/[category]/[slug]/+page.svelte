@@ -14,7 +14,13 @@
 	const description = $derived(service.seo?.description ?? service.shortDescription);
 	const canonical = $derived(buildCanonical(page.url.pathname));
 	const others = $derived(otherServices(service.slug, 8));
-	const jsonLd = $derived(buildJsonLd.service(service, canonical));
+	const breadcrumbs = $derived([
+		{ label: 'Forside', href: '/' },
+		{ label: 'Ydelser', href: '/ydelser' },
+		{ label: category.title, href: categoryPath(category) },
+		{ label: service.title }
+	]);
+	const jsonLd = $derived(buildJsonLd.service(service, canonical, { breadcrumbs }));
 </script>
 
 <PageMeta
@@ -22,7 +28,6 @@
 	{description}
 	{canonical}
 	image={service.heroImage.src}
-	type="article"
 	{jsonLd}
 />
 
@@ -30,12 +35,7 @@
 	title={service.title}
 	description={service.shortDescription}
 	image={service.heroImage}
-	breadcrumbs={[
-		{ label: 'Forside', href: '/' },
-		{ label: 'Ydelser', href: '/ydelser' },
-		{ label: category.title, href: categoryPath(category) },
-		{ label: service.title }
-	]}
+	{breadcrumbs}
 	body={service.body}
 	ctaLine1={`Få juridisk hjælp til ${service.title.toLowerCase()}.`}
 	ctaLine2="Kontakt os i dag for en uforpligtende snak."

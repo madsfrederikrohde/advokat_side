@@ -9,9 +9,13 @@
 	import { services } from '$lib/data/services';
 	import { buildCanonical, buildJsonLd } from '$lib/seo';
 
+	const breadcrumbs = [{ label: 'Forside', href: '/' }, { label: 'Priser' }];
 	const canonical = $derived(buildCanonical(page.url.pathname));
 	const jsonLd = $derived(
-		buildJsonLd.webPage(priserContent.seo.title, priserContent.seo.description, canonical)
+		buildJsonLd.page(priserContent.seo.title, priserContent.seo.description, canonical, {
+			breadcrumbs,
+			image: priserContent.heroImage.src
+		})
 	);
 
 	const priceFoldoutItems = $derived(
@@ -37,7 +41,7 @@
 	title={priserContent.title}
 	description={priserContent.shortDescription}
 	image={priserContent.heroImage}
-	breadcrumbs={[{ label: 'Forside', href: '/' }, { label: 'Priser' }]}
+	{breadcrumbs}
 	body={[]}
 	ctaLine1="Har du spørgsmål til prisen?"
 	ctaLine2="Kontakt os for en uforpligtende snak."

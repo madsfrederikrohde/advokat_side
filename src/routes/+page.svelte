@@ -10,8 +10,10 @@
 
 	const canonical = $derived(buildCanonical(page.url.pathname));
 	const jsonLd = $derived([
-		buildJsonLd.webPage(homeContent.seo.title, homeContent.seo.description, canonical),
-		buildJsonLd.faqPage(faqs)
+		buildJsonLd.page(homeContent.seo.title, homeContent.seo.description, canonical, {
+			image: homeContent.heroImage.src
+		}),
+		buildJsonLd.faqPage(faqs, canonical)
 	]);
 </script>
 

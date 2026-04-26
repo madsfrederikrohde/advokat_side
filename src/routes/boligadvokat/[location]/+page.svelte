@@ -9,11 +9,21 @@
 	let { data } = $props();
 	let { location } = $derived(data);
 
-	const canonical = $derived(buildCanonical(page.url.pathname));
-	const jsonLd = $derived([
-		buildJsonLd.localLegalService({ name: location.name, type: location.type }, canonical),
-		buildJsonLd.webPage(location.seo.title, location.seo.description, canonical)
+	const breadcrumbs = $derived([
+		{ label: 'Forside', href: '/' },
+		{ label: 'Boligadvokat', href: '/boligadvokat' },
+		{ label: location.name }
 	]);
+	const canonical = $derived(buildCanonical(page.url.pathname));
+	const jsonLd = $derived(
+		buildJsonLd.locationPage(
+			{ name: location.name, type: location.type, inflected: location.inflected },
+			location.seo.title,
+			location.seo.description,
+			canonical,
+			{ breadcrumbs, image: location.heroImage.src }
+		)
+	);
 </script>
 
 <PageMeta
@@ -21,7 +31,6 @@
 	description={location.seo.description}
 	{canonical}
 	image={location.heroImage.src}
-	type="article"
 	noindex={location.draft}
 	{jsonLd}
 />
@@ -30,11 +39,7 @@
 	title={`Boligadvokat ${location.inflected}`}
 	description={location.intro}
 	image={location.heroImage}
-	breadcrumbs={[
-		{ label: 'Forside', href: '/' },
-		{ label: 'Boligadvokat', href: '/boligadvokat' },
-		{ label: location.name }
-	]}
+	{breadcrumbs}
 	body={location.body}
 	ctaLine1={`Har du brug for en boligadvokat ${location.inflected}?`}
 	ctaLine2="Kontakt os i dag for en uforpligtende snak."

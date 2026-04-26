@@ -9,8 +9,9 @@
 	const title = 'Ydelser';
 	const description =
 		'Oversigt over vores juridiske ydelser inden for boligkøb, fast ejendom samt familie- og arveret.';
+	const breadcrumbs = [{ label: 'Forside', href: '/' }, { label: 'Ydelser' }];
 	const canonical = $derived(buildCanonical(page.url.pathname));
-	const jsonLd = $derived(buildJsonLd.webPage(title, description, canonical));
+	const jsonLd = $derived(buildJsonLd.page(title, description, canonical, { breadcrumbs }));
 </script>
 
 <PageMeta {title} {description} {canonical} {jsonLd} />

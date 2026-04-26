@@ -5,33 +5,16 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import favicon from '$lib/assets/favicon.svg';
-	import { SITE_URL, BRAND_NAME, LEGAL_NAME, PREVIOUS_NAME } from '$lib/config';
+	import { SITE_URL, BRAND_NAME } from '$lib/config';
+	import { rootGraph } from '$lib/seo';
 
 	let { children } = $props();
 
 	const canonical = $derived(`${SITE_URL}${page.url.pathname}`);
 
-	const orgJsonLd = {
-		'@context': 'https://schema.org',
-		'@type': 'LegalService',
-		name: BRAND_NAME,
-		legalName: LEGAL_NAME,
-		alternateName: PREVIOUS_NAME,
-		url: SITE_URL,
-		telephone: '+4520317879',
-		email: 'hr@hansrohde.dk',
-		areaServed: 'Denmark',
-		description:
-			'Uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter hos Ejendomsadvokaterne v/ Hans Rohde.',
-		contactPoint: {
-			'@type': 'ContactPoint',
-			telephone: '+4520317879',
-			email: 'hr@hansrohde.dk',
-			contactType: 'customer service',
-			areaServed: 'DK',
-			availableLanguage: ['Danish', 'English']
-		}
-	};
+	// Emitted once on every page. Defines Organization, WebSite and Person nodes
+	// with stable @ids; per-page graphs reference them rather than duplicating.
+	const orgJsonLd = rootGraph();
 
 	// Page transitions via View Transitions API
 	onNavigate((navigation) => {

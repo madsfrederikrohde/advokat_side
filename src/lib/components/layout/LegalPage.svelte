@@ -13,7 +13,16 @@
 
 	const heroImage = { src: '/copenhagencityy.jpg', alt: 'Københavnsk boligområde' };
 	const canonical = $derived(buildCanonical(page.url.pathname));
-	const jsonLd = $derived(buildJsonLd.webPage(content.title, content.intro, canonical));
+	const breadcrumbs = $derived([
+		{ label: 'Forside', href: '/' },
+		{ label: content.eyebrow }
+	]);
+	const jsonLd = $derived(
+		buildJsonLd.page(content.title, content.intro, canonical, {
+			breadcrumbs,
+			image: heroImage.src
+		})
+	);
 
 	const body = $derived([
 		{ paragraphs: [content.intro] },
@@ -22,11 +31,6 @@
 			paragraphs: s.paragraphs,
 			bullets: s.bullets
 		}))
-	]);
-
-	const breadcrumbs = $derived([
-		{ label: 'Forside', href: '/' },
-		{ label: content.eyebrow }
 	]);
 </script>
 

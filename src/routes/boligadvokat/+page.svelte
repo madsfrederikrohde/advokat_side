@@ -7,12 +7,14 @@
 	import { services } from '$lib/data/services';
 	import { buildCanonical, buildJsonLd } from '$lib/seo';
 
+	const breadcrumbs = [{ label: 'Forside', href: '/' }, { label: 'Boligadvokat' }];
 	const canonical = $derived(buildCanonical(page.url.pathname));
 	const jsonLd = $derived(
-		buildJsonLd.webPage(
+		buildJsonLd.page(
 			boligadvokatContent.seo.title,
 			boligadvokatContent.seo.description,
-			canonical
+			canonical,
+			{ breadcrumbs, image: boligadvokatContent.heroImage.src }
 		)
 	);
 </script>
@@ -29,7 +31,7 @@
 	title={boligadvokatContent.title}
 	description={boligadvokatContent.shortDescription}
 	image={boligadvokatContent.heroImage}
-	breadcrumbs={[{ label: 'Forside', href: '/' }, { label: 'Boligadvokat' }]}
+	{breadcrumbs}
 	body={boligadvokatContent.body}
 	ctaLine1="Har du brug for en boligadvokat?"
 	ctaLine2="Kontakt os i dag for en uforpligtende snak."

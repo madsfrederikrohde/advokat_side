@@ -9,8 +9,15 @@
 	let { data } = $props();
 	let { category, services } = $derived(data);
 
+	const breadcrumbs = $derived([
+		{ label: 'Forside', href: '/' },
+		{ label: 'Ydelser', href: '/ydelser' },
+		{ label: category.title }
+	]);
 	const canonical = $derived(buildCanonical(page.url.pathname));
-	const jsonLd = $derived(buildJsonLd.webPage(category.title, category.description, canonical));
+	const jsonLd = $derived(
+		buildJsonLd.page(category.title, category.description, canonical, { breadcrumbs })
+	);
 </script>
 
 <PageMeta
