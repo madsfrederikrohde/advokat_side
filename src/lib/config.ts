@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://www.ejendomsadvokaterne.dk/';
+export const SITE_URL = 'https://www.ejendomsadvokaterne.dk';
 
 // Brand name used in page titles, OG tags, schema.org `name`.
 export const BRAND_NAME = 'Ejendomsadvokaterne';
