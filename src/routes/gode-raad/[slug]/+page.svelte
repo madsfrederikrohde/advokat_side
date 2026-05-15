@@ -28,7 +28,7 @@
 	});
 	const bylineDateISO = $derived(article.updatedAt ?? article.publishedAt);
 	const byline = $derived({
-		author: 'Hans Rohde',
+		author: 'Advokat Hans Rohde',
 		dateISO: bylineDateISO,
 		dateLabel: danishDateFormatter.format(new Date(bylineDateISO)),
 		dateVerb: article.updatedAt ? 'Opdateret' : 'Udgivet'

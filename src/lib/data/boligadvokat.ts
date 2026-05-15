@@ -16,24 +16,24 @@ export const boligadvokatContent: {
 	},
 	body: [
 		{
-			heading: 'Boligadvokater til lavere pris: No cure – no pay',
+			heading: 'Boligadvokater til lav pris: No cure – no pay',
 			paragraphs: [
-				'Hos Ejendomsadvokaterne arbejder vi på <a href="/priser" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">no cure – no pay</a>-vilkår. Det betyder, at du ikke betaler advokatsalær, hvis handlen ikke gennemføres. Vores honorar forfalder først til betaling, når du har overtaget din nye bolig – og det er der en god grund til. Et boligkøb er forbundet med mange usikkerhedsmomenter, og vi mener, at du som køber ikke bør bære den fulde økonomiske risiko alene. Med vores model er vi med dig hele vejen, og vores interesse er den samme som din: at handlen lykkes.',
-				'Vi tilbyder <a href="/priser" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">fast pris</a> på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer eller timepriset fakturering. Du får en erfaren boligadvokat til en forudsigelig og konkurrencedygtig pris.'
+				'Hos Ejendomsadvokaterne arbejder vi på <a href="/priser" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">no cure – no pay</a>-vilkår. Det betyder, at du ikke betaler advokatsalær, hvis handlen ikke gennemføres. Vores honorar forfalder først til betaling, når din bolighandel er endelig – og det er der en god grund til. Et boligkøb er forbundet med mange usikkerhedsmomenter, og vi mener, at du som køber ikke bør bære den fulde økonomiske risiko alene. Med vores model er vi med dig hele vejen, og vores interesse er den samme som din: at handlen lykkes.',
+				'Vi tilbyder <a href="/priser" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">fast pris</a> på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer eller timepriset fakturering udover tinglysningsafgift til Staten (0,6 % af købesum + 1.850 kr.). Du får en erfaren boligadvokat til en forudsigelig og konkurrencedygtig pris, en udgift, der som regel kan lægges ind i den samlede finansiering.'
 			]
 		},
 		{
 			heading: 'Hvorfor skal man benytte en boligadvokat?',
 			paragraphs: [
-				'Et boligkøb er for de fleste den største investering i livet, og der følger en stor mængde juridiske dokumenter med – uanset om du køber en <a href="/ydelser/boligkoeb/villa" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">villa</a>, en <a href="/ydelser/boligkoeb/ejerlejlighed" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">ejerlejlighed</a> eller et <a href="/ydelser/boligkoeb/sommerhus" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">sommerhus</a>. Købsaftale, tilstandsrapport, elinstallationsrapport, energimærke, BBR-meddelelse og tingbogsattest er blot nogle af de dokumenter, der kræver grundig gennemgang. Fejl eller oversete forbehold kan koste dig dyrt – både økonomisk og juridisk.',
-				'En boligadvokat sikrer, at du forstår, hvad du skriver under på. Vi gennemgår samtlige dokumenter, vurderer risici og rådgiver dig om, hvilke forbehold der bør indsættes i købsaftalen. Det kan eksempelvis dreje sig om finansieringsforbehold, advokatforbehold eller forbehold for byggetilladelser. Bruger du en boligadvokat, slipper du for selv at være eksperten, når dokumenterne kommer i spil.'
+				'Et boligkøb er for de fleste den største investering i livet, og der følger en stor mængde juridiske dokumenter og overvejelser med – uanset om du køber en villa, en ejerlejlighed eller et sommerhus. Købsaftale, tilstandsrapport, elinstallationsrapport, energimærke, BBR-meddelelse og tingbogsattest er blot nogle af de dokumenter, der kræver grundig gennemgang. Fejl eller oversete forbehold kan koste dig dyrt – både økonomisk og juridisk.',
+				'En boligadvokat sikrer, at du forstår, hvad du skriver under på. Vi gennemgår samtlige dokumenter, vurderer risici og rådgiver dig om, hvilke forbehold der bør indsættes i købsaftalen. Det kan eksempelvis dreje sig om servitutter, fejl og mangler eller uafsluttede byggesager mv. Bruger du en boligadvokat, er du sikker på professionel vurdering og rådgivning.'
 			]
 		},
 		{
 			heading: 'Kan man klare handlen uden en boligadvokat?',
 			paragraphs: [
-				'Det er juridisk muligt at gennemføre et boligkøb uden en advokat. Men de færreste har den juridiske viden, der skal til for at gennemskue samtlige klausuler, servitutter og betingelser i en handlens dokumentpakke. En sælgers ejendomsmægler varetager sælgerens interesser – ikke dine. Det er derfor vigtigt, at du som køber har din egen rådgiver.',
-				'Særligt ved komplekse handler – som køb af <a href="/ydelser/boligkoeb/andelsbolig" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">andelsbolig</a>, <a href="/ydelser/boligkoeb/anpart" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">anpart</a> eller <a href="/ydelser/boligkoeb/byggegrund" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">byggegrund</a> – er der mange faldgruber, som kun en erfaren boligadvokat vil kende til. En andelsbolighandel kræver eksempelvis gennemgang af foreningens regnskaber og vedtægter, vurdering af andelsværdi og stillingtagen til eventuelle forkøbsrettigheder. Her kan en fejl have store konsekvenser.'
+				'Det er juridisk muligt at gennemføre et boligkøb uden en advokat. Men de færreste har den juridiske viden, der skal til for at gennemskue samtlige klausuler, servitutter og betingelser i en ejendomshandel. En sælgers ejendomsmægler varetager sælgerens interesser – ikke dine. Det er derfor vigtigt, at du som køber har din egen rådgiver.',
+				'Særligt ved komplekse handler – er der mange faldgruber, som kun en erfaren boligadvokat vil kende til. Her kan en fejl have store konsekvenser.'
 			]
 		},
 		{

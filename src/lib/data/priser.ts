@@ -33,7 +33,7 @@ export const priserContent: {
 		heading: 'No cure – no pay',
 		paragraphs: [
 			'Hos Ejendomsadvokaterne arbejder vi på no cure – no pay-vilkår. Det betyder, at du ikke betaler advokatsalær, hvis handlen ikke gennemføres. Vores honorar forfalder først til betaling, når du har overtaget din nye bolig – og det er der en god grund til. Et boligkøb er forbundet med mange usikkerhedsmomenter, og vi mener, at du som køber ikke bør bære den fulde økonomiske risiko alene. Med vores model er vi med dig hele vejen, og vores interesse er den samme som din: at handlen lykkes.',
-			'Vi tilbyder fast pris på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer og ingen timepriset fakturering – blot en forudsigelig og konkurrencedygtig pris for en erfaren boligadvokat.'
+			'Vi tilbyder fast pris på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer udover tinglysningsafgift til Staten (0,6 % af købesummen + 1.850 kr. og ingen timepriset fakturering – blot en forudsigelig og konkurrencedygtig pris for en erfaren boligadvokat.'
 		]
 	},
 	priceItems: [
@@ -42,9 +42,8 @@ export const priserContent: {
 			href: '/ydelser/boligkoeb/villa',
 			fromPrice: 'fra 8.500 kr.',
 			description:
-				'Fuld juridisk gennemgang af købsaftale, tilstandsrapport, energimærke og øvrige dokumenter, samt tinglysning af skøde. Prisen afhænger af handelssummen.',
+				'Fuld juridisk gennemgang af købsaftale, tilstandsrapport, energimærke og øvrige dokumenter, samt tinglysning af skøde.',
 			examples: [
-				{ label: 'Villa op til 5.000.000 kr.', price: '8.500 kr.' },
 				{ label: 'Villa op til 10.000.000 kr.', price: '9.995 kr.' },
 				{ label: 'Villa over 10.000.000 kr.', price: 'efter aftale' }
 			]
@@ -56,7 +55,6 @@ export const priserContent: {
 			description:
 				'Gennemgang af købsaftale, ejerforeningens regnskaber og vedtægter samt tinglysning af skøde. Prisen afhænger af handelssummen.',
 			examples: [
-				{ label: 'Ejerlejlighed op til 5.000.000 kr.', price: '8.500 kr.' },
 				{ label: 'Ejerlejlighed op til 10.000.000 kr.', price: '9.995 kr.' },
 				{ label: 'Ejerlejlighed over 10.000.000 kr.', price: 'efter aftale' }
 			]
@@ -66,10 +64,10 @@ export const priserContent: {
 			href: '/ydelser/boligkoeb/sommerhus',
 			fromPrice: 'fra 9.500 kr.',
 			description:
-				'Sommerhushandler kræver særlig opmærksomhed på planlovens regler om helårsanvendelse, servitutter og eventuelle udlejningsforhold. Prisen inkluderer tinglysning af skøde.',
+				'Sommerhus op til 10.000.000 kr. 9.995kr.',
 			examples: [
-				{ label: 'Sommerhus op til 5.000.000 kr.', price: '9.500 kr.' },
-				{ label: 'Sommerhus over 5.000.000 kr.', price: '10.995 kr.' }
+				{ label: 'Sommerhus op til 10.000.000 kr.', price: '9.995 kr.' },
+				{ label: 'Sommerhus over 10.000.000 kr.', price: 'efter aftale' }
 			]
 		},
 		{
@@ -80,7 +78,7 @@ export const priserContent: {
 				'Vi gennemgår overdragelsesaftalen, foreningens regnskab og vedtægter samt vurderer andelsværdien og eventuelle forkøbsrettigheder.',
 			examples: [
 				{ label: 'Andelsbolig op til 2.000.000 kr.', price: '7.500 kr.' },
-				{ label: 'Andelsbolig over 2.000.000 kr.', price: '8.500 kr.' }
+				{ label: 'Andelsbolig over 2.000.000 kr.', price: '9.500 kr.' }
 			]
 		},
 		{
@@ -90,8 +88,8 @@ export const priserContent: {
 			description:
 				'Oprettelse af individuelt tilpasset testamente og rådgivning om arvefordeling. Prisen afhænger af antallet af testatorer og kompleksiteten af dine ønsker.',
 			examples: [
-				{ label: 'Enkelt testamente', price: '3.500 kr.' },
-				{ label: 'Fælles testamente (par)', price: '4.500 kr.' }
+				{ label: 'Enkelt testamente', price: '4.500 kr.' },
+				{ label: 'Fælles testamente (par)', price: '6.500 kr.' }
 			]
 		},
 		{
@@ -102,7 +100,7 @@ export const priserContent: {
 				'Udarbejdelse og tinglysning af ægtepagt, herunder rådgivning om formuefællesskab, særeje og kombinationsmodeller.',
 			examples: [
 				{ label: 'Almindelig ægtepagt', price: '3.500 kr.' },
-				{ label: 'Ægtepagt med kombinationssæreje', price: '4.500 kr.' }
+				{ label: 'Ægtepakt med særlige klausuler, f.eks. kombinationssæreje', price: '5.500 kr.' }
 			]
 		}
 	],
@@ -116,7 +114,7 @@ export const priserContent: {
 			'Uforpligtende indledende samtale, inden vi går i gang'
 		],
 		paragraphs: [
-			'Alle priser er inkl. moms. Der er ingen skjulte gebyrer og ingen timepriset fakturering – du ved fra starten, hvad du kommer til at betale.'
+			'Alle priser er inkl. moms. Der er ingen skjulte gebyrer udover tinglysningafgifter og ingen timepriset fakturering – du ved fra starten, hvad du kommer til at betale. Udgiften til advokat, tinglysning mv kan oftest kan lægges ind i finansieringen af den samlede handel:'
 		]
 	},
 	seo: {

@@ -5,7 +5,7 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 		eyebrow: 'Advokatsamfundet',
 		title: 'Oplysninger om branchetilknytning og de rammer, vi arbejder under.',
 		intro:
-			'Ejendomsadvokaterne v/ Hans Rohde udøver advokatvirksomhed under de regler, der gælder for advokater i Danmark. Siden her samler de overordnede oplysninger om tilsyn, etiske regler og den professionelle ramme omkring rådgivningen.',
+			'Ejendomsadvokaterne udøver advokatvirksomhed under de regler, der gælder for advokater i Danmark. Siden her samler de overordnede oplysninger om tilsyn, etiske regler og den professionelle ramme omkring rådgivningen.',
 		sections: [
 			{
 				heading: 'Professionel ramme',
@@ -52,7 +52,7 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 		eyebrow: 'Forretningsbetingelser',
 		title: 'De generelle vilkår for samarbejde, opgaveomfang og honorar.',
 		intro:
-			'Forretningsbetingelserne beskriver de generelle rammer for samarbejdet. Det konkrete opgaveomfang og eventuelle særlige vilkår aftales altid i relation til den enkelte sag.',
+			'Forretningsbetingelserne beskriver de generelle rammer for samarbejdet. Det konkrete opgaveomfang og eventuelle særlige vilkår aftales altid i relation til den enkelte sag. Du modtager altid en skriftlig ordrebekræftelse med de aftalte vilkår, inden opgaven sættes i gang.',
 		sections: [
 			{
 				heading: 'Opgavens omfang',
@@ -63,7 +63,7 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 			{
 				heading: 'Honorar og udlæg',
 				paragraphs: [
-					'Honorar fastsættes ud fra opgavens karakter, omfang, kompleksitet og det ansvar, den indebærer. Eventuelle udlæg og tredjemandsomkostninger håndteres efter nærmere aftale.'
+					'Honorar fastsættes ud fra opgavens karakter, omfang, tidsforbrug, kompleksitet og det ansvar, den indebærer. Eventuelle udlæg og tredjemandsomkostninger håndteles efter nærmere aftale.'
 				]
 			},
 			{
@@ -75,10 +75,10 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 		]
 	},
 	gdpr: {
-		eyebrow: 'GDPR',
+		eyebrow: 'Behandling af personoplysninger',
 		title: 'Behandling af personoplysninger med respekt for nødvendighed, sikkerhed og fortrolighed.',
 		intro:
-			'Når du kontakter Ejendomsadvokaterne v/ Hans Rohde eller indgår i et sagsforløb, kan der behandles personoplysninger som led i kommunikationen og den juridiske rådgivning. Behandlingen sker med fokus på nødvendighed og fortrolighed.',
+			'Når du kontakter Ejendomsadvokaterne eller indgår i et sagsforløb, kan der behandles personoplysninger som led i kommunikationen og den juridiske rådgivning. Behandlingen sker med fokus på nødvendighed og fortrolighed.',
 		sections: [
 			{
 				heading: 'Formål',
@@ -110,12 +110,6 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 				heading: 'Nødvendige cookies',
 				paragraphs: [
 					'Nødvendige cookies kan bruges til at sikre, at siden fungerer teknisk korrekt, og at essentielle funktioner som navigation, grundlæggende sikkerhed og sessionsrelateret drift virker som forventet.'
-				]
-			},
-			{
-				heading: 'Formål og transparens',
-				paragraphs: [
-					'Formålet er at holde siden stabil, sikker og brugbar. Hvis der senere anvendes yderligere kategorier af cookies eller lignende teknologier, bør dette beskrives særskilt og tydeligt.'
 				]
 			}
 		]

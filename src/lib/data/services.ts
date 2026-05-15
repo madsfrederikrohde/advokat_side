@@ -5,7 +5,7 @@ export const categories: ServiceCategory[] = [
 		slug: 'boligkoeb',
 		title: 'Boligkøb',
 		description:
-			'Juridisk rådgivning når du skal købe bolig — fra villa og ejerlejlighed til sommerhus, anpart og finansiering.',
+			'Juridisk rådgivning når du skal købe bolig —Køb af villa, ejerlejlighed, sommerhus, anpart og andelsbolig, byggegrund.',
 		order: 1
 	},
 	{
@@ -19,7 +19,7 @@ export const categories: ServiceCategory[] = [
 		slug: 'familiearveret',
 		title: 'Familie- og arveret',
 		description:
-			'Testamente, ægtepagt, fremtidsfuldmagt, dødsbobehandling og retssager inden for familie- og arveretten.',
+			'Testamente, ægtepagt, fremtidsfuldmagt, dødsbobehandling og rådgivning om generationsskifte.',
 		order: 3
 	}
 ];
@@ -77,13 +77,13 @@ export const services: Service[] = [
 			{
 				heading: 'Priseksempel',
 				paragraphs: [
-					'Erfaringsmæssigt kan en almindelig villahandel til op til 6 mio. kr. klares for 9.995 kr. inkl. moms (men eksl. tinglysningsafgift). Ligger handlen over det, eller er der særlige forhold — ulovligt byggeri, uklare servitutter, komplicerede finansieringsforhold — aftaler vi honorar på forhånd. Altid klare aftaler og fuld transparens.'
+					'Vi har faste priser. Køb af villa op til 10.000.000 klarer vi for 9.995 kr. inkl. moms (men eksl. tinglysningsafgift). Ligger handlen over det, eller er der særlige forhold — ulovligt byggeri, uklare servitutter, komplicerede finansieringsforhold — aftaler vi honorar på forhånd. Altid klare aftaler og fuld transparens.'
 				]
 			},
 			{
 				heading: 'Ingen handel — ingen regning',
 				paragraphs: [
-					'Trækker du dig under advokatforbeholdet på baggrund af vores rådgivning, koster det ikke noget. Falder handlen af andre årsager — fx at sælger trækker sig, eller at dit forbehold for eget salg ikke opfyldes — afregner vi arbejdet som aftalt.'
+					'Trækker du dig under advokatforbeholdet på baggrund af vores rådgivning, koster det ikke noget. Falder handlen af andre årsager — fx at sælger trækker sig, eller at dit forbehold for evt. eget salg ikke opfyldes — afregner vi arbejdet som aftalt.'
 				]
 			}
 		]
@@ -107,9 +107,9 @@ export const services: Service[] = [
 				]
 			},
 			{
-				heading: 'Priseksempel',
+				heading: 'Pris',
 				paragraphs: [
-					'Erfaringsmæssigt kan en almindelig ejerlejlighedshandel til op til 6 mio. kr. klares for 9.995 kr. inkl. moms (men eksl. tinglysningsafgift). Ligger handlen over det, eller er der særlige forhold, aftaler vi honorar på forhånd. Altid klare aftaler og fuld transparens.'
+					'Ejerlejlighedshandel op til 10.000.000 kr: 9.995 kr. inkl. moms (men eksl. tinglysningsafgift). Ligger handlen over det, eller er der særlige forhold, aftaler vi honorar på forhånd. Altid klare aftaler og fuld transparens.'
 				]
 			},
 			{
@@ -127,15 +127,14 @@ export const services: Service[] = [
 		navLabel: 'Sommerhus',
 		heroImage: defaultImage,
 		shortDescription:
-			'Køb af sommerhus er en drøm for mange — men der er særlige regler om bopælspligt, udlejning og zonelovgivning at være opmærksom på.',
+			'Køb af sommerhus er en drøm for mange — men der er særlige regler om bopælspligt, udlejning og planlovgivning at være opmærksom på, isæt hvis du skal bygge om eller til.',
 		body: [
 			{
 				heading: 'Sommerhus — enkelt ser det ud, enkelt er det sjældent',
 				paragraphs: [
 					'Et sommerhus ser ofte enkelt ud. Reglerne bag er sjældent så enkle.',
 					'Bopælspligt, sommerhusreglementet, planforhold, naturbeskyttelseslinjer, udlejningsregler og gamle servitutter kan få afgørende betydning for, hvad du må bruge huset til, færdselsret mv. Vi gennemgår det hele, før du skriver under — ikke efter.',
-					'Vi tjekker også tidligere ombygninger: er tilbygningen godkendt? Er annekset registreret? Og hvad med drikkevand, kloak mv? Ældre sommerhuse har ofte en historik, der ikke fremgår af salgsopstillingen.',
-					'Vi står på handlen hele vejen — gennemgang, forhandling, tinglysning og refusion.'
+				'Vi tjekker også tidligere ombygninger i arkiverne: er tilbygningen godkendt? Er annekset registreret? Og hvad med drikkevand, kloak mv? Ældre sommerhuse har ofte en historik, der ikke fremgår af salgsopstillingen.'
 				]
 			},
 			{
@@ -167,12 +166,6 @@ export const services: Service[] = [
 					'En anpart lyder som en blanding af ejerbolig og andelsbolig — og juridisk er det heller ikke helt det ene eller det andet. Du ejer en ideel andel af en fast ejendom og får en eksklusiv brugsret til en bestemt del. Men reglerne for salg, vedligehold og især finansiering er anderledes — og ofte mindre beskyttede.',
 					'Vi gennemgår købsaftalen, anpartshaveroverenskomsten, fordelingstal, brugsret, videresalgsret og eventuelle forkøbsrettigheder. Vi tjekker også servitutter, BBR og ejendommens øvrige dokumenter.',
 					'Anpartsboliger har ofte særlige forhold med belåning — vi rådgiver realistisk om finansieringen, før du går videre.'
-				]
-			},
-			{
-				heading: 'Priseksempel',
-				paragraphs: [
-					'Priserne ligger typisk på niveau med en almindelig bolighandel — under 10.000 kr. inkl. moms for handler uden komplikationer. Ved særlige forhold, fx ved usædvanlige fordelingsnøgler eller uklare brugsrettigheder, aftaler vi honorar efter et konkret estimat.'
 				]
 			},
 			{
@@ -228,7 +221,7 @@ export const services: Service[] = [
 				paragraphs: [
 					'Når du køber en andelsbolig, køber du ikke fast ejendom. Du køber en ret til at bo i boligen — gennem medlemskab af en andelsboligforening. Og foreningens gæld, rentebindinger og vedligeholdelsestilstand har direkte betydning for værdien af din andel.',
 					'Vi gennemgår vedtægter, seneste årsregnskab, referater fra generalforsamling, valuarvurdering og foreningens lånesammensætning. Hvis der er planer om større vedligehold, eller hvis værdiansættelsen hviler på optimistiske forudsætninger, fortæller vi dig det. Før du skriver under, ikke efter.',
-					'Vi kender fælderne i ældre andelsforeninger med renteswaps og kreative værdiansættelser. Og vi siger det som det er.'
+					'Vi kender fælderne i ældre andelsforeninger med renteswaps og værdiansættelser. Og vi siger det som det er.'
 				]
 			},
 			{
@@ -255,17 +248,17 @@ export const services: Service[] = [
 			'Valget af finansiering har stor betydning for din økonomi. Vi rådgiver uvildigt om lånemuligheder og har tæt kontakt til bankerne.',
 		body: [
 			{
-				heading: 'Boligfinansiering — vi har ingen interesser i, hvor du låner',
+				heading: 'Boligfinansiering  Overvej en second opinion',
 				paragraphs: [
 					'Banken og realkreditinstituttet har deres egne interesser, når de foreslår dig en finansieringsløsning. Vi varetager kun dine interesser. Som advokater er vi lovbestemt uvildige — ingen provision, ingen bindinger til bestemte banker, kreditforeninger eller forsikringsselskaber.',
-					'Vi læser dit finansieringstilbud kritisk: renteform (fast, variabel, lang kort binding), løbetid, afdragsfrihed, bidragssats, gebyrer, samlede kreditomkostninger over lånets levetid og omkostninger ved indfrielse. Hvis der er bedre alternativer, peger vi på det.',
-					'Vi rådgiver også om kurssikring, kursgevinst og -tab, og skattemæssige forhold ved rentebetaling.'
+					'Vi læser dit finansieringstilbud kritisk: renteform (fast, variabel, lang kort binding), løbetid, afdragsfrihed, bidragssats, gebyrer, samlede kreditomkostninger over lånets levetid og omkostninger ved indfrielse. Hvis der er andre alternativer, peger vi på det.',
+					'Vi vurderer  også om kurssikring, kursgevinst og -tab, kan være noget for dig.'
 				]
 			},
 			{
 				heading: 'Priseksempel',
 				paragraphs: [
-					'Gennemgang af lånetilbud i forbindelse med en bolighandel er som regel inkluderet i det samlede honorar. Ønsker du en selvstændig second opinion uden tilknytning til en handel, aftaler vi et estimat efter sagens kompleksitet.'
+					'Gennemgang af lånetilbud i forbindelse med en bolighandel er som regel inkluderet i det samlede honorar. Ønsker du en selvstændig second opinion uden tilknytning til en handel, aftaler vi et estimat efter sagens kompleksitet og formidler eventuelt egentlig finansiel rådgivning hos eksterne part.'
 				]
 			}
 		]
@@ -427,13 +420,13 @@ export const services: Service[] = [
 		navLabel: 'Tvister og klagesager',
 		heroImage: defaultImage,
 		shortDescription:
-			'Vi fører retssager og klagesager om fast ejendom — fra Ankenævn for Ejendomsmæglervirksomhed til byret og landsret.',
+			'Vi fører retssager og klagesager om fast ejendom — fra Ankenævn for Ejendomsmæglervirksomhed til domstolene.',
 		body: [
 			{
 				heading: 'Tvister — vi fører sagen der, hvor den har bedst chance',
 				paragraphs: [
-					'Ikke alle tvister skal føres i retten. Mange af de vigtigste afgørelser om fast ejendom træffes i forvaltningens klageinstanser — huslejenævn, beboerklagenævn, Planklagenævnet, Miljø- og Fødevareklagenævnet, Ankenævnet for Huseftersyn, Skatteankestyrelsen.',
-					'Vi vurderer, hvor din sag har bedst chance, og om en forligsforhandling er realistisk. Vi har ført sager i de fleste relevante nævn og ved byret, landsret og Planklagenævnet — og siger klart til, når en sag ikke er værd at føre.'
+					'Ikke alle tvister skal føres i retten. Mange af de vigtigste afgørelser om fast ejendom træffes i klageinstanser — huslejenævn, beboerklagenævn, Planklagenævnet, Miljø- og Fødevareklagenævnet, Ankenævnet for Huseftersyn, Skatteankestyrelsen.',
+					'Vi vurderer, hvor din sag har bedst chance, og om en forligsforhandling er realistisk. Vi har ført sager i de fleste relevante nævn og ved byret og Planklagenævnet.'
 				]
 			},
 			{
@@ -451,7 +444,7 @@ export const services: Service[] = [
 		navLabel: 'Ejerforening',
 		heroImage: defaultImage,
 		shortDescription:
-			'Rådgivning til ejerforeninger og enkeltmedlemmer om vedtægter, generalforsamling, fællesudgifter og tvister.',
+			'Rådgivning til ejerforeninger og enkeltmedlemmer om vedtægter, brug og ændring af ejerlejligheden, fællesudgifter og tvister.',
 		body: [
 			{
 				heading: 'Ejerforening — fra stiftelse til den svære generalforsamling',
@@ -475,13 +468,13 @@ export const services: Service[] = [
 		navLabel: 'Planlovgivning',
 		heroImage: defaultImage,
 		shortDescription:
-			'Vi hjælper med klager over lokalplaner, dispensationer, landzonetilladelser og andre planretlige afgørelser.',
+			'Vi hjælper med alt fra ansøgninger til klager over lokalplaner, dispensationer, landzonetilladelser og andre planretlige afgørelser.',
 		body: [
 			{
-				heading: 'Planlovgivning — fra lokalplan til Planklagenævnet',
+				heading: 'Planlovgivning — fra ansøgning til Planklagenævnet',
 				paragraphs: [
-					'Lokalplan, kommuneplan og dispensation afgør, hvad du må bygge og ændre på din ejendom. Vi kender både reglerne og forvaltningspraksis. Hvis du står før et grundkøb, kan du med fordel læse om <a href="/ydelser/boligkoeb/byggegrund" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">køb af byggegrund</a>.',
-					'Med baggrund fra Københavns Kommune, By- og Boligministeriet og 20+ års arbejde med plan- og byggesager har vi en særlig indsigt i sagsgangen, klagesystemets nåleøjer og domstolenes tilgang. Vi rådgiver ejere, investorer, bygherrer og grundejerforeninger. Er sagen allerede låst i kommunen, hjælper vi også med <a href="/ydelser/fast-ejendom/byggesag" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">hjælp til din byggesag</a>.'
+					'Lokalplan, kommuneplan og dispensation afgør, hvad du må bygge og ændre på din ejendom. Vi kender både reglerne og forvaltningspraksis. Hvis du står før et grundkøb, kan du med fordel læse om køb af byggegrund.',
+					'Med baggrund fra Københavns Kommune, By- og Boligministeriet og 20+ års arbejde med plan- og byggesager har vi en særlig indsigt i sagsgangen. Vi rådgiver ejere, investorer, bygherrer og ejer- og grundejerforeninger. Er sagen allerede låst i kommunen, hjælper vi også med at få din byggesag afsluttet.'
 				]
 			},
 			{
@@ -525,7 +518,7 @@ export const services: Service[] = [
 		navLabel: 'Testamente',
 		heroImage: defaultImage,
 		shortDescription:
-			'Et testamente giver tryghed og klarhed. Vi udarbejder testamente tilpasset din familie, dine ønsker og de skattemæssige forhold.',
+			'Et testamente giver tryghed og klarhed om arvens fordeling. Vi udarbejder testamente tilpasset din familie, dine ønsker og de skattemæssige forhold.',
 		body: [
 			{
 				heading: 'Testamente — så fordelingen sker, som du vil',
@@ -621,13 +614,13 @@ export const services: Service[] = [
 		navLabel: 'Retssager og tvister',
 		heroImage: defaultImage,
 		shortDescription:
-			'Opstår der strid om arv, testamente eller ægtefælleskifte, fører vi sagen gennem forhandling, skifteretten eller ved domstolene.',
+			'Få juridisk hjælp til retssager og andre tvister.',
 		body: [
 			{
 				heading: 'Retssager — vi fører sagen, men kun hvis den er værd at føre',
 				paragraphs: [
 					'De fleste tvister kan løses uden retssag. Forhandling, forlig eller klageinstans er billigere, hurtigere og mere forudsigelige. Men når modparten ikke vil forhandle, eller sagen kun kan afgøres af retten, fører vi den.',
-					'Vi har ført sager for byretten, og flere klagenævn inden for fast ejendom, entrepriseret, erhvervsleje og naboforhold. Har din sag primært karakter af en ejendomstvist, kan du læse mere om <a href="/ydelser/fast-ejendom/tvister-og-klagesager" class="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80">tvister og klagesager</a>. Og vi vurderer realistisk, før vi går i gang — chancer, omkostninger og risici.'
+				'Vi har ført sager for byretten, og flere klagencevn inden for fast ejendom, entrepriseret, erhvervsleje og naboforhold. Har din sag primært karakter af en ejendomstvist, kan du læse mere om tvister og klagesager. Og vi vurderer realistisk, før vi går i gang — chancer, omkostninger og risici.'
 				]
 			},
 			{

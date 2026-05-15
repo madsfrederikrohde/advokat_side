@@ -7,9 +7,9 @@ export const homeContent: {
 	body: BodySection[];
 	seo: { title: string; description: string };
 } = {
-	title: 'Boligadvokat med erfaren juridisk sparring fra første vurdering til handlen er i hus.',
+	title: 'Få rådgivning af en erfaren boligadvokat fra første overvejelser til handlen er i hus.',
 	shortDescription:
-		'Få uvildig rådgivning om boligkøb, finansiering, byggeri og ejendomsprojekter. Vi hjælper også gerne med et gratis advokatforbehold, før du skriver under.',
+		'Få uvildig rådgivning om forhandling, boligkøb, finansiering og alle forhold omkring din handel. Vi hjælper også gerne med et gratis advokatforbehold, før du skriver under.',
 	heroImage: {
 		src: '/copenhagencityy.jpg',
 		alt: 'København — fast ejendom og boligkøb'
@@ -18,17 +18,17 @@ export const homeContent: {
 		{
 			heading: 'Uvildig rådgivning om boligkøb og fast ejendom',
 			paragraphs: [
-				'Alle kan i princippet tilbyde køberrådgivning. Men kun advokater er lovmæssigt forpligtet til at yde uvildig rådgivning uden provision eller binding til bestemte banker, kreditforeninger eller forsikringsselskaber.',
-				'Ejendomsadvokaterne arbejder med fast ejendom, bolighandler, byggeri og ejendomsudvikling. Målet er ikke blot korrekt jura, men et forløb der føles klart, trygt og ordentligt fra første vurdering til endelig beslutning.'
+				'Alle kan i princippet tilbyde køberrådgivning. Men kun advokater er lovmæssigt forpligtede til at yde uvildig rådgivning uden provision eller binding til bestemte banker, mæglere, kreditforeninger eller forsikringsselskaber.',
+				'Ejendomsadvokaterne arbejder med fast ejendom, bolighandler, byggeri og ejendomsudvikling. Målet er ikke blot korrekt jura, men et forløb der føles klart, trygt og ordentligt fra første overvejelse om køb til du har nøglerne i hånden.'
 			]
 		},
 		{
 			heading: 'Vi hjælper blandt andet med følgende',
 			bullets: [
-				'Gratis advokatforbehold, så handlen kan undersøges før den bliver endelig',
-				'Grundig gennemgang af købsaftale, bilag og servitutter',
+				'Advokat- og bankforbehold, så handlen gennemgås grundigt, før den bliver endelig',
+				'Grundig gennemgang af købsaftale, alle bilag og servitutter, byggesager og øvrige dokumenter i handlen',
 				'Uvildig second opinion på finansiering og lånetyper',
-				'Tinglysning, skøde og refusionsopgørelse',
+				'Tinglysning af skøde og refusionsopgørelse',
 				'Rådgivning om byggeri, entreprise og ejendomsudvikling'
 			]
 		}
@@ -76,7 +76,7 @@ export const faqs: FaqItem[] = [
 	{
 		question: 'Skal jeg skrive under uden et advokatforbehold?',
 		answer:
-			'Nej. Et advokatforbehold giver dig mulighed for at få handlen undersøgt, før den bliver endelig. Det kan være afgørende, hvis der dukker noget op i dokumenterne eller finansieringen.'
+			'Nej. Et advokatforbehold giver dig netop mulighed for at få handlen gennemgået, før den bliver endelig. Det kan være afgørende, hvis der dukker noget op i dokumenterne eller finansieringen.'
 	},
 	{
 		question: 'Kan en second opinion på finansieringen betale sig?',
@@ -86,11 +86,11 @@ export const faqs: FaqItem[] = [
 	{
 		question: 'Hvad skal jeg være opmærksom på ved selve boligen?',
 		answer:
-			'Beliggenhed, stand, fejl og mangler, ejerskifteforsikring, servitutter og de praktiske forhold omkring overtagelsen er alle forhold, der bør vurderes grundigt.'
+			'Beliggenhed, stand, fejl og mangler, ejerskifteforsikring, servitutter og de praktiske forhold omkring overtagelsen er alle forhold, der bør vurderes grundigt. Vi forklarer alt grundigt, så du er tryg i din beslutning.'
 	},
 	{
 		question: 'Hvorfor er tinglysning og refusionsopgørelse vigtige?',
 		answer:
-			'Korrekt tinglysning sikrer, at du bliver den retmæssige ejer. Refusionsopgørelsen er vigtig, fordi udgifter mellem køber og sælger skal opgøres korrekt på overtagelsesdagen.'
+			'Korrekt tinglysning sikrer, at du bliver registreret som  retmæssig ejer. Refusionsopgørelsen er vigtig, fordi udgifter mellem køber og sælger skal opgøres korrekt pr. overtagelsesdagen.'
 	}
 ];

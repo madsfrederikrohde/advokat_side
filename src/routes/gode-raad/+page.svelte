@@ -8,7 +8,7 @@
 
 	const title = 'Gode råd';
 	const description =
-		'Praktiske råd og juridiske opmærksomhedspunkter om advokatforbehold, finansiering og tinglysning ved boligkøb.';
+		'Praktiske råd og juridiske opmærksomhedspunkter om boligkøb.';
 	const breadcrumbs = [{ label: 'Forside', href: '/' }, { label: 'Gode råd' }];
 	const canonical = $derived(buildCanonical(page.url.pathname));
 	const jsonLd = $derived(buildJsonLd.page(title, description, canonical, { breadcrumbs }));

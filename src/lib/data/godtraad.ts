@@ -24,7 +24,7 @@ export const godtRaad: GodtRaad[] = [
 				heading: 'Hvorfor det gør hele forskellen',
 				paragraphs: [
 					'Uden advokatforbehold er du bundet af handlen, så snart du har skrevet under. Du har som privatkøber en fortrydelsesret i seks hverdage — men den koster dig 1 % af købesummen i gebyr til sælger. På en handel til 4 mio. kr. er det 40.000 kr.',
-					'Med advokatforbehold er det omvendt: handlen kan trækkes uden omkostninger, hvis advokaten gør indsigelse — og du får samtidig forhandlet eventuelle rettelser ind i købsaftalen, uden at sælger kan nægte at genforhandle. Uden forbeholdet er der ingen vej tilbage.',
+					'Med advokatforbehold er det omvendt: handlen kan trækkes uden omkostninger, hvis advokaten gør indsigelse — og du får samtidig forhandlet eventuelle rettelser ind i købsaftalen med sælger. Uden forbeholdet er der ingen vej tilbage.',
 					'Alt i alt betyder det, at advokatforbeholdet er det stærkeste forhandlingsværktøj, du har som køber — og det koster dig ingenting.'
 				]
 			},
@@ -35,11 +35,12 @@ export const godtRaad: GodtRaad[] = [
 				],
 				bullets: [
 					'Selve købsaftalen med vilkår, forbehold og særlige bestemmelser',
+					'Ejendommens servitutter',
 					'Tilstandsrapport, elinstallationsrapport og energimærke',
 					'Tilbud om ejerskifteforsikring',
 					'Tingbogsattest og tinglyste servitutter',
 					'BBR-meddelelsen',
-					'Lokalplan og eventuelle byrådsbeslutninger af betydning',
+					'Lokalplan og byggesager af betydning',
 					'Årsregnskab, vedtægter og referater fra generalforsamling, hvis der er tale om ejerforening eller andelsforening',
 					'Eventuelle forbehold vedrørende finansiering'
 				]
@@ -47,28 +48,28 @@ export const godtRaad: GodtRaad[] = [
 			{
 				heading: 'Hvis der findes problemer',
 				paragraphs: [
-					'Hvis der findes problemer — en uafsluttet byggesag, en servitut der begrænser dine planer, et mangelfuldt tilstandsrapport-grundlag eller et vilkår, der er ensidigt sælgers — rejser advokaten indsigelse. Mægleren får et klart svar, der enten fører til rettelse, prisnedslag eller annullering af handlen.'
+					'Hvis der findes problemer — en uafsluttet byggesag, en servitut der begrænser dine planer, et mangelfuldt tilstandsrapport-grundlag eller et vilkår, der er ensidigt sælgers — rejser advokaten indsigelse. Vi gennemgår grundigt alle forebhold med dig, så du er helt oplyst om alle forhold.'
 				]
 			},
 			{
 				heading: 'Gratis advokatforbehold — hvad betyder det egentlig?',
 				paragraphs: [
 					'Mange advokater tilbyder gratis rådgivning om selve formuleringen af advokatforbeholdet. Det betyder, at du kan ringe til advokaten, før du skriver under, og få hjælp til at sikre, at forbeholdet er korrekt formuleret og fristen er passende. Det er gratis og uforpligtende.',
-					'Den efterfølgende gennemgang — selve advokatarbejdet — er ikke gratis, men hos os er den del af boligpakken til fast pris. Og hvis handlen ikke gennemføres efter advokatforbeholdet, betaler du ikke noget for gennemgangen.'
+					'Den efterfølgende gennemgang — selve advokatarbejdet — er ikke gratis, men hos os er den del af boligpakken til fast pris. Og hvis handlen ikke gennemføres efter advokatforbeholdet, betaler du ikke noget for gennemgangen, no-cure, no-pay.'
 				]
 			},
 			{
 				heading: 'Tre ting, du skal passe på',
 				paragraphs: [
-					'For det første: fristen. Mægleren kan forsøge at sætte en kort frist — tre dage er set. Insistér på minimum fem hverdage. Advokaten skal bruge tid på at få materiale, gennemgå det og forhandle.',
+					'For det første: fristen. Mægleren kan forsøge at sætte en kort frist. Insistér på minimum fem hverdage. Advokaten skal bruge tid på at få materiale, gennemgå det og forhandle.',
 					'For det andet: formuleringen. Forbeholdet skal være "i sin helhed" — ikke begrænset til bestemte forhold. Hvis mægleren foreslår en indskrænket formulering, så ring til advokaten, før du skriver under.',
-					'For det tredje: sælgeradvokatens rolle. Sælgers advokat er ikke din advokat. Selv hvis mægleren tilbyder at "lade handlen gå igennem sælgers advokat", er det ikke det samme som at have din egen uvildige rådgiver. Advokater er lovbestemt forpligtet til at være uvildige, men kun for egen klient.'
+					'For det tredje: sælgeradvokatens rolle. Sælgers advokat er ikke din advokat. Selv hvis mægleren tilbyder at "lade handlen gå igennem sælgers advokat eller mægler", er det ikke det samme som at have din egen uvildige rådgiver. Advokater er lovbestemt forpligtet til at være uvildige, men kun for egen klient.'
 				]
 			},
 			{
 				heading: 'Det korte råd',
 				paragraphs: [
-					'Skriv aldrig under på en købsaftale uden et advokatforbehold. Det er gratis at få formuleret, det koster ingenting at indskrive, og det kan spare dig for titusinder — eller hundredtusinder — hvis sagen viser sig at have problemer.'
+					'Skriv aldrig under på en købsaftale uden et advokatforbehold. Det er gratis at få formuleret, det koster ingenting at indskrive, og det kan spare dig for mange penge og ærgelser.'
 				]
 			}
 		],
@@ -162,7 +163,7 @@ export const godtRaad: GodtRaad[] = [
 				paragraphs: [
 					'Udestuer, overdækkede terrasser, skure og carporte uden byggetilladelse er meget almindelige. Udnyttet loftsrum eller kælder til beboelse uden godkendelse er ligeledes typisk. Indretning af ekstra badeværelse eller bryggers uden færdigmelding sker ofte, ligesom opdeling af enfamiliehus i to lejligheder uden tilladelse.',
 					'Anneksser, gæstehuse eller udhuse på større ejendomme og sommerhuse, der aldrig er registreret, er også problematiske. Og så er der overskridelse af bebyggelsesprocent, byggehøjde eller afstandskrav til skel.',
-					'I nogle tilfælde er der tale om lovliggørbare forhold — kommunen vil udstede en efterfølgende tilladelse, hvis man søger. I andre tilfælde er forholdene fysisk ulovlige, og eneste udvej er nedrivning.'
+					'I nogle tilfælde er der tale om forhold, der kan lovliggøres — kommunen vil udstede en efterfølgende tilladelse, hvis man søger. I andre tilfælde er forholdene fysisk ulovlige, og eneste udvej er nedrivning.'
 				]
 			},
 			{
@@ -215,7 +216,7 @@ export const godtRaad: GodtRaad[] = [
 		navLabel: 'Refusionsopgørelse',
 		heroImage: defaultImage,
 		shortDescription:
-			'Refusionsopgørelsen er den sidste regning i en bolighandel. Her er hvad den indeholder — og hvor der typisk findes fejl til flere tusinde kroner.',
+			'Refusionsopgørelsen er det sidste led i en bolighandel. Her er hvad den indeholder — og hvor der typisk findes fejl til flere tusinde kroner.',
 		body: [
 			{
 				heading: 'Hvad er en refusionsopgørelse?',
@@ -236,7 +237,7 @@ export const godtRaad: GodtRaad[] = [
 				heading: 'Hvad indgår typisk i opgørelsen?',
 				paragraphs: [
 					'Ejendomsskat og grundskyld betales af sælger forud for et kvartal eller halvår. Din andel opgøres fra skæringsdagen. Ejendomsforsikring: hvis du overtager sælgers forsikring, refunderes den forud-betalte præmie fra skæringsdagen og året ud. Hvis du tegner en ny forsikring, bortfalder denne post.',
-					'Fællesudgifter i ejerforening eller andelsforening betales ofte månedsvis eller kvartalsvis. Sælgers betaling for den igangværende periode fordeles. Forbrug af vand, varme og el opgøres ved aflæsning på skæringsdagen. Refusion sker typisk med acontobeløb, og det endelige forbrug opgøres senere direkte med forsyningsselskabet.',
+					'Fællesudgifter i ejerforening betales ofte månedsvis eller kvartalsvis. Sælgers betaling for den igangværende periode fordeles. Forbrug af vand, varme og el opgøres ved aflæsning på skæringsdagen. Refusion sker typisk med acontobeløb, og det endelige forbrug opgøres senere direkte med forsyningsselskabet.',
 					'Skorstensfejer, renovation og rottebekæmpelse betales typisk sammen med ejendomsskatten. Antenneforening, vejlaug og grundejerforening skal også med, hvis der er sådanne. Og eventuel restgæld på pantebreve eller andre forpligtelser, der følger med ejendommen, skal opgøres.'
 				]
 			},
@@ -245,7 +246,7 @@ export const godtRaad: GodtRaad[] = [
 				paragraphs: [
 					'Forestil dig, at du overtager et hus i Rødovre den 1. juli. Sælger har i januar betalt grundskyld på 20.000 kr. for hele året. Din andel fra 1. juli og året ud er 10.000 kr. Du skal derfor refundere sælger 10.000 kr. i opgørelsen.',
 					'Samtidig har sælger betalt forsikringspræmie på 8.000 kr. for året, der løber til og med 31. december. Din andel fra 1. juli er 4.000 kr. — og dem refunderer du også sælger.',
-					'Til gengæld skal sælger dække de sidste fem dage af juni i fællesudgifter, som beboerforeningen har opkrævet i juli, og forbruget frem til skæringsdagen. Typisk ender opgørelsen med en enkel nettoberegning: et beløb, der enten overføres fra køber til sælger, eller modregnes i resterende deponering.'
+				'Til gengæld skal sælger dække de sidste fem dage af juni i fællesudgifter, som ejerforeningen har opkrævet i juli, og forbruget frem til skæringsdagen. Typisk ender opgørelsen med en enkel nettoberegning: et beløb, der enten overføres fra køber til sælger, eller modregnes i resterende deponering.'
 				]
 			},
 			{
@@ -266,7 +267,7 @@ export const godtRaad: GodtRaad[] = [
 		],
 		seo: {
 			description:
-				'Refusionsopgørelsen er den sidste regning i en bolighandel. Her er hvad den indeholder — og hvor der typisk findes fejl til flere tusinde kroner.'
+				'Refusionsopgørelsen er det sidste led i en bolighandel. Her er hvad den indeholder — og hvor der typisk findes fejl til flere tusinde kroner.'
 		}
 	},
 	{
@@ -289,8 +290,7 @@ export const godtRaad: GodtRaad[] = [
 			{
 				heading: 'Hvad er tilstandsrapporten?',
 				paragraphs: [
-					'Tilstandsrapporten er en bygningsgennemgang foretaget af en beskikket bygningssagkyndig. Den gennemgår ejendommens synlige stand og angiver fejl og skader i karakterer: K0 (kosmetisk), K1 (mindre alvorlig), K2 (alvorlig) og K3 (kritisk). Desuden kan rapporten indeholde UN-mærkninger (undersøges nærmere).',
-					'Rapporten er gyldig i seks måneder og danner grundlag for forsikringstilbuddet.'
+					'Tilstandsrapporten er en bygningsgennemgang foretaget af en beskikket bygningssagkyndig. Den beskriver synlige skader på ejendommen og inddeler dem i fire kategorier: kritiske skader (rød) med risiko for funktionssvigt på kort sigt, alvorlige skader (gul) med risiko for funktionssvigt på længere sigt, mindre alvorlige skader (grå) uden betydning for bygningens funktion og mulige skader, hvor forholdet bør undersøges nærmere. Bagatelagtige forhold, sædvanligt slid og forhold, der må forventes af et hus af bygningens alder og type, registreres ikke. Rapporten er gyldig i seks måneder og danner grundlag for sælgers tilbud om ejerskifteforsikring.'
 				]
 			},
 			{
@@ -378,7 +378,7 @@ export const godtRaad: GodtRaad[] = [
 					'F1/F3/F5-lån: lavere rente på kort sigt, men risiko for rentestigninger ved refinansiering',
 					'Afdragsfrihed: lavere ydelse i en periode, men stigende gæld i afdragsfriheden',
 					'Lånets løbetid og den samlede tilbagebetalte sum over lånets levetid',
-					'Kursskæring og gebyrer ved optagelse af realkreditlån'
+					'Kursskæring og gebyrer ved optagelse af realkreditlån – Hvad koster det ?'
 				]
 			},
 			{
@@ -421,7 +421,7 @@ export const godtRaad: GodtRaad[] = [
 				heading: 'Hvad er tinglysning?',
 				paragraphs: [
 					'Tinglysning er den officielle registrering af rettigheder over fast ejendom i det digitale tinglysningssystem, der administreres af Tinglysningsretten. Når du køber en ejendom, sikrer tinglysningen af skødet, at du er registreret som den retmæssige ejer i det offentlige register.',
-					'Tinglysning er ikke blot en formalitet – det er den juridiske bekræftelse af dit ejerskab og en forudsætning for, at du kan sælge ejendommen igen eller optage lån med sikkerhed i den. Uden tinglyst skøde er dit ejerskab ikke beskyttet over for tredjemand.'
+					'Tinglysning er ikke blot en formalitet – det er den juridiske bekræftelse af dit ejerskab og en forudsætning for, at du kan sælge ejendommen igen eller optage lån med sikkerhed i den. Uden tinglyst skøde er dit ejerskab ikke beskyttet over for tredjemand. Tinglysning af skødet koster 0,6 % af købesummen + 1.850 kr, men udgiften kan typisk medtages i den samlede finansiering sammen med udgiften til advokat.'
 				]
 			},
 			{

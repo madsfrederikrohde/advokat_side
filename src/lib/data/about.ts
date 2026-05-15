@@ -19,14 +19,14 @@ export const aboutContent: {
 		{
 			heading: 'Over 20 års erfaring med fast ejendom',
 			paragraphs: [
-				'Hans Rohde er advokat cand.jur. og har gennem mere end 20 år rådgivet om alle lag af fast ejendom. Baggrunden spænder fra offentlig forvaltning og ministerier til selvstændig advokatvirksomhed, partnerskab og ledende in-house ansvar inden for legal real estate.',
+				'Hans Rohde er advokat cand.jur. og har gennem mere end 20 år rådgivet om alle dele af fast ejendoms regulering. Baggrunden spænder fra offentlig forvaltning og ministerier til selvstændig advokatvirksomhed, partnerskab og ledende in-house ansvar inden for fast ejendom.',
 				'Det giver et perspektiv hvor dokumenter, risici og rettigheder altid ses i sammenhæng med de praktiske og økonomiske konsekvenser. Rådgivningen skal være fagligt stærk, men også brugbar i virkeligheden.'
 			]
 		},
 		{
-			heading: 'En mere enkel og gennemarbejdet måde at være advokat på',
+			heading: 'Hvad er god rådgivning for os ?',
 			paragraphs: [
-				'Den bedste rådgivning er præcis, men også rolig at navigere i. Derfor lægges vægt på klare anbefalinger, tydelige forbehold og en proces, hvor klienten hele tiden ved hvad sagen handler om, og hvad næste skridt er.',
+				'Den bedste rådgivning er juridisk præcis, men også rolig og tryg at navigere i for klienten. Derfor lægges vægt på klare anbefalinger, tydelige forbehold og en proces, hvor klienten hele tiden ved hvad sagen handler om, og hvad næste skridt er.',
 				'Erfaringen fra både myndighed, advokatpraksis og in-house ledelse betyder, at juridiske spørgsmål ikke kun vurderes i teorien. De vurderes også i forhold til timing, forhandling, gennemførelse og det faktiske beslutningsrum i sagen.',
 				'Det gælder både ved privat boligkøb, større ejendomstransaktioner, udviklingsprojekter og andre sager, hvor fast ejendom og jura mødes i praksis.'
 			]
@@ -47,9 +47,9 @@ export const aboutContent: {
 
 export const timeline: TimelineItem[] = [
 	{
-		period: '2024-',
-		role: 'EiGN ApS',
-		detail: 'Arbejder videre med rådgivning og udvikling inden for fast ejendom og relaterede projekter.'
+		period: '2008-',
+		role: 'Advokatfirmaet Hans Rohde',
+		detail: ''
 	},
 	{
 		period: '2018-2024',
