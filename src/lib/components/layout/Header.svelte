@@ -3,8 +3,10 @@
 	import { navItems } from '$lib/data/nav';
 	import HeaderDropdown from '$lib/components/layout/HeaderDropdown.svelte';
 	import GodtRaadHeaderDropdown from '$lib/components/layout/GodtRaadHeaderDropdown.svelte';
+	import { Menu, X } from 'lucide-svelte';
 
 	let isScrolled = $state(false);
+	let mobileOpen = $state(false);
 
 	$effect(() => {
 		const onScroll = () => {
@@ -13,6 +15,11 @@
 		onScroll();
 		window.addEventListener('scroll', onScroll, { passive: true });
 		return () => window.removeEventListener('scroll', onScroll);
+	});
+
+	$effect(() => {
+		page.url.pathname;
+		mobileOpen = false;
 	});
 
 	function isActive(item: (typeof navItems)[number]) {
@@ -75,6 +82,35 @@
 					{/each}
 				</div>
 			</div>
+
+			<button
+				class="ml-auto flex items-center justify-center p-2 text-[var(--color-navy)] md:hidden"
+				aria-label={mobileOpen ? 'Luk menu' : 'Åbn menu'}
+				aria-expanded={mobileOpen}
+				onclick={() => (mobileOpen = !mobileOpen)}
+			>
+				{#if mobileOpen}
+					<X size={22} />
+				{:else}
+					<Menu size={22} />
+				{/if}
+			</button>
 		</div>
+
+		{#if mobileOpen}
+			<div class="flex flex-col gap-1 border-t border-neutral-200/60 bg-white/95 py-4 backdrop-blur-xl md:hidden">
+				{#each navItems as item}
+					<a
+						href={item.to}
+						onclick={() => (mobileOpen = false)}
+						class="block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors {isActive(item)
+							? 'bg-neutral-100 text-neutral-900'
+							: 'text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900'}"
+					>
+						{item.label}
+					</a>
+				{/each}
+			</div>
+		{/if}
 	</nav>
 </header>
