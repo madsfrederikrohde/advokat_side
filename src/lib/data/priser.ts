@@ -24,7 +24,7 @@ export const priserContent: {
 } = {
 	title: 'Ejendomsadvokaternes priser',
 	shortDescription:
-		'Prisen på en boligadvokat er en vigtig faktor, når du skal købe eller sælge bolig. En kompetent boligadvokat sikrer, at alle juridiske aspekter af din bolighandel håndteres korrekt. Hos Ejendomsadvokaterne tilbyder vi erfarne boligadvokater til en fast lav pris, så du kan få professionel rådgivning uden uventede omkostninger.',
+		'Prisen på en boligadvokat er en vigtig faktor, når du skal købe eller sælge bolig. En kompetent boligadvokat sikrer, at alle juridiske aspekter af din bolighandel håndteles korrekt. Hos Ejendomsadvokaterne tilbyder vi rådgivning til en fast lav pris, så du kan få professionel rådgivning uden uventede omkostninger.',
 	heroImage: {
 		src: '/copenhagencityy.jpg',
 		alt: 'Ejendomsadvokaternes priser – fast pris på boligrådgivning'
@@ -32,7 +32,7 @@ export const priserContent: {
 	intro: {
 		heading: 'No cure – no pay',
 		paragraphs: [
-			'Hos Ejendomsadvokaterne arbejder vi på no cure – no pay-vilkår. Det betyder, at du ikke betaler advokatsalær, hvis handlen ikke gennemføres. Vores honorar forfalder først til betaling, når du har overtaget din nye bolig – og det er der en god grund til. Et boligkøb er forbundet med mange usikkerhedsmomenter, og vi mener, at du som køber ikke bør bære den fulde økonomiske risiko alene. Med vores model er vi med dig hele vejen, og vores interesse er den samme som din: at handlen lykkes.',
+			'Hos Ejendomsadvokaterne tilbyder vi no cure – no pay. Det betyder, at du ikke betaler advokatsalær, hvis handlen ikke gennemføres. Et boligkøb er forbundet med mange usikkerhedsmomenter, og vi mener, at du som køber ikke bør bære den fulde økonomiske risiko alene. Med vores model er vi med dig hele vejen, og vores interesse er den samme som din: at handlen lykkes på de rigtige vilkår.',
 			'Vi tilbyder fast pris på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer udover tinglysningsafgift til Staten (0,6 % af købesummen + 1.850 kr. og ingen timepriset fakturering – blot en forudsigelig og konkurrencedygtig pris for en erfaren boligadvokat.'
 		]
 	},
@@ -114,7 +114,7 @@ export const priserContent: {
 			'Uforpligtende indledende samtale, inden vi går i gang'
 		],
 		paragraphs: [
-			'Alle priser er inkl. moms. Der er ingen skjulte gebyrer udover tinglysningafgifter og ingen timepriset fakturering – du ved fra starten, hvad du kommer til at betale. Udgiften til advokat, tinglysning mv kan oftest kan lægges ind i finansieringen af den samlede handel:'
+			'Alle priser er inkl. moms. Der er ingen skjulte gebyrer udover tinglysningafgifter og andre afgifter til Staten. Ingen timepriset fakturering uden særlig aftale – du ved fra starten, hvad du kommer til at betale. Og udgiften til advokat, tinglysning mv. kan som oftest lægges ind i finansieringen af den samlede handel. Og ring altid for en gratis uforpligtende samtale, inden vi går i gang'
 		]
 	},
 	seo: {
