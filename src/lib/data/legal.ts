@@ -50,26 +50,114 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 	},
 	forretningsbetingelser: {
 		eyebrow: 'Forretningsbetingelser',
-		title: 'De generelle vilkår for samarbejde, opgaveomfang og honorar.',
+		title: 'Forretningsbetingelser for Ejendomsadvokaterne.',
 		intro:
-			'Forretningsbetingelserne beskriver de generelle rammer for samarbejdet. Det konkrete opgaveomfang og eventuelle særlige vilkår aftales altid i relation til den enkelte sag. Du modtager altid en skriftlig ordrebekræftelse med de aftalte vilkår, inden opgaven sættes i gang.',
+			'Stamoplysninger, klientoplysning og forretningsbetingelser for Ejendomsadvokaterne.',
 		sections: [
 			{
-				heading: 'Opgavens omfang',
+				heading: 'Stamoplysninger',
 				paragraphs: [
-					'Rådgivningen afgrænses efter den konkrete aftale. Det er vigtigt, at der er klarhed om, hvilke forhold der indgår i opgaven, og hvilke forhold der eventuelt kræver særskilt aftale.'
+					'Advokat Hans Rohde er beskikket af Justitsministeriet i Danmark og er medlem af Advokatsamfundet.',
+					'Adresse: Hviddingvej 47 2610 Rødovre',
+					'Kontakt: Telefon: +45 20 31 78 79 E-mail: hr@hansrohde.dk',
+					'CVR-nummer 31 30 46 87'
 				]
 			},
 			{
-				heading: 'Honorar og udlæg',
+				heading: 'Opgaven',
 				paragraphs: [
-					'Honorar fastsættes ud fra opgavens karakter, omfang, tidsforbrug, kompleksitet og det ansvar, den indebærer. Eventuelle udlæg og tredjemandsomkostninger håndteles efter nærmere aftale.'
+					'Den juridiske bistands karakter, omfang og afgrænsning aftales ved opstart og løbende. Rådgivningen tilpasses den enkelte klients forhold og må ikke anvendes til andre formål uden forudgående skriftlig accept.',
+					'Klienten får de nødvendige brugsrettigheder til det udarbejdede materiale, mens Ejendomsadvokaterne bevarer immaterielle rettigheder, herunder ophavsrettigheder.',
+					'Advokatfirmaet kan ophøre med at repræsentere klienten, hvis klienten misligholder disse betingelser, undlader betaling, bliver insolvent eller hvis andre væsentlige forhold gør fortsat bistand uforsvarlig.',
+					'Advokatfirmaet er underlagt god advokatskik, jf. retsplejelovens § 126, samt de advokatetiske regler. Reglerne kan findes på www.advokatsamfundet.dk.'
 				]
 			},
 			{
-				heading: 'Samarbejde og forudsætninger',
+				heading: 'Interessekonflikter',
 				paragraphs: [
-					'Et godt forløb forudsætter rettidige oplysninger og relevant dokumentation. Rådgivningen bygger på det materiale og de oplysninger, der er til rådighed på tidspunktet for vurderingen.'
+					'Før en sag påtages, kontrolleres det, at der ikke foreligger interesse- eller loyalitetskonflikter i overensstemmelse med Advokatsamfundets regler og firmaets interne procedurer.'
+				]
+			},
+			{
+				heading: 'Hvidvasklovgivningen',
+				paragraphs: [
+					'Advokatfirmaet er omfattet af lov om forebyggende foranstaltninger mod hvidvask af penge og finansiering af terrorisme. Dette indebærer, at der skal indsamles og opbevares identitetsoplysninger i minimum fem år.',
+					'Ved sagens oprettelse skal klienten oplyse navn, adresse og CPR- eller CVR-nummer samt fremvise nødvendig legitimation. For selskaber skal der desuden foreligge oplysninger om reelle ejere.',
+					'Hvis der opstår mistanke om hvidvask eller terrorfinansiering, kan firmaet være forpligtet til at undersøge transaktioner og eventuelt underrette relevante myndigheder.',
+					'Klienten er forpligtet til at gennemgå kundekendskabsprocedure via advokatfirmaets onboardingsystem, leveret af Visma Creditro.'
+				]
+			},
+			{
+				heading: 'Fortrolighed',
+				paragraphs: [
+					'Alle oplysninger, der modtages som led i en sag, behandles som fortrolige efter gældende ret, de advokatetiske regler og firmaets interne politikker.'
+				]
+			},
+			{
+				heading: 'Forsikring og ansvarsbegrænsning',
+				paragraphs: [
+					'Ejendomsadvokaterne er ansvarlig for rådgivningen efter dansk rets almindelige regler.',
+					'Rådgivningen omfatter alene direkte tab. Følgeskader og indirekte tab, herunder driftstab, tab af data og goodwill, erstattes ikke. Advokatfirmaet er ikke ansvarlig for ydelser leveret af tredjemand, selv om disse er anbefalet eller koordineret af advokatfirmaet.'
+				]
+			},
+			{
+				heading: 'Ansvarsforsikring',
+				paragraphs: [
+					'Advokat Hans Rohde har tegnet ansvarsforsikring og garantiordning hos CNA Insurance Company (Europe) S.A. Forsikringsdækningen opfylder Advokatsamfundets minimumskrav og omfatter advokatvirksomhed med en dækningssum på 2,5 mio. kr. pr. skade samt garantiordning på 5 mio. kr.'
+				]
+			},
+			{
+				heading: 'Ansvarsbegrænsning',
+				paragraphs: [
+					'Advokatfirmaets ansvar i en konkret sag er begrænset til et beløb, der maksimalt svarer til tre gange det fakturerede honorar i den pågældende sag, medmindre andet er skriftligt aftalt.',
+					'Ved større sager eller transaktioner kan der efter særskilt aftale tegnes udvidet eller supplerende forsikringsdækning med højere dækningssum. Klienten informeres herom, hvis sagens karakter giver anledning til øget risiko.'
+				]
+			},
+			{
+				heading: 'Honorar',
+				paragraphs: [
+					'Honorar fastsættes efter en samlet vurdering, hvor bl.a. følgende forhold indgår:',
+					'Visse af firmaets advokatydelser udføres til fast pris. Se nærmere prisoplysning på vores hjemmeside: www.ejendomsadvokaterne.dk. Forbrugere modtager altid forud for igangsætning af sagen en skriftlig ordrebekræftelse med prisoplysning.',
+					'I henhold til retsplejelovens § 126, stk. 2, må honoraret ikke overstige, hvad der kan anses for rimeligt.',
+					'Tvister om salær kan indbringes for Advokatnævnet.'
+				],
+				bullets: [
+					'Tidsforbrug',
+					'Specialkompetencer',
+					'Opgavens kompleksitet',
+					'Tidsmæssigt pres',
+					'Opgavens betydning for klienten',
+					'Det ansvar, opgaven indebærer',
+					'Resultatet'
+				]
+			},
+			{
+				heading: 'Fakturering og betalingsbetingelser',
+				paragraphs: [
+					'Ved længerevarende eller større opgaver faktureres der som udgangspunkt månedligt bagud. Ved mindre opgaver faktureres ved opgavens afslutning.',
+					'Betalingsfristen er otte dage netto. Der tillægges moms efter gældende regler. Ved forsinket betaling beregnes morarenter i henhold til renteloven.',
+					'Advokatfirmaet kan kræve forudbetaling, hvis sagens karakter eller klientens forhold begrunder det.',
+					'Klientmidler forvaltes i overensstemmelse med Advokatsamfundets regler. Eventuelle renter tilfalder klienten, og eventuelle negative renter afholdes af klienten.'
+				]
+			},
+			{
+				heading: 'Udlæg',
+				paragraphs: [
+					'Klienten betaler særskilt for omkostninger til tredjemand, herunder retsafgifter, tinglysningsafgifter, gebyrer, rejseomkostninger, forsendelse, samt større kopieringsopgaver.',
+					'Hvis advokaten skal stille sikkerhed for syn og skøn, og der ikke er retshjælpsdækning eller fri proces, debiteres klienten de forventede omkostninger.'
+				]
+			},
+			{
+				heading: 'Opbevaring af sagsakter',
+				paragraphs: [
+					'Originale dokumenter udleveres senest ved sagens afslutning. Sagsakter opbevares i mindst fem år derefter.'
+				]
+			},
+			{
+				heading: 'Lovvalg og værneting',
+				paragraphs: [
+					'Enhver tvist mellem klienten og Ejendomsadvokaterne afgøres efter dansk ret med Københavns Byret som aftalt værneting.',
+					'Dato 17. april 2026'
 				]
 			}
 		]
@@ -83,7 +171,7 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 			{
 				heading: 'Formål og retsgrundlag',
 				paragraphs: [
-					'I forbindelse med den juridiske bistand og rådgivning, som Advokat Hans Rohde leverer til dig, er det nødvendigt at behandle personoplysninger om dig. Behandlingen sker for at kunne varetage dine interesser og yde korrekt, relevant og fagligt forsvarlig rådgivning.'
+					'I forbindelse med den juridiske bistand og rådgivning, som Ejendomsadvokaterne leverer til dig, er det nødvendigt at behandle personoplysninger om dig. Behandlingen sker for at kunne varetage dine interesser og yde korrekt, relevant og fagligt forsvarlig rådgivning.'
 				],
 				bullets: [
 					'Databeskyttelsesforordningens artikel 6, stk. 1, litra b (opfyldelse af en kontrakt)',
