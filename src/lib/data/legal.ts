@@ -75,27 +75,90 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 		]
 	},
 	gdpr: {
-		eyebrow: 'Behandling af personoplysninger',
-		title: 'Behandling af personoplysninger med respekt for nødvendighed, sikkerhed og fortrolighed.',
+		eyebrow: 'GDPR - Persondatalovgivningen og dine rettigheder',
+		title: 'GDPR - Persondatalovgivningen og dine rettigheder',
 		intro:
-			'Når du kontakter Ejendomsadvokaterne eller indgår i et sagsforløb, kan der behandles personoplysninger som led i kommunikationen og den juridiske rådgivning. Behandlingen sker med fokus på nødvendighed og fortrolighed.',
+			'Databeskyttelse og behandling af personoplysninger',
 		sections: [
 			{
-				heading: 'Formål',
+				heading: 'Formål og retsgrundlag',
 				paragraphs: [
-					'Personoplysninger behandles alene i det omfang, det er relevant for at besvare henvendelser, administrere et muligt eller eksisterende klientforhold og gennemføre den aftalte rådgivning.'
+					'I forbindelse med den juridiske bistand og rådgivning, som Advokat Hans Rohde leverer til dig, er det nødvendigt at behandle personoplysninger om dig. Behandlingen sker for at kunne varetage dine interesser og yde korrekt, relevant og fagligt forsvarlig rådgivning.'
+				],
+				bullets: [
+					'Databeskyttelsesforordningens artikel 6, stk. 1, litra b (opfyldelse af en kontrakt)',
+					'Databeskyttelsesforordningens artikel 6, stk. 1, litra c (opfyldelse af retlige forpligtelser, herunder bogførings- og hvidvaskregler)',
+					'Databeskyttelsesforordningens artikel 6, stk. 1, litra f (legitim interesse, når relevant)',
+					'Databeskyttelsesforordningens artikel 9, stk. 2, litra f (retskrav), hvis behandling af følsomme oplysninger er nødvendig',
+					'Databeskyttelseslovens §§ 6 og 7',
+					'Databeskyttelseslovens § 11, stk. 2, nr. 3 og 4 (CPR-numre)',
+					'Hvidvaskloven, når dette er relevant for klientidentifikation'
 				]
 			},
 			{
-				heading: 'Typer af oplysninger',
+				heading: 'Kategorier af personoplysninger',
 				paragraphs: [
-					'Det kan for eksempel være kontaktoplysninger, sagsmateriale, korrespondance og andre oplysninger, som er nødvendige for den konkrete vurdering eller sagsbehandling.'
+					'De oplysninger, der behandles, omfatter blandt andet:',
+					'Der kan løbende blive behov for yderligere oplysninger, og du informeres, når vi beder om dem.'
+				],
+				bullets: [
+					'Identifikations- og kontaktoplysninger',
+					'Sags- og dokumentationsoplysninger',
+					'Eventuelle følsomme oplysninger, hvis det er nødvendigt for sagen',
+					'CPR-nummer, når det er nødvendigt for fx tinglysning eller identifikation',
+					'Oplysninger indhentet fra modparter, myndigheder og andre involverede i sagen'
 				]
 			},
 			{
-				heading: 'Opbevaring og sikkerhed',
+				heading: 'Modtagere af personoplysninger',
 				paragraphs: [
-					'Oplysninger opbevares kun så længe, det er relevant eller nødvendigt efter sagens karakter og de regler, der gælder for advokatvirksomhed. Der arbejdes løbende med passende organisatoriske og tekniske sikkerhedsforanstaltninger.'
+					'Videregivelse af oplysninger sker alene, når det er nødvendigt for at varetage dine interesser, herunder til:',
+					'Advokater er underlagt streng tavshedspligt efter retsplejeloven. Oplysninger videregives ikke til uvedkommende.',
+					'Digitale oplysninger opbevares hos vores IT-leverandør, som fungerer som databehandler og alene behandler oplysninger efter instruks. Der er indgået databehandleraftale i overensstemmelse med databeskyttelsesreglerne.',
+					'Tredjelande Der sker som udgangspunkt ingen overførsel til lande uden for EU/EØS. Hvis det bliver nødvendigt, vil du blive informeret særskilt.'
+				],
+				bullets: [
+					'Domstole',
+					'Myndigheder',
+					'Modparter og deres repræsentanter',
+					'Andre relevante aktører i sagen'
+				]
+			},
+			{
+				heading: 'Hvor stammer oplysningerne fra',
+				paragraphs: [
+					'Oplysningerne stammer primært fra dig selv. Herudover kan der modtages nødvendige oplysninger fra modparter, myndigheder eller andre aktører involveret i sagen.'
+				]
+			},
+			{
+				heading: 'Opbevaring af oplysninger',
+				paragraphs: [
+					'Oplysninger opbevares, så længe sagen er aktiv, og normalt i fem år efter sagens afslutning. Dette sker af hensyn til dokumentation, krav om bogføring og almindelig advokatansvarspraksis. I særlige tilfælde kan længere opbevaring være nødvendig.'
+				]
+			},
+			{
+				heading: 'Dine rettigheder',
+				paragraphs: [
+					'Du har efter databeskyttelsesforordningen en række rettigheder, herunder:',
+					'Der kan i advokatforhold forekomme begrænsninger i rettighederne, særligt henset til tavshedspligt, dokumentationskrav og varetagelse af retskrav.',
+					'Hvis du ønsker at gøre brug af dine rettigheder, kan du kontakte os direkte.'
+				],
+				bullets: [
+					'Ret til indsigt',
+					'Ret til berigtigelse',
+					'Ret til sletning (med de begrænsninger der følger af bl.a. advokatens pligt til dokumentation)',
+					'Ret til begrænsning af behandling',
+					'Ret til dataportabilitet',
+					'Ret til indsigelse mod behandlingen'
+				]
+			},
+			{
+				heading: 'Klageadgang',
+				paragraphs: [
+					'Hvis du ønsker at klage over behandlingen af dine personoplysninger, kan du rette henvendelse til:',
+					'Datatilsynet Carl Jacobsens Vej 35 2500 Valby www.datatilsynet.dk',
+					'Du er altid velkommen til først at rette henvendelse til os med spørgsmål.',
+					'17.05.2026'
 				]
 			}
 		]
