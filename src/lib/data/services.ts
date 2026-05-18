@@ -396,19 +396,19 @@ export const services: Service[] = [
 		navLabel: 'Forurenet jord',
 		heroImage: defaultImage,
 		shortDescription:
-			'Har du opdaget jordforurening på din grund? Vi rådgiver om ansvar, oprydning og eventuelle krav mod sælger eller myndigheder.',
+			'Har du opdaget jordforurening på din grund? Vi rådgiver om ansvar, oprydning og eventuelle krav mod forurener eller sælger.',
 		body: [
 			{
-				heading: 'Forurenet jord — ansvaret følger ejendommen, ikke forureneren',
+				heading: 'Forurenet jord — forureneren betaler, men desværre ikke altid',
 				paragraphs: [
-					'Forurening er ofte usynlig — indtil nogen bygger, sælger eller ændrer anvendelsen. Så dukker den op som et problem, ingen vil betale for.',
-					'Reglerne i jordforureningsloven er komplekse, og ansvaret kan ende hos både ejer, køber og tidligere forurener. Vi rådgiver om kortlægning (V1 og V2), undersøgelsesforpligtelser, § 8-tilladelser ved ændret anvendelse, erstatningskrav og forsikringsforhold. Særligt ved køb af ejendomme med tidligere erhvervsanvendelse — værksted, benzintank, renseri — er tidlig advokatrådgivning ofte det, der redder handlen eller projektet.'
+					'Forurening er ofte usynlig — indtil man bygger, tager jordprøver eller ændrer anvendelse. Så dukker den op som et problem, ingen vil betale for.',
+					'Reglerne i jordforureningsloven er komplekse, og ansvaret kan ende hos både forurener, ejer, køber og sælger. Vi rådgiver om ansvar, kortlægning (V1 og V2), undersøgelsesforpligtelser, § 8-tilladelser ved ændret anvendelse, erstatningskrav og forsikringsforhold. Særligt ved køb af ejendomme med tidligere villaolietanke, erhvervsanvendelse — værksted, benzintank, renseri — er tidlig advokatrådgivning afgørende for et godt udfald af din sag.'
 				]
 			},
 			{
 				heading: 'Priseksempel',
 				paragraphs: [
-					'Indledende vurdering af forureningsrisikoen kan typisk klares på 1–3 timer. Videre sagsgang afregnes efter timepris mod et estimat.'
+					'Indledende vurdering af forureningsrisikoen kan typisk klares for ca. 2.500,- inkl. moms. Videre sagsbehandling afregnes efter timepris efter estimat og oversalg.'
 				]
 			}
 		]
