@@ -277,15 +277,15 @@ export const services: Service[] = [
 			{
 				heading: 'Boliglejeret — både for lejere og udlejere',
 				paragraphs: [
-					'Både lejere og udlejere står ofte med en fraflytningsopgørelse, de ikke forstår — eller en opsigelse, der ikke er lovlig.',
-					'Vi bistår begge sider: tvister om fraflytningsopgørelse, vedligeholdelsespligt, lejeforhøjelse, varslinger, opsigelse og ophævelse. Vi fører sager ved huslejenævn, beboerklagenævn og domstolene og forhandler forlig, når det er den rigtige vej.',
+					'Både lejer og udlejer kan komme ud for spørgsmål om en fraflytningsopgørelse, tvist om huslejens størrelse eller en opsigelse, der ikke er lovlig.',
+					'Vi bistår både udlejere og lejere i tvister om fraflytningsopgørelse, vedligeholdelsespligt, lejeforhøjelse, varslinger, opsigelse og ophævelse. Vi fører sager ved huslejenævn, beboerklagenævn og domstolene og forhandler forlig, når det er den rigtige vej.',
 					'Vi har ført mange huslejenævnssager og retssager på udlejerside og kender reglerne fra begge sider af bordet. Det betyder, at vi altid giver en realistisk vurdering af, om sagen er værd at føre — før du bruger tid og penge på den.'
 				]
 			},
 			{
 				heading: 'Priseksempel',
 				paragraphs: [
-					'Gennemgang af lejekontrakt eller fraflytningsopgørelse kan typisk klares på 1–3 timer. Nævnssager og retssager afregner vi på timepris mod et estimat up front. Du ved, hvad du går ind til.'
+					'Gennemgang af lejekontrakt eller fraflytningsopgørelse kan typisk klares på 1–3 timer. Nævnssager og retssager afregner vi på timepris mod et estimat up front.'
 				]
 			}
 		]

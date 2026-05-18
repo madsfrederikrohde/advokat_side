@@ -312,29 +312,28 @@ export const godtRaad: GodtRaad[] = [
 					'Det er vigtigt at forstå, at ejerskifteforsikringen har mange undtagelser. Typiske områder, der ikke dækkes, er:'
 				],
 				bullets: [
-					'Almindeligt slid og ælde. Tage, der er udtjente, men ikke defekte. Vinduer med termorudeklemme, der er ved at bryde sammen. Disse forhold er "forventelige" og ikke mangler i forsikringens forstand.',
-					'Vedligeholdelsesmangler. Manglende maling, lappet puds, rustne tagplader osv. Sælger havde ansvar for løbende vedligeholdelse, men forsikringen dækker ikke resultatet.',
-					'Forhold, der burde være fundet ved bygningsgennemgangen. Hvis den bygningssagkyndig burde have opdaget en fejl, men undlod det, er forholdet sælgers eller den sagkyndiges ansvar, ikke forsikringens.',
+					'Almindeligt slid og ælde. Disse forhold er "forventelige" og ikke mangler i forsikringens forstand.',
+					'Vedligeholdelsesmangler. Manglende maling, lappet puds, rustne tagplader osv.',
 					'Ulovligt byggeri og myndighedsforhold. Dækkes som udgangspunkt ikke. Et ulovligt byggeri, der senere kræver lovliggørelse, er ikke en "skjult mangel" i forsikringens forstand.',
-					'Stikledninger og kloak. Mange standardforsikringer dækker ikke — eller kun med betydelige forbehold — fejl i stikledninger (fra skel til bygning) eller hovedkloakken. Udvidelser til disse områder koster ekstra.',
+					'Stikledninger og kloak. Mange standardforsikringer dækker ikke - eller kun med betydelige forbehold - fejl i stikledninger (fra skel til bygning) eller hovedkloakken. Udvidelser til disse områder koster ekstra.',
 					'Olietanke, nedgravede olietanke og jordforurening. Dækkes typisk ikke. Bør særskilt undersøges.',
 					'Termoruder og punkterede ruder. Nogle forsikringer dækker, andre ikke.',
 					'Ejendomme tilbygget eller ombygget inden for få år før salg. Nogle forsikringer har karensperiode eller særlige undtagelser.',
-					'Selvrisiko. Forsikringen har typisk selvrisiko på 6.000–30.000 kr. pr. skade. Små skader dækkes derfor i praksis ikke, selvom de formelt er dækkede.'
+					'Selvrisiko. Forsikringen har typisk selvrisiko på 6.000-30.000 kr. pr. skade. Små skader dækkes derfor i praksis ikke, selvom de formelt er dækkede.'
 				]
 			},
 			{
 				heading: 'Hvad du skal tjekke, før du skriver under',
 				paragraphs: [
-					'Forsikringstilbuddet skal læses grundigt — ikke bare taget for givet. Særligt skal du se på hvilken forsikring du har valgt (basis, udvidet, kommerciel variant), selvrisikoens størrelse, dækningsperioden (fem eller ti år), om stikledninger og kloak er medtaget som tilkøb, og om der er særlige undtagelser knyttet til denne konkrete ejendom.',
-					'Særligt kritisk er det at læse, om forsikringsselskabet har taget forbehold for bestemte forhold, fordi tilstandsrapporten har markeret dem som UN (undersøges nærmere). Forhold med UN-mærke er som udgangspunkt ikke dækket — medmindre de undersøges og godkendes inden tegning.'
+					'Forsikringstilbuddet skal læses grundigt - ikke bare tages for givet. Særligt skal du se på hvilken forsikring du har valgt (basis, udvidet eller anden variant), selvrisikoens størrelse, dækningsperioden (fem eller ti år), om stikledninger og kloak er medtaget som tilkøb, og om der er særlige undtagelser knyttet til denne konkrete ejendom.',
+					'Særligt kritisk er det at læse, om forsikringsselskabet har taget forbehold for bestemte forhold, fordi tilstandsrapporten har markeret dem som "Sort: Mulige skader". Forhold med sort-mærke er som udgangspunkt ikke dækket — medmindre de undersøges og godkendes inden tegning.'
 				]
 			},
 			{
 				heading: 'Tre typiske fælder',
 				paragraphs: [
-					'For det første: "Forsikringen dækker alt" — den gør den ikke. Mægleren kan godt formulere det, som om forsikringen er et totalkasko-produkt. Det er den aldrig.',
-					'For det andet: UN-markeringer, der ikke undersøges. Hvis rapporten har markeret noget som UN, og det ikke undersøges nærmere, er det ikke dækket senere. Mange købere tror, forsikringen "tager over" — den gør den ikke.',
+					'For det første: "Forsikringen dækker alt" - den gør den ikke. Mægleren kan godt formulere det, som om forsikringen er et totalkasko-produkt. Det er den aldrig.',
+					'For det andet: Sorte markeringer, der ikke undersøges. Hvis rapporten har markeret noget som sort, og det ikke undersøges nærmere, er det ikke dækket senere. Mange købere tror, forsikringen "tager over" - den gør den ikke.',
 					'For det tredje: anmeldelse glemmes eller sker for sent. Skader skal anmeldes, så snart du opdager dem. Forsikringen kan afslå dækning, hvis du har ventet for længe, eller har fået forholdet forværret ved at udskyde reparation.'
 				]
 			},
