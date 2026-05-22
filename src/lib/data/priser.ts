@@ -40,7 +40,7 @@ export const priserContent: {
 		{
 			service: 'Køb af villa',
 			href: '/ydelser/boligkoeb/villa',
-			fromPrice: 'fra 8.500 kr.',
+			fromPrice: ' 8.500 kr.',
 			description:
 				'Fuld juridisk gennemgang af købsaftale, tilstandsrapport, energimærke og øvrige dokumenter, samt tinglysning af skøde.',
 			examples: [
@@ -51,7 +51,7 @@ export const priserContent: {
 		{
 			service: 'Køb af ejerlejlighed',
 			href: '/ydelser/boligkoeb/ejerlejlighed',
-			fromPrice: 'fra 8.500 kr.',
+			fromPrice: ' 8.500 kr.',
 			description:
 				'Gennemgang af købsaftale, ejerforeningens regnskaber og vedtægter samt tinglysning af skøde. Prisen afhænger af handelssummen.',
 			examples: [
@@ -62,7 +62,7 @@ export const priserContent: {
 		{
 			service: 'Køb af sommerhus',
 			href: '/ydelser/boligkoeb/sommerhus',
-			fromPrice: 'fra 9.500 kr.',
+			fromPrice: ' 9.500 kr.',
 			description:
 				'Sommerhus op til 10.000.000 kr. 9.995kr.',
 			examples: [
@@ -73,7 +73,7 @@ export const priserContent: {
 		{
 			service: 'Køb af andelsbolig',
 			href: '/ydelser/boligkoeb/andelsbolig',
-			fromPrice: 'fra 7.500 kr.',
+			fromPrice: ' 7.500 kr.',
 			description:
 				'Vi gennemgår overdragelsesaftalen, foreningens regnskab og vedtægter samt vurderer andelsværdien og eventuelle forkøbsrettigheder.',
 			examples: [
@@ -84,7 +84,7 @@ export const priserContent: {
 		{
 			service: 'Testamente',
 			href: '/ydelser/familiearveret/testamente',
-			fromPrice: 'fra 3.500 kr.',
+			fromPrice: ' 3.500 kr.',
 			description:
 				'Oprettelse af individuelt tilpasset testamente og rådgivning om arvefordeling. Prisen afhænger af antallet af testatorer og kompleksiteten af dine ønsker.',
 			examples: [
@@ -95,7 +95,7 @@ export const priserContent: {
 		{
 			service: 'Ægtepagt',
 			href: '/ydelser/familiearveret/aegtepagt',
-			fromPrice: 'fra 3.500 kr.',
+			fromPrice: ' 3.500 kr.',
 			description:
 				'Udarbejdelse og tinglysning af ægtepagt, herunder rådgivning om formuefællesskab, særeje og kombinationsmodeller.',
 			examples: [
