@@ -33,7 +33,7 @@ export const priserContent: {
 		heading: 'No cure – no pay',
 		paragraphs: [
 			'Hos Ejendomsadvokaterne tilbyder vi no cure – no pay. Det betyder, at du ikke betaler advokatsalær, hvis handlen ikke gennemføres. Et boligkøb er forbundet med mange usikkerhedsmomenter, og vi mener, at du som køber ikke bør bære den fulde økonomiske risiko alene. Med vores model er vi med dig hele vejen, og vores interesse er den samme som din: at handlen lykkes på de rigtige vilkår.',
-			'Vi tilbyder fast pris på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer udover tinglysningsafgift til Staten (0,6 % af købesummen + 1.850 kr. og ingen timepriset fakturering – blot en forudsigelig og konkurrencedygtig pris for en erfaren boligadvokat.'
+			'Vi tilbyder fast pris på vores boligrådgivning, så du fra starten ved, hvad du kommer til at betale. Der er ingen skjulte gebyrer udover tinglysningsafgift til Staten (0,6 % af købesummen + 1.850 kr.) og ingen timepriset fakturering – blot en forudsigelig og konkurrencedygtig pris for en erfaren boligadvokat.'
 		]
 	},
 	priceItems: [
