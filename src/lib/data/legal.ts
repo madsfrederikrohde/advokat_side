@@ -50,7 +50,7 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 	},
 	forretningsbetingelser: {
 		eyebrow: 'Forretningsbetingelser',
-		title: 'Forretningsbetingelser for Ejendomsadvokaterne.',
+		title: 'Stamoplysninger, klientoplysning og forretningsbetingelser for Ejendomsadvokaterne (Advokatfirmaet Hans Rohde)',
 		intro:
 			'Stamoplysninger, klientoplysning og forretningsbetingelser for Ejendomsadvokaterne.',
 		sections: [
@@ -117,7 +117,7 @@ export const legalContent: Record<LegalVariant, LegalContent> = {
 				heading: 'Honorar',
 				paragraphs: [
 					'Honorar fastsættes efter en samlet vurdering, hvor bl.a. følgende forhold indgår:',
-					'Visse af firmaets advokatydelser udføres til fast pris. Se nærmere prisoplysning på vores hjemmeside: www.ejendomsadvokaterne.dk. Forbrugere modtager altid forud for igangsætning af sagen en skriftlig ordrebekræftelse med prisoplysning.',
+					'Visse af firmaets forbrugerrettede advokatydelser udføres til fast pris. Se nærmere prisoplysning på vores hjemmeside: www.ejendomsadvokaterne.dk. Forbrugere modtager altid forud for igangsætning af sagen en skriftlig ordrebekræftelse med prisoplysning.',
 					'I henhold til retsplejelovens § 126, stk. 2, må honoraret ikke overstige, hvad der kan anses for rimeligt.',
 					'Tvister om salær kan indbringes for Advokatnævnet.'
 				],
