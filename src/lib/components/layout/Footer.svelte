@@ -42,7 +42,7 @@
 					Ejendomsadvokaterne
 				</p>
 				<p class="mt-4 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-white/60">
-					v/ Hans Rohde
+					En del af Advokatfirmaet Hans Rohde
 				</p>
 				<p class="mt-6 max-w-md text-[0.98rem] font-light leading-7 text-white/70">
 					Uvildig rådgivning om boligkøb, finansiering, byggeri og fast ejendom med fokus på

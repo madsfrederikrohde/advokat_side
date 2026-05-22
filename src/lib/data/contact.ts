@@ -33,6 +33,6 @@ export const contactContent: {
 	seo: {
 		title: 'Kontakt',
 		description:
-			'Kontakt Ejendomsadvokaterne v/ Hans Rohde. Ring, skriv eller brug kontaktformularen for en uforpligtende snak om din sag.'
+			'Kontakt Ejendomsadvokaterne. Ring, skriv eller brug kontaktformularen for en uforpligtende snak om din sag.'
 	}
 };
